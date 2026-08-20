@@ -1,5 +1,5 @@
 # Cr1py.github.io
-(Currently under progress. Feel free to view my current progress by viewing the link in the about section of this project.) 
+(There is a current issue where GitHub is deployed this README.md rather than the website. I am trying to fix it) 
 
 ## About
 This is my personal portfolio to display my work experience, projects, and hobbies. I hope that you can learn a little bit more about me through this!
