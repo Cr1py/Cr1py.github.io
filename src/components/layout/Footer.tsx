@@ -1,5 +1,5 @@
 import { personalInfo } from "../data/personal-info";
-import { FaGithub, FaLinkedin } from "../node_modules/react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 // curr date for @ copyright
 const Footer = ({ className }: { className?: string }) => {
