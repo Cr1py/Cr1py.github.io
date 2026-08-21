@@ -67,7 +67,7 @@ const FeaturedProjects = () => {
                         {project.title}
                       </h3>
 
-                      <p className="text-ele-text-light mb-4 line-clamp-2">
+                      <p className="text-ele-text-light mb-4 line-clamp-3">
                         {project.description}
                       </p>
 

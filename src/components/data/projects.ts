@@ -42,9 +42,29 @@ export const projects: Project[] = [
     featured: true,
     date: '2026-04'
   },
-
   {
     id: 'proj-nlp',
+    title: 'Riipen NLP Project',
+    description:
+      'A data processing and natural language processing Riipen project, focused on transforming unstructured web data into structured datasets for NLP analysis.',
+    shortDescription:
+      'Web data pipeline and NLP preprocessing project',
+    longDescription:
+      'Built a data pipeline to scrape, parse, and clean unstructured web data into structured datasets using Beautiful Soup 4 and Pandas. Implemented text preprocessing techniques including regular expressions and tokenization with NLTK to support downstream NLP feature extraction across multiple datasets.',
+    technologies: [
+      'Python',
+      'NLTK',
+      'Pandas',
+      'Beautiful Soup 4',
+      'Google Colab'
+    ],
+    imageUrl: 'src/assets/Riipen-Logo.png',
+    category: 'Freelance',
+    featured: true,
+    date: '2024-03'
+  },
+  {
+    id: 'proj-picams',
     title: 'Natural Language Processing',
     description:
       'A data processing and natural language processing Riipen project, focused on transforming unstructured web data into structured datasets for NLP analysis.',
@@ -59,12 +79,11 @@ export const projects: Project[] = [
       'Beautiful Soup 4',
       'Google Colab'
     ],
-    imageUrl: 'src/assets/nlpImg.png',
-    category: 'Freelance',
-    featured: true,
-    date: '2024-03'
+    imageUrl: 'src/assets/Riipen-Logo.png',
+    category: 'School',
+    featured: false,
+    date: '2023-09'
   },
-
   {
     id: 'proj-western-maps',
     title: 'Campus Building Map',
@@ -81,10 +100,28 @@ export const projects: Project[] = [
       'CSS',
       'REST API'
     ],
-    imageUrl: 'src/assets/capstoneImg.png',
+    imageUrl: 'src/assets/MC-groundfloor.png',
     githubUrl: 'https://github.com/Cr1py/Western_Maps',
     category: 'School',
     featured: true,
     date: '2022-09'
+  },
+  {
+    id: 'proj-custom-discord',
+    title: 'Custom Discord UI',
+    description:
+      'Used Better Discord plugin to add a custom CSS theme to my Discord client.',
+    shortDescription:
+      'Custom Discord user interface',
+    longDescription:
+      'Used Better Discord plugin to add a custom CSS theme to my Discord client.',
+    technologies: [
+      'CSS',
+      'Better Discord'
+    ],
+    imageUrl: 'src/assets/customDiscordImg1.png',
+    category: 'Personal',
+    featured: true,
+    date: '2021-11'
   }
 ];
