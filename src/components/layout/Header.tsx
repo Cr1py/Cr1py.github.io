@@ -8,6 +8,7 @@ import {
   FaBars,
   FaPaintBrush,
   FaTimes,
+  FaPaperPlane
 } from "react-icons/fa";
 
 type HeaderProps = {
@@ -17,7 +18,8 @@ type HeaderProps = {
 const HOBBY_LINKS = [
   { to: "/hobbies/art", icon: <FaPaintBrush />, label: "Art" },
   { to: "/hobbies/baking", icon: <PiBowlFoodFill />, label: "Baking"},
-  { to: "/hobbies/TCGs", icon: <TbPlayCardStarFilled />, label: "TCGs" }
+  { to: "/hobbies/TCGs", icon: <TbPlayCardStarFilled />, label: "TCGs" },
+  { to: "/hobbies/travel", icon: <FaPaperPlane />, label: "Travel" }
 ];
 
 const PROJECT_LINKS = [

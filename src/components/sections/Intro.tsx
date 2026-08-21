@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { FaGithub, FaLinkedin, FaDownload, FaEye } from "react-icons/fa"
 import { personalInfo } from "../data/personal-info"
-import resume from "../data/Christine_Bautista_Resume2026.pdf"
+import resume from "/src/assets/Christine_Bautista_Resume2026.pdf"
 
 const Intro = () => {
   return (
