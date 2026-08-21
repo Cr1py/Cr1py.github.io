@@ -100,7 +100,7 @@ const AboutMeSection = () => {
           >
             <p className="text-sm sm:text-base text-left text-ele-text-light/70 leading-[1.85] mb-6 whitespace-pre-line">
               I am <span className="font-bold">software developer</span> love working with people to solve problems and I am constantly looking for ways to learn and improve myself. 
-              Whether I'm building software, analyzing data, or working with a team, I enjoy taking on new challenges and finding new solutions. {"\n"}
+              Whether I'm building software, analyzing data, or working with a team, <span className="font-bold">I enjoy taking on new challenges and finding new solutions.</span> {"\n"}
               I hope you'll be able to learn more about my personality, my work, and what I can bring to the table as you browse my website. Thanks for stopping by!
             </p>
 
