@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import { FaGithub, FaLinkedin, FaDownload, FaEye } from "react-icons/fa"
 import { personalInfo } from "../data/personal-info"
+import resume from "../data/Christine_Bautista_Resume2026.pdf"
 
 const Intro = () => {
   return (
@@ -45,7 +46,7 @@ const Intro = () => {
           transition={{ delay: 0.6 }}
         >
           <a
-            href="./data/Christine_Bautista_Resume2026.pdf"
+            href={resume}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-ele-pink text-ele-dark font-semibold rounded-lg hover:bg-ele-purple transition-colors duration-300 group"
@@ -54,7 +55,7 @@ const Intro = () => {
             View CV
           </a>
           <a
-            href="./data/Christine_Bautista_Resume2026.pdf"
+            href={resume}
             className="inline-flex items-center gap-2 px-6 py-3 border border-ele-pink text-ele-pink font-semibold rounded-lg hover:bg-ele-pink hover:text-ele-dark transition-colors duration-300 group"
           >
             <FaDownload className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
