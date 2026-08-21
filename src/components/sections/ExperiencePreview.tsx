@@ -13,13 +13,12 @@ const ExperiencePreview = () => {
     });
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
       <div className="text-center mb-12">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl sm:text-4xl font-bold text-ele-pink mb-4"
         >
           <h3 className="text-3xl sm:text-4xl font-bold text-ele-pink mb-4">
             Experience

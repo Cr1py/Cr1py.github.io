@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradescope Results Preview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            overflow: visible;
+        }
+        .summary-banner {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        .summary-score {
+            font-size: 28px;
+            font-weight: 700;
+        }
+        .summary-label {
+            font-size: 13px;
+            color: #555;
+            margin-top: 2px;
+        }
+        .summary-divider {
+            width: 1px;
+            height: 36px;
+            background: #ccc;
+        }
+        .container pre {
+            background: #f8f8f8;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 10px 12px;
+            font-size: 13px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            white-space: pre-wrap;
+            word-break: break-word;
+            overflow-x: hidden;
+        }
+        .container details summary {
+            cursor: pointer;
+            font-size: 13px;
+            padding: 4px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="summary-banner">
+            <div>
+                <div class="summary-score">45.0 pts</div>
+                <div class="summary-label">Total Score</div>
+            </div>
+            <div class="summary-divider"></div>
+            <div>
+                <div style="font-size: 15px; font-weight: 600;">13 tests</div>
+                <div class="summary-label">evaluated</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container"><div style="font-family: Arial, sans-serif;
+            white-space: normal;
+            font-size: 14px;
+            line-height: 1.5">
+    <h3>Test ALL: All expected output types</h3>
+    <p>
+            Required
+    </p>
+    <p>process_file(&#39;input.txt&#39;) should print a summary, return a count, write output.txt, and not produce stderr</p>
+    <p>
+            <strong style="color: orange;">PARTIAL PASS</strong>
+    </p>
+
+    <p>
+            Score: 10/20 points
+    </p>
+
+    <hr>
+    <div style="overflow-y: auto; overflow-x: hidden; max-height: 800px;">
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Expected Output:</p>
+
+
+                <p style="font-size: 12px; font-weight: bold; margin-bottom: 2px;">program Output:</p>
+                <pre><code>Processed<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>3<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>lines.<span style="color: #ccc; user-select: none;">↵</span>
+</code></pre>
+
+                <p style="font-size: 12px; font-weight: bold; margin-bottom: 2px;">return Value:</p>
+                "<code>3</code>"
+
+
+                <p style="font-size: 12px; font-weight: bold; margin-bottom: 2px;">files:</p>
+                    <details style="margin-bottom:8px;">
+                        <summary style="cursor:pointer;">output.txt</summary>
+                        <div style="padding:8px; border-left: 3px solid #ccc; margin-left:8px;"><pre><code>line1<span style="color: #ccc; user-select: none;">↵</span>
+line2<span style="color: #ccc; user-select: none;">↵</span>
+line3<span style="color: #ccc; user-select: none;">↵</span>
+</code></pre></div>
+                    </details>
+                    <details style="margin-bottom:8px;">
+                        <summary style="cursor:pointer;">summary.txt</summary>
+                        <div style="padding:8px; border-left: 3px solid #ccc; margin-left:8px;"><pre><code>Total:<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>3<span style="color: #ccc; user-select: none;">↵</span>
+</code></pre></div>
+                    </details>
+
+            <hr style="border: none; border-top: 1px dashed #6e6e6e; margin: 12px 0;">
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Function Called:</p>
+            <p>process_file(&#39;input.txt&#39;)</p>
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Program Output:</p>
+            <pre style="background:#f8f8f8;
+                        border:1px solid #e0e0e0;
+                        border-radius:4px;
+                        padding:10px 12px;
+                        font-size:13px;
+                        font-family:'Consolas','Courier New',monospace;
+                        white-space:pre-wrap;
+                        word-break:break-word;
+                        overflow-x:hidden">Processed<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>3<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>lines.<span style="color: #ccc; user-select: none;">↵</span>
+</pre>
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Student Return Value:</p>
+            <pre style="background:#f8f8f8;
+                        border:1px solid #e0e0e0;
+                        border-radius:4px;
+                        padding:10px 12px;
+                        font-size:13px;
+                        font-family:'Consolas','Courier New',monospace;
+                        white-space:pre-wrap;
+                        word-break:break-word;
+                        overflow-x:hidden">2</pre>
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Input Files:</p>
+                <details style="margin-bottom:8px;">
+                    <summary style="cursor:pointer;">input.txt</summary>
+                    <div style="padding:8px; border-left: 3px solid #ccc; margin-left:8px;">
+                        <pre style="background:#f8f8f8;
+                                    border:1px solid #e0e0e0;
+                                    border-radius:4px;
+                                    padding:10px 12px;
+                                    font-size:13px;
+                                    font-family:'Consolas','Courier New',monospace;
+                                    white-space:pre-wrap;
+                                    word-break:break-word;
+                                    overflow-x:hidden">line1<span style="color: #ccc; user-select: none;">↵</span>
+line2<span style="color: #ccc; user-select: none;">↵</span>
+line3<span style="color: #ccc; user-select: none;">↵</span>
+</pre>
+                    </div>
+                </details>
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Error Output:</p>
+            <pre style="background:#f8f8f8;
+                        border:1px solid #e0e0e0;
+                        border-radius:4px;
+                        padding:10px 12px;
+                        font-size:13px;
+                        font-family:'Consolas','Courier New',monospace;
+                        white-space:pre-wrap;
+                        word-break:break-word;
+                        overflow-x:hidden">Warning:<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>something<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>unexpected<span style="color: #ccc; user-select: none;">↵</span>
+</pre>
+
+
+
+    </div>
+</div></div><div class="container"><div style="font-family: Arial, sans-serif;
+            white-space: normal;
+            font-size: 14px;
+            line-height: 1.5">
+    <h3>Test 1: AllOf stdout</h3>
+    <p>
+            Required
+    </p>
+    <p>stdout must match multiple conditions</p>
+    <p>
+            <strong style="color: red;">FAILED</strong>
+    </p>
+
+    <p>
+            Score: 0/5 points
+    </p>
+
+    <hr>
+    <div style="overflow-y: auto; overflow-x: hidden; max-height: 800px;">
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Expected Output:</p>
+
+
+                <p style="font-size: 12px; font-weight: bold; margin-bottom: 2px;">program Output:</p>
+                <pre><code>Hello,<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>world!<span style="color: #ccc; user-select: none;">↵</span>
+</code></pre>
+
+
+
+
+            <hr style="border: none; border-top: 1px dashed #6e6e6e; margin: 12px 0;">
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Program Output:</p>
+            <pre style="background:#f8f8f8;
+                        border:1px solid #e0e0e0;
+                        border-radius:4px;
+                        padding:10px 12px;
+                        font-size:13px;
+                        font-family:'Consolas','Courier New',monospace;
+                        white-space:pre-wrap;
+                        word-break:break-word;
+                        overflow-x:hidden">hello<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>world<span style="color: #ccc; user-select: none;">↵</span>
+</pre>
+
+
+
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Hints:</p>
+            <p>Check capitalization and punctuation.</p>
+
+    </div>
+</div></div><div class="container"><div style="font-family: Arial, sans-serif;
+            white-space: normal;
+            font-size: 14px;
+            line-height: 1.5">
+    <h3>Test 2: Numeric return value</h3>
+    <p>
+            Required
+    </p>
+    <p>add(2, 3) should return a value &gt;= 3 and &lt; 6</p>
+    <p>
+            <strong style="color: green;">PASSED</strong>
+    </p>
+
+    <p>
+            Score: 5/5 points
+    </p>
+
+    <hr>
+    <div style="overflow-y: auto; overflow-x: hidden; max-height: 800px;">
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Expected Output:</p>
+
+
+
+                <p style="font-size: 12px; font-weight: bold; margin-bottom: 2px;">return Value:</p>
+                "<code>5</code>"
+
+
+
+            <hr style="border: none; border-top: 1px dashed #6e6e6e; margin: 12px 0;">
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Function Called:</p>
+            <p>add(2, 3)</p>
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Student Return Value:</p>
+            <pre style="background:#f8f8f8;
+                        border:1px solid #e0e0e0;
+                        border-radius:4px;
+                        padding:10px 12px;
+                        font-size:13px;
+                        font-family:'Consolas','Courier New',monospace;
+                        white-space:pre-wrap;
+                        word-break:break-word;
+                        overflow-x:hidden">5</pre>
+
+
+
+
+
+
+    </div>
+</div></div><div class="container"><div style="font-family: Arial, sans-serif;
+            white-space: normal;
+            font-size: 14px;
+            line-height: 1.5">
+    <h3>Test 3: stderr check</h3>
+    <p>
+            Required
+    </p>
+    <p>Program should not produce any error output</p>
+    <p>
+            <strong style="color: red;">FAILED</strong>
+    </p>
+
+    <p>
+            Score: 0/2 points
+    </p>
+
+    <hr>
+    <div style="overflow-y: auto; overflow-x: hidden; max-height: 800px;">
+
+
+
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Program Output:</p>
+            <pre style="background:#f8f8f8;
+                        border:1px solid #e0e0e0;
+                        border-radius:4px;
+                        padding:10px 12px;
+                        font-size:13px;
+                        font-family:'Consolas','Courier New',monospace;
+                        white-space:pre-wrap;
+                        word-break:break-word;
+                        overflow-x:hidden">Hello,<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>world!<span style="color: #ccc; user-select: none;">↵</span>
+</pre>
+
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Error Output:</p>
+            <pre style="background:#f8f8f8;
+                        border:1px solid #e0e0e0;
+                        border-radius:4px;
+                        padding:10px 12px;
+                        font-size:13px;
+                        font-family:'Consolas','Courier New',monospace;
+                        white-space:pre-wrap;
+                        word-break:break-word;
+                        overflow-x:hidden">NameError:<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>name<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>&#39;x&#39;<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>is<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>not<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>defined<span style="color: #ccc; user-select: none;">↵</span>
+</pre>
+
+
+
+    </div>
+</div></div><div class="container"><div style="font-family: Arial, sans-serif;
+            white-space: normal;
+            font-size: 14px;
+            line-height: 1.5">
+    <h3>Test 4: File output check</h3>
+    <p>
+            Required
+    </p>
+    <p>Program must write expected content to result.txt</p>
+    <p>
+            <strong style="color: red;">FAILED</strong>
+    </p>
+
+    <p>
+            Score: 0/5 points
+    </p>
+
+    <hr>
+    <div style="overflow-y: auto; overflow-x: hidden; max-height: 800px;">
+
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Input:</p>
+            <pre style="white-space: pre-wrap;
+                        word-break: break-word;
+                        overflow-x: hidden">result.txt
+</pre>
+
+
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Input Files:</p>
+                <details style="margin-bottom:8px;">
+                    <summary style="cursor:pointer;">input.txt</summary>
+                    <div style="padding:8px; border-left: 3px solid #ccc; margin-left:8px;">
+                        <pre style="background:#f8f8f8;
+                                    border:1px solid #e0e0e0;
+                                    border-radius:4px;
+                                    padding:10px 12px;
+                                    font-size:13px;
+                                    font-family:'Consolas','Courier New',monospace;
+                                    white-space:pre-wrap;
+                                    word-break:break-word;
+                                    overflow-x:hidden">Hello,<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>world!<span style="color: #ccc; user-select: none;">↵</span>
+</pre>
+                    </div>
+                </details>
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Hints:</p>
+            <p>Check your file writing logic — missing comma or punctuation.</p>
+
+    </div>
+</div></div><div class="container"><div style="font-family: Arial, sans-serif;
+            white-space: normal;
+            font-size: 14px;
+            line-height: 1.5">
+    <h3>Test 5: stdout and return value</h3>
+    <p>
+            Required
+    </p>
+    <p>greet(&#39;John&#39;) should print and return a greeting</p>
+    <p>
+            <strong style="color: orange;">PARTIAL PASS</strong>
+    </p>
+
+    <p>
+            Score: 2/5 points
+    </p>
+
+    <hr>
+    <div style="overflow-y: auto; overflow-x: hidden; max-height: 800px;">
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Expected Output:</p>
+
+
+
+                <p style="font-size: 12px; font-weight: bold; margin-bottom: 2px;">return Value:</p>
+                "<code>Hello,<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>John!</code>"
+
+
+
+            <hr style="border: none; border-top: 1px dashed #6e6e6e; margin: 12px 0;">
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Function Called:</p>
+            <p>greet(&#39;John&#39;)</p>
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Program Output:</p>
+            <pre style="background:#f8f8f8;
+                        border:1px solid #e0e0e0;
+                        border-radius:4px;
+                        padding:10px 12px;
+                        font-size:13px;
+                        font-family:'Consolas','Courier New',monospace;
+                        white-space:pre-wrap;
+                        word-break:break-word;
+                        overflow-x:hidden">Hello,<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>John!<span style="color: #ccc; user-select: none;">↵</span>
+</pre>
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Student Return Value:</p>
+            <pre style="background:#f8f8f8;
+                        border:1px solid #e0e0e0;
+                        border-radius:4px;
+                        padding:10px 12px;
+                        font-size:13px;
+                        font-family:'Consolas','Courier New',monospace;
+                        white-space:pre-wrap;
+                        word-break:break-word;
+                        overflow-x:hidden">&#39;Hello, John!&#39;</pre>
+
+
+
+
+
+
+    </div>
+</div></div><div class="container"><div style="font-family: Arial, sans-serif;
+            white-space: normal;
+            font-size: 14px;
+            line-height: 1.5">
+    <h3>Test 6: exception instead of return</h3>
+    <p>
+            Required
+    </p>
+    <p>divide(10, 0) should raise a ValueError</p>
+    <p>
+            <strong style="color: red;">FAILED</strong>
+    </p>
+
+    <p>
+            Score: 0/3 points
+    </p>
+
+    <hr>
+    <div style="overflow-y: auto; overflow-x: hidden; max-height: 800px;">
+
+
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Function Called:</p>
+            <p>divide(10, 0)</p>
+
+
+
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Exception Raised:</p>
+                <p>ZeroDivisionError: division by zero</p>
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Hints:</p>
+            <p>Handle division by zero with a ValueError.</p>
+
+    </div>
+</div></div><div class="container"><div style="font-family: Arial, sans-serif;
+            white-space: normal;
+            font-size: 14px;
+            line-height: 1.5">
+    <h3>Test 7: Multiple expected outputs</h3>
+    <p>
+            Required
+    </p>
+    <p>process(&#39;input.txt&#39;) should print a summary, return a count, and write results.txt</p>
+    <p>
+            <strong style="color: orange;">PARTIAL PASS</strong>
+    </p>
+
+    <p>
+            Score: 3/10 points
+    </p>
+
+    <hr>
+    <div style="overflow-y: auto; overflow-x: hidden; max-height: 800px;">
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Expected Output:</p>
+
+
+                <p style="font-size: 12px; font-weight: bold; margin-bottom: 2px;">program Output:</p>
+                <pre><code>Processed<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>3<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>lines.<span style="color: #ccc; user-select: none;">↵</span>
+</code></pre>
+
+                <p style="font-size: 12px; font-weight: bold; margin-bottom: 2px;">return Value:</p>
+                "<code>3</code>"
+
+
+                <p style="font-size: 12px; font-weight: bold; margin-bottom: 2px;">files:</p>
+                    <details style="margin-bottom:8px;">
+                        <summary style="cursor:pointer;">results.txt</summary>
+                        <div style="padding:8px; border-left: 3px solid #ccc; margin-left:8px;"><pre><code>line1<span style="color: #ccc; user-select: none;">↵</span>
+line2<span style="color: #ccc; user-select: none;">↵</span>
+line3<span style="color: #ccc; user-select: none;">↵</span>
+</code></pre></div>
+                    </details>
+
+            <hr style="border: none; border-top: 1px dashed #6e6e6e; margin: 12px 0;">
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Function Called:</p>
+            <p>process(&#39;input.txt&#39;)</p>
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Program Output:</p>
+            <pre style="background:#f8f8f8;
+                        border:1px solid #e0e0e0;
+                        border-radius:4px;
+                        padding:10px 12px;
+                        font-size:13px;
+                        font-family:'Consolas','Courier New',monospace;
+                        white-space:pre-wrap;
+                        word-break:break-word;
+                        overflow-x:hidden">Processed<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>3<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>lines.<span style="color: #ccc; user-select: none;">↵</span>
+</pre>
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Student Return Value:</p>
+            <pre style="background:#f8f8f8;
+                        border:1px solid #e0e0e0;
+                        border-radius:4px;
+                        padding:10px 12px;
+                        font-size:13px;
+                        font-family:'Consolas','Courier New',monospace;
+                        white-space:pre-wrap;
+                        word-break:break-word;
+                        overflow-x:hidden">2</pre>
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Input Files:</p>
+                <details style="margin-bottom:8px;">
+                    <summary style="cursor:pointer;">input.txt</summary>
+                    <div style="padding:8px; border-left: 3px solid #ccc; margin-left:8px;">
+                        <pre style="background:#f8f8f8;
+                                    border:1px solid #e0e0e0;
+                                    border-radius:4px;
+                                    padding:10px 12px;
+                                    font-size:13px;
+                                    font-family:'Consolas','Courier New',monospace;
+                                    white-space:pre-wrap;
+                                    word-break:break-word;
+                                    overflow-x:hidden">line1<span style="color: #ccc; user-select: none;">↵</span>
+line2<span style="color: #ccc; user-select: none;">↵</span>
+line3<span style="color: #ccc; user-select: none;">↵</span>
+</pre>
+                    </div>
+                </details>
+
+
+
+
+    </div>
+</div></div><div class="container"><div style="font-family: Arial, sans-serif;
+            white-space: normal;
+            font-size: 14px;
+            line-height: 1.5">
+    <h3>Test 8: Long horizontal output</h3>
+    <p>
+            Required
+    </p>
+    <p>very very very very very very verey very veyr very very very very very very verey very veyr very very very very very very verey very veyr very very very very very very verey very veyr very very very very very very verey very veyr very very very very very very verey very veyr long test</p>
+    <p>
+            <strong style="color: red;">FAILED</strong>
+    </p>
+
+    <p>
+            Score: 3/10 points
+    </p>
+
+    <hr>
+    <div style="overflow-y: auto; overflow-x: hidden; max-height: 800px;">
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Expected Output:</p>
+
+
+                <p style="font-size: 12px; font-weight: bold; margin-bottom: 2px;">program Output:</p>
+                <pre><code>The<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>SEI<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Series<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>in<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Software<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Engineering<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>is<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>a<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>collaborative<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>undertaking<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>of<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>the<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Carnegie<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Mellon<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Software<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Engineering<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Institute<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>(SEI)<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>and<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Addison<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Wesley<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>to<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>develop<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>and<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>publish<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>books<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>on<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>software<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>engineering<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>and<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>related<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>topics.<span style="color: #ccc; user-select: none;">↵</span>
+The<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>common<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>goal<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>of<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>the<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>SEI<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>and<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Addison-Wesley<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>is<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>to<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>provide<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>the<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>most<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>current<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>information<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>on<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>these<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>topics<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>in<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>a<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>form<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>that<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>is<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>easily<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>usable<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>by<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>practitioners<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>and<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>students.<span style="color: #ccc; user-select: none;">↵</span>
+<span style="color: #ccc; user-select: none;">↵</span>
+</code></pre>
+
+
+
+
+            <hr style="border: none; border-top: 1px dashed #6e6e6e; margin: 12px 0;">
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Program Output:</p>
+            <pre style="background:#f8f8f8;
+                        border:1px solid #e0e0e0;
+                        border-radius:4px;
+                        padding:10px 12px;
+                        font-size:13px;
+                        font-family:'Consolas','Courier New',monospace;
+                        white-space:pre-wrap;
+                        word-break:break-word;
+                        overflow-x:hidden">Lorem<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>ipsum<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>dolor<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>sit<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>amet<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>consectetur<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>adipiscing<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>elit.<span style="color: #ccc; user-select: none;">↵</span>
+Quisque<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>faucibus<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>ex<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>sapien<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>vitae<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>pellentesque<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>sem<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>placerat.<span style="color: #ccc; user-select: none;">↵</span>
+In<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>id<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>cursus<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>mi<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>pretium<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>tellus<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>duis<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>convallis.<span style="color: #ccc; user-select: none;">↵</span>
+Tempus<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>leo<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>eu<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>aenean<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>sed<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>diam<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>urna<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>tempor.<span style="color: #ccc; user-select: none;">↵</span>
+Pulvinar<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>vivamus<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>fringilla<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>lacus<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>nec<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>metus<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>bibendum<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>egestas.<span style="color: #ccc; user-select: none;">↵</span>
+Iaculis<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>massa<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>nisl<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>malesuada<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>lacinia<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>integer<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>nunc<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>posuere.<span style="color: #ccc; user-select: none;">↵</span>
+Ut<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>hendrerit<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>semper<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>vel<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>class<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>aptent<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>taciti<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>sociosqu.<span style="color: #ccc; user-select: none;">↵</span>
+Ad<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>litora<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>torquent<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>per<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>conubia<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>nostra<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>inceptos<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>himenaeos.<span style="color: #ccc; user-select: none;">↵</span>
+<span style="color: #ccc; user-select: none;">↵</span>
+</pre>
+
+
+
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Hints:</p>
+            <p>Semi long hint text to test this very long ouput message test. Idk what elese to write so i will just ramble on here for a century. Do not mind me as I ramble on, I am just trying to reach a certain word count so that i can test this thing and see if it works as intended.</p>
+
+    </div>
+</div></div><div class="container">
+<h3>Test 9: Test Group</h3>
+    <p>test group tests</p>
+
+<p>
+        <strong style="color: orange;">PARTIAL PASS</strong>
+</p>
+
+<p>Score: 17.0 / 31 points</p>
+<hr>
+
+    <details style="margin-bottom:8px;">
+        <summary style="cursor:pointer; font-weight:bold;">
+            Test 9.1: 10/10 pts
+        </summary>
+        <div style="padding:8px; border-left: 3px solid #ccc; margin-left:8px;">
+            <div style="font-family: Arial, sans-serif;
+            white-space: normal;
+            font-size: 14px;
+            line-height: 1.5">
+    <h3>Test 9.1</h3>
+    <p>
+            Required
+    </p>
+    <p>John</p>
+    <p>
+            <strong style="color: green;">PASSED</strong>
+    </p>
+
+    <p>
+            Score: 10/10 points
+    </p>
+
+    <hr>
+    <div style="overflow-y: auto; overflow-x: hidden; max-height: 800px;">
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Expected Output:</p>
+
+
+                <p style="font-size: 12px; font-weight: bold; margin-bottom: 2px;">program Output:</p>
+                <pre><code>John<span style="color: #ccc; user-select: none;">↵</span>
+</code></pre>
+
+
+
+
+            <hr style="border: none; border-top: 1px dashed #6e6e6e; margin: 12px 0;">
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Program Output:</p>
+            <pre style="background:#f8f8f8;
+                        border:1px solid #e0e0e0;
+                        border-radius:4px;
+                        padding:10px 12px;
+                        font-size:13px;
+                        font-family:'Consolas','Courier New',monospace;
+                        white-space:pre-wrap;
+                        word-break:break-word;
+                        overflow-x:hidden">John<span style="color: #ccc; user-select: none;">↵</span>
+</pre>
+
+
+
+
+
+
+
+    </div>
+</div>
+        </div>
+    </details>
+    <details style="margin-bottom:8px;">
+        <summary style="cursor:pointer; font-weight:bold;">
+            Test 9.2: 7/10 pts
+        </summary>
+        <div style="padding:8px; border-left: 3px solid #ccc; margin-left:8px;">
+            <div style="font-family: Arial, sans-serif;
+            white-space: normal;
+            font-size: 14px;
+            line-height: 1.5">
+    <h3>Test 9.2</h3>
+    <p>
+            Required
+    </p>
+    <p>Wayne</p>
+    <p>
+            <strong style="color: orange;">PARTIAL PASS</strong>
+    </p>
+
+    <p>
+            Score: 7/10 points
+    </p>
+
+    <hr>
+    <div style="overflow-y: auto; overflow-x: hidden; max-height: 800px;">
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Expected Output:</p>
+
+
+                <p style="font-size: 12px; font-weight: bold; margin-bottom: 2px;">program Output:</p>
+                <pre><code>Hello,<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Wayne!<span style="color: #ccc; user-select: none;">↵</span>
+</code></pre>
+
+
+
+
+            <hr style="border: none; border-top: 1px dashed #6e6e6e; margin: 12px 0;">
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Program Output:</p>
+            <pre style="background:#f8f8f8;
+                        border:1px solid #e0e0e0;
+                        border-radius:4px;
+                        padding:10px 12px;
+                        font-size:13px;
+                        font-family:'Consolas','Courier New',monospace;
+                        white-space:pre-wrap;
+                        word-break:break-word;
+                        overflow-x:hidden">Hello<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Wayne<span style="color: #ccc; user-select: none;">↵</span>
+</pre>
+
+
+
+
+
+
+
+    </div>
+</div>
+        </div>
+    </details>
+    <details style="margin-bottom:8px;">
+        <summary style="cursor:pointer; font-weight:bold;">
+            Test 9.3: globals_check: 0.0/1 pts
+        </summary>
+        <div style="padding:8px; border-left: 3px solid #ccc; margin-left:8px;">
+            <div style="font-family: Arial, sans-serif;
+            white-space: normal;
+            font-size: 14px;
+            line-height: 1.5">
+    <h3>Test 9.3: globals_check</h3>
+    <p>
+            Required
+    </p>
+    <p>Program must not use global variables</p>
+    <p>
+            <strong style="color: red;">FAILED</strong>
+    </p>
+
+    <p>
+            Score: 0.0/1 points
+    </p>
+
+    <hr>
+    <div style="overflow-y: auto; overflow-x: hidden; max-height: 800px;">
+
+
+
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Program Output:</p>
+            <pre style="background:#f8f8f8;
+                        border:1px solid #e0e0e0;
+                        border-radius:4px;
+                        padding:10px 12px;
+                        font-size:13px;
+                        font-family:'Consolas','Courier New',monospace;
+                        white-space:pre-wrap;
+                        word-break:break-word;
+                        overflow-x:hidden">Detected<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>global<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>variable<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>&#39;count&#39;.</pre>
+
+
+
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Hints:</p>
+            <p>Avoid using global variables; pass values through functions.</p>
+
+    </div>
+</div>
+        </div>
+    </details>
+    <details style="margin-bottom:8px;">
+        <summary style="cursor:pointer; font-weight:bold;">
+            Test 9.4: Long horizontal output: 0/10 pts
+        </summary>
+        <div style="padding:8px; border-left: 3px solid #ccc; margin-left:8px;">
+            <div style="font-family: Arial, sans-serif;
+            white-space: normal;
+            font-size: 14px;
+            line-height: 1.5">
+    <h3>Test 9.4: Long horizontal output</h3>
+    <p>
+            Required
+    </p>
+    <p>very very very very very very verey very veyr very very very very very very verey very veyr very very very very very very verey very veyr very very very very very very verey very veyr very very very very very very verey very veyr very very very very very very verey very veyr long test</p>
+    <p>
+            <strong style="color: red;">FAILED</strong>
+    </p>
+
+    <p>
+            Score: 0/10 points
+    </p>
+
+    <hr>
+    <div style="overflow-y: auto; overflow-x: hidden; max-height: 800px;">
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Expected Output:</p>
+
+
+                <p style="font-size: 12px; font-weight: bold; margin-bottom: 2px;">program Output:</p>
+                <pre><code>The<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>SEI<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Series<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>in<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Software<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Engineering<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>is<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>a<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>collaborative<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>undertaking<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>of<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>the<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Carnegie<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Mellon<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Software<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Engineering<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Institute<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>(SEI)<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>and<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Addison<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Wesley<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>to<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>develop<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>and<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>publish<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>books<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>on<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>software<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>engineering<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>and<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>related<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>topics.<span style="color: #ccc; user-select: none;">↵</span>
+The<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>common<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>goal<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>of<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>the<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>SEI<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>and<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>Addison-Wesley<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>is<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>to<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>provide<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>the<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>most<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>current<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>information<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>on<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>these<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>topics<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>in<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>a<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>form<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>that<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>is<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>easily<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>usable<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>by<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>practitioners<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>and<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>students.<span style="color: #ccc; user-select: none;">↵</span>
+<span style="color: #ccc; user-select: none;">↵</span>
+</code></pre>
+
+
+
+
+            <hr style="border: none; border-top: 1px dashed #6e6e6e; margin: 12px 0;">
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Program Output:</p>
+            <pre style="background:#f8f8f8;
+                        border:1px solid #e0e0e0;
+                        border-radius:4px;
+                        padding:10px 12px;
+                        font-size:13px;
+                        font-family:'Consolas','Courier New',monospace;
+                        white-space:pre-wrap;
+                        word-break:break-word;
+                        overflow-x:hidden">Lorem<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>ipsum<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>dolor<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>sit<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>amet<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>consectetur<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>adipiscing<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>elit.<span style="color: #ccc; user-select: none;">↵</span>
+Quisque<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>faucibus<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>ex<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>sapien<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>vitae<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>pellentesque<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>sem<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>placerat.<span style="color: #ccc; user-select: none;">↵</span>
+In<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>id<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>cursus<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>mi<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>pretium<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>tellus<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>duis<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>convallis.<span style="color: #ccc; user-select: none;">↵</span>
+Tempus<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>leo<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>eu<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>aenean<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>sed<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>diam<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>urna<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>tempor.<span style="color: #ccc; user-select: none;">↵</span>
+Pulvinar<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>vivamus<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>fringilla<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>lacus<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>nec<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>metus<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>bibendum<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>egestas.<span style="color: #ccc; user-select: none;">↵</span>
+Iaculis<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>massa<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>nisl<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>malesuada<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>lacinia<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>integer<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>nunc<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>posuere.<span style="color: #ccc; user-select: none;">↵</span>
+Ut<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>hendrerit<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>semper<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>vel<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>class<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>aptent<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>taciti<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>sociosqu.<span style="color: #ccc; user-select: none;">↵</span>
+Ad<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>litora<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>torquent<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>per<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>conubia<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>nostra<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>inceptos<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>himenaeos.<span style="color: #ccc; user-select: none;">↵</span>
+<span style="color: #ccc; user-select: none;">↵</span>
+</pre>
+
+
+
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Hints:</p>
+            <p>Semi long hint text to test this very long ouput message test. Idk what elese to write so i will just ramble on here for a century. Do not mind me as I ramble on, I am just trying to reach a certain word count so that i can test this thing and see if it works as intended.</p>
+
+    </div>
+</div>
+        </div>
+    </details>
+</div><div class="container"><div style="font-family: Arial, sans-serif;
+            white-space: normal;
+            font-size: 14px;
+            line-height: 1.5">
+    <h3>Test 10: File Copy</h3>
+    <p>
+            Required
+    </p>
+    <p>Program must copy input.txt to output.txt</p>
+    <p>
+            <strong style="color: red;">FAILED</strong>
+    </p>
+
+    <p>
+            Score: 0/5 points
+    </p>
+
+    <hr>
+    <div style="overflow-y: auto; overflow-x: hidden; max-height: 800px;">
+
+
+
+
+
+
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Input Files:</p>
+                <details style="margin-bottom:8px;">
+                    <summary style="cursor:pointer;">input.txt</summary>
+                    <div style="padding:8px; border-left: 3px solid #ccc; margin-left:8px;">
+                        <pre style="background:#f8f8f8;
+                                    border:1px solid #e0e0e0;
+                                    border-radius:4px;
+                                    padding:10px 12px;
+                                    font-size:13px;
+                                    font-family:'Consolas','Courier New',monospace;
+                                    white-space:pre-wrap;
+                                    word-break:break-word;
+                                    overflow-x:hidden">This<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>is<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>some<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>example<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>file<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>content.<span style="color: #ccc; user-select: none;">↵</span>
+It<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>should<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>be<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>copied<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>to<span style="background: url('data:image/svg+xml;utf-8,%3Csvg%20viewBox%3D%220%200%206%206%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Ccircle%20fill%3D%22%23ccc%22%20cx%3D%223%22%20cy%3D%223%22%20r%3D%221%22%20/%3E%3C/svg%3E') no-repeat center;"> </span>output.txt.<span style="color: #ccc; user-select: none;">↵</span>
+</pre>
+                    </div>
+                </details>
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Hints:</p>
+            <p>insert hint for test1 here idk</p>
+
+    </div>
+</div></div><div class="container"><div style="font-family: Arial, sans-serif;
+            white-space: normal;
+            font-size: 14px;
+            line-height: 1.5">
+    <h3>Test 11: add(2, 3)</h3>
+    <p>
+            Required
+    </p>
+    <p>add(2, 3) should return 5</p>
+    <p>
+            <strong style="color: red;">FAILED</strong>
+    </p>
+
+    <p>
+            Score: 0/5 points
+    </p>
+
+    <hr>
+    <div style="overflow-y: auto; overflow-x: hidden; max-height: 800px;">
+
+
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Function Called:</p>
+            <p>add(2, 3)</p>
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Program Output:</p>
+            <pre style="background:#f8f8f8;
+                        border:1px solid #e0e0e0;
+                        border-radius:4px;
+                        padding:10px 12px;
+                        font-size:13px;
+                        font-family:'Consolas','Courier New',monospace;
+                        white-space:pre-wrap;
+                        word-break:break-word;
+                        overflow-x:hidden">asdf<span style="color: #ccc; user-select: none;">↵</span>
+</pre>
+
+
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Exception Raised:</p>
+                <p>TypeError: unsupported operand type(s) for +: &#39;int&#39; and &#39;str&#39;</p>
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Hints:</p>
+            <p>insert hint for test2 here</p>
+
+    </div>
+</div></div><div class="container"><div style="font-family: Arial, sans-serif;
+            white-space: normal;
+            font-size: 14px;
+            line-height: 1.5">
+    <h3>Test 12: add(2, 3) correct</h3>
+    <p>
+            Required
+    </p>
+    <p>add(2, 3) should return 5</p>
+    <p>
+            <strong style="color: green;">PASSED</strong>
+    </p>
+
+    <p>
+            Score: 5/5 points
+    </p>
+
+    <hr>
+    <div style="overflow-y: auto; overflow-x: hidden; max-height: 800px;">
+
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Expected Output:</p>
+
+
+
+                <p style="font-size: 12px; font-weight: bold; margin-bottom: 2px;">return Value:</p>
+                "<code>5</code>"
+
+
+
+            <hr style="border: none; border-top: 1px dashed #6e6e6e; margin: 12px 0;">
+
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Function Called:</p>
+            <p>add(2, 3)</p>
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Program Output:</p>
+            <pre style="background:#f8f8f8;
+                        border:1px solid #e0e0e0;
+                        border-radius:4px;
+                        padding:10px 12px;
+                        font-size:13px;
+                        font-family:'Consolas','Courier New',monospace;
+                        white-space:pre-wrap;
+                        word-break:break-word;
+                        overflow-x:hidden">asdf<span style="color: #ccc; user-select: none;">↵</span>
+</pre>
+
+            <p style="font-size: 15px; font-weight: bold; margin-bottom: 4px;">Student Return Value:</p>
+            <pre style="background:#f8f8f8;
+                        border:1px solid #e0e0e0;
+                        border-radius:4px;
+                        padding:10px 12px;
+                        font-size:13px;
+                        font-family:'Consolas','Courier New',monospace;
+                        white-space:pre-wrap;
+                        word-break:break-word;
+                        overflow-x:hidden">5</pre>
+
+
+
+
+
+
+    </div>
+</div></div>
+
+    <div class="container" style="text-align: center; padding: 10px;">
+        <p>Generated with execution time: 3.5s</p>
+    </div>
+</body>
+</html>
