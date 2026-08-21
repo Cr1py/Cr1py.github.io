@@ -15,12 +15,25 @@ const ExperiencePreview = () => {
   return (
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
-        <h3 className="text-xl sm:text-2xl font-semibold text-ele-text-light mb-4">
-              Experience
-        </h3>
-        <p className="text-sm sm:text-base text-center text-ele-text-light/70">
-          Here is a brief overview of my professional journey, highlighting my most recent experience. If you want to dive deeper, feel free to follow the link below!
-        </p>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-3xl sm:text-4xl font-bold text-ele-pink mb-4"
+        >
+          <h3 className="text-3xl sm:text-4xl font-bold text-ele-pink mb-4">
+            Experience
+          </h3>
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="text-sm sm:text-base text-center text-ele-text-light/70 mb-6"
+        >
+          Here is a brief overview of my career journey, highlighting my most recent experience. If you want to dive deeper, feel free to follow the link below!
+        </motion.p>
       </div>
 
       <motion.div

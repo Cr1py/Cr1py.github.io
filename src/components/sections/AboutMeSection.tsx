@@ -25,8 +25,14 @@ const AboutMeSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-start">
 
           {/* Left Section - Stats */}
-          <div>
-            <h3 className="text-xl sm:text-2xl font-semibold text-ele-text-light mb-4">
+          <motion.div
+            className="w-full"
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            <h3 className="text-3xl sm:text-4xl font-bold text-ele-pink mb-4">
               A little about me...
             </h3>
 
@@ -82,15 +88,19 @@ const AboutMeSection = () => {
               </motion.div>
 
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Section - About Text */}
-          <div>
-            <p className="text-sm sm:text-base text-left text-ele-text-light/70 whitespace-pre-line">
+          <motion.div
+            className="text-sm sm:text-base text-left text-ele-text-light/70 whitespace-pre-line"
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+          >
               I am <span className="font-bold">software developer</span> love working with people to solve problems and I am constantly looking for ways to learn and improve myself. 
               Whether I'm building software, analyzing data, or working with a team, <span className="font-bold">I enjoy taking on new challenges and finding new solutions.</span> {"\n"}
               I hope you'll be able to learn more about my personality, my work, and what I can bring to the table as you browse my website. Thanks for stopping by!
-            </p>
 
             {/* Skills */}
             <div className="flex flex-wrap gap-2 mt-6">
@@ -104,8 +114,8 @@ const AboutMeSection = () => {
                 </motion.span>
               ))}
             </div>
-          </div>
-        
+
+          </motion.div>
         </div>
       </div>
     </div>
