@@ -24,8 +24,8 @@ export const personalInfo: PersonalInfo = {
   email: 'cbautista2503@gmail.com',
   location: 'Vancouver, Canada',
   currentPosition: {
-    title: 'Automation Developer Intern',
-    company: 'General Dynamics Land Systems - Canada',
+    title: 'New Computer Science Graduate',
+    company: 'The University of Western Ontario',
     location: 'London ON, Canada'
   },
   socials: {
