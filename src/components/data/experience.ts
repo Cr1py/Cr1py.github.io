@@ -1,3 +1,8 @@
+import GDImg from "../../assets/GD.jpg";
+import GoodSelfImg from "../../assets/goodSelf.jpg";
+import FimiMallIMG from "../../assets/fimi.png";
+import SimulenceIMG from "../../assets/simu.png";
+
 export interface Experience {
   id: string;
   title: string;
@@ -20,19 +25,19 @@ export const experiences: Experience[] = [
     startDate: '2025-05',
     endDate: '2025-08',
     description:
-      'Developed Python automation tools and SQL solutions to streamline Supply Chain Management workflows, automate repetitive tasks, and improve the efficiency of internal processes.',
+      'Collaborated with departments such as Suppy Chain Management, HR, and Operations to identifiy pain points with their daily workflows. Developed Python automation tools, and SQL queries and schemas to streamline workflows, automate repetitive tasks, and improve the efficiency of internal processes.',
     technologies: [
       'Python',
       'SQL',
+      'JSON',
       'Bash',
       'Excel',
-      'Automation',
       'Data Processing',
     ],
     achievements: [
-        ' Automated part identification, report generation, and email communications, reducing manual tasks by 5-10 minutes per item and significantly optimizing project timelines.'
+        'Automated part identification, report generation, and email communications, reducing manual tasks by 5-10 minutes per item and significantly optimizing project timelines.',
     ],
-    imageUrl: '/experience/general-dynamics.jpg',
+    imageUrl: GDImg,
   },
 
   {
@@ -43,22 +48,25 @@ export const experiences: Experience[] = [
     startDate: '2024-05',
     endDate: '2024-12',
     description:
-      'Developed features and analytics for a React-based mobile and web application, using Mixpanel and Firebase to track user behaviour and identify opportunities to improve the user experience.',
+      'Worked closely with product, design, and engineering teams to understand the architecture and functionality of a React-based mobile and web application and identify opportunities for improvement. Contributed to the development of UI components using HTML and CSS based on Figma designs.',
     technologies: [
       'TypeScript',
+      'HTML',
+      'CSS',
       'React',
       'Node.js',
       'Firebase',
       'Mixpanel',
       'Git',
+      'CI/CD',
+      'TestFlight'
     ],
     achievements: [
-      'Implemented Mixpanel event tracking across 13 key pages of the React-based mobile and web application.',
-      'Integrated Mixpanel with Firebase Analytics to enable detailed analysis of user behaviour and application usage.',
-      'Analyzed user engagement data to identify areas for improvement and support increases in user retention.',
-      'Conducted end-to-end and UAT testing across development, staging, and production environments to reduce production bugs.',
+      'Implemented Mixpanel event tracking across 13 key pages.',
+      'Integrated Mixpanel with Firebase Analytics and created 18 metrics reports.',
+      'Conducted unit, end-to-end, and UAT testing across development, staging, and production environments to reduce user bug reports by 80%.',
     ],
-    imageUrl: '/experience/goodself.jpg',
+    imageUrl: GoodSelfImg,
   },
 
   {
@@ -69,7 +77,7 @@ export const experiences: Experience[] = [
     startDate: '2024-01',
     endDate: '2024-04',
     description:
-      'Worked on search optimization and backend development, improving product search functionality and data retrieval using Elasticsearch, MongoDB, and Java Spring Boot.',
+      'Contributed to the development of backend systems for an e-commerce platform, focusing on product search and data retrieval. Developed database queries to retrieve, rank, and filter products across multiple parameters, improving the relevance of search results. Integrated the search functionality into the backend to support reliable product retrieval and API services.',
     technologies: [
       'Java',
       'Spring Boot',
@@ -83,11 +91,10 @@ export const experiences: Experience[] = [
     ],
     achievements: [
       'Optimized search data using MongoDB, Studio 3T, and Elasticsearch to improve data retrieval reliability.',
-      'Used Docker to access containerized database services locally during development.',
-      'Integrated search phrase and search term queries into the Java Spring Boot backend to improve product ranking and search relevance.',
+      'Integrated search phrase and search term queries into the backend to improve product ranking and search relevance.',
       'Used Postman to test REST API endpoints and validate HTTP requests, improving integration reliability.',
     ],
-    imageUrl: '/experience/fimimall.jpg',
+    imageUrl: FimiMallIMG,
   },
 
   {
@@ -98,7 +105,7 @@ export const experiences: Experience[] = [
     startDate: '2022-06',
     endDate: '2022-09',
     description:
-      'Conducted user research and designed user interfaces for a game development company, using feedback from experienced game developers to improve internal processes and the company website.',
+      'Conducted user research and designed user interfaces for a video game development testing company, using feedback from experienced game developers to improve internal processes and the company website\'s design appeal.',
     technologies: [
       'Figma',
       'User Research',
@@ -106,10 +113,9 @@ export const experiences: Experience[] = [
       'Prototyping',
     ],
     achievements: [
-      'Conducted surveys and live interviews with 8 senior game developers to identify pain points in the game development process.',
-      'Identified opportunities that led to 3 process improvements within the game development cycle.',
-      'Designed the main website user interface in Figma, creating an intuitive and visually appealing experience.',
+      'Interviewed 8 senior game developers, identifying opportunities that led to 3 process improvements within the game development cycle.',
+      'Updated the main website user interface design in Figma, creating a more intuitive and visually appealing experience.'
     ],
-    imageUrl: '/experience/simulence.jpg',
+    imageUrl: SimulenceIMG,
   },
 ];
