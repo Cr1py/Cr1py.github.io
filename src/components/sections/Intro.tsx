@@ -1,11 +1,11 @@
 import { motion } from "framer-motion"
 import { FaGithub, FaLinkedin, FaDownload, FaEye } from "react-icons/fa"
 import { personalInfo } from "../data/personal-info"
-import resume from "/src/assets/Christine_Bautista_Resume2026.pdf"
+import resume from "/src/assets/CBautista_Resume.pdf"
 
 const Intro = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 gap-8 lg:gap-4">
+    <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 gap-8 lg:gap-4">
       {/* Left Section - Text */}
       <motion.div
         className="flex-1 text-center lg:text-left w-full"

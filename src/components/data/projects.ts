@@ -1,3 +1,8 @@
+import capstoneImg from "../../assets/capstoneImg.png";
+import riipenLogo from "../../assets/Riipen-Logo.png";
+import mcGroundFloor from "../../assets/MC-groundfloor.png";
+import customDiscordImg1 from "../../assets/customDiscordImg1.png";
+
 export interface Project {
   id: string;
   title: string;
@@ -36,7 +41,7 @@ export const projects: Project[] = [
       'Gradescope API',
       'Git'
     ],
-    imageUrl: 'src/assets/capstoneImg.png',
+    imageUrl: capstoneImg,
     docUrl: 'https://docs.google.com/document/d/1O5qf_DMcFqYfs4oCuyddA4Y3oEUy9TBw4a7ZQiWutMM/edit?tab=t.rm89jsjypd',
     category: 'School',
     featured: true,
@@ -58,7 +63,7 @@ export const projects: Project[] = [
       'Beautiful Soup 4',
       'Google Colab'
     ],
-    imageUrl: 'src/assets/Riipen-Logo.png',
+    imageUrl: riipenLogo,
     category: 'Freelance',
     featured: true,
     date: '2024-03'
@@ -79,7 +84,7 @@ export const projects: Project[] = [
       'Beautiful Soup 4',
       'Google Colab'
     ],
-    imageUrl: 'src/assets/Riipen-Logo.png',
+    imageUrl: riipenLogo,
     category: 'School',
     featured: false,
     date: '2023-09'
@@ -100,7 +105,7 @@ export const projects: Project[] = [
       'CSS',
       'REST API'
     ],
-    imageUrl: 'src/assets/MC-groundfloor.png',
+    imageUrl: mcGroundFloor,
     githubUrl: 'https://github.com/Cr1py/Western_Maps',
     category: 'School',
     featured: true,
@@ -119,7 +124,7 @@ export const projects: Project[] = [
       'CSS',
       'Better Discord'
     ],
-    imageUrl: 'src/assets/customDiscordImg1.png',
+    imageUrl: customDiscordImg1,
     category: 'Personal',
     featured: true,
     date: '2021-11'

@@ -1,5 +1,3 @@
-import { useRef } from "react"
-import { motion } from "framer-motion"
 import Intro from "../components/sections/Intro"
 import AboutMeSection from "../components/sections/AboutMeSection"
 import ExperiencePreview from "../components/sections/ExperiencePreview"
@@ -11,8 +9,7 @@ import '../App.css'
 const Home = ()=> {
 
     return (
-        <div>
-
+        <div >
             {/* Intro */}
             <section>
                 <div>
