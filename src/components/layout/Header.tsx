@@ -66,7 +66,7 @@ const Header = ({ className = "" }: HeaderProps) => {
 
   return (
     <header
-      className={`h-20 bg-ele-dark/90 backdrop-blur-sm border-b border-ele-purple/20 ${className}`}
+      className={`h-16 bg-ele-dark/90 backdrop-blur-sm border-b border-ele-purple/20 ${className}`}
     >
       <nav className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 relative">
         <div className="flex items-center justify-between h-full">
