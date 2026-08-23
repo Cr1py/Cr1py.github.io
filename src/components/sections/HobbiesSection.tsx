@@ -7,7 +7,7 @@ const HobbiesSection = () => {
   const [activeHobby, setActiveHobby] = useState<string | null>(null);
 
   return (
-    <div className="w-full max-w-7xl mx-auto">
+    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-10">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -18,7 +18,7 @@ const HobbiesSection = () => {
         </h3>
       </motion.h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
         {hobbies.map((hobby, index) => (
           <motion.div
             key={hobby.id}

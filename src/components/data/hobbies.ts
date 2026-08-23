@@ -28,11 +28,5 @@ export const hobbies: Hobby[] = [
     name: 'TCGs',
     icon: TbPlayCardStarFilled,
     description: 'I like art. I like strategy. And I LOVE gambling. Getting into trading card games might have been a mistake...',
-  },
-  {
-    id: 'travel',
-    name: 'Travel',
-    icon: FaPaperPlane,
-    description: 'My fun little photo dump of my travels. I\'ve been to a few places, but I\'m hoping to go to more in the future!',
   }
 ];

@@ -31,7 +31,7 @@ const AboutMeSection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          <h3 className="text-3xl sm:text-4xl font-bold text-ele-pink mb-4">
+          <h3 className="text-left text-3xl sm:text-4xl font-bold text-ele-pink mb-4">
             A little about me...
           </h3>
 
@@ -55,10 +55,10 @@ const AboutMeSection = () => {
               whileHover={{ y: -3 }}
             >
               <div className="font-mono text-2xl sm:text-3xl font-bold text-ele-pink tracking-tight">
-                SWE
+                2026
               </div>
               <div className="text-xs text-ele-text-light/60 mt-1">
-                Software Engineering
+                University of Western Ontario
               </div>
             </motion.div>
 

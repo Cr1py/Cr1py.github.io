@@ -21,7 +21,7 @@ export const personalInfo: PersonalInfo = {
   name: 'Christine Bautista',
   title: 'New Graduate from the University of Western Ontario',
   shortBio: '',
-  email: 'cbautista2503@gmail.com',
+  email: 'c.bautista2503@gmail.com',
   location: 'Vancouver, Canada',
   currentPosition: {
     title: 'New Computer Science Graduate',

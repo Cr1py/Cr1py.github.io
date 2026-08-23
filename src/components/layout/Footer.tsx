@@ -13,7 +13,7 @@ const Footer = ({ className }: { className?: string }) => {
  
         {/* Copyright */}
         <div>
-            © {currentYear} {personalInfo.name}. All rights reserved.
+            © {currentYear} {personalInfo.name} — Built with ❤️
         </div>
  
         {/* Social Links */}
