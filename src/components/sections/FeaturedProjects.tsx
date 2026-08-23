@@ -27,7 +27,7 @@ const FeaturedProjects = () => {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
+    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 lg:pt-10">
       <div className="relative">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

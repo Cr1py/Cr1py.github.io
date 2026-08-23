@@ -10,6 +10,7 @@ import {
   FaTimes,
   FaPaperPlane
 } from "react-icons/fa";
+import ContactSection from "../sections/ContactSection"
 
 type HeaderProps = {
   className?: string;
@@ -19,7 +20,6 @@ const HOBBY_LINKS = [
   { to: "/hobbies/art", icon: <FaPaintBrush />, label: "Art" },
   { to: "/hobbies/baking", icon: <PiBowlFoodFill />, label: "Baking"},
   { to: "/hobbies/TCGs", icon: <TbPlayCardStarFilled />, label: "TCGs" },
-  { to: "/hobbies/travel", icon: <FaPaperPlane />, label: "Travel" }
 ];
 
 const PROJECT_LINKS = [
@@ -158,16 +158,12 @@ const Header = ({ className = "" }: HeaderProps) => {
                 </AnimatePresence>
               </div>
 
-              <Link
-                to="/contact"
-                className={`${
-                  isActive("/contact")
-                    ? "text-pink-400"
-                    : "text-ele-text-light hover:text-ele-text"
-                } transition-colors duration-300 text-lg`}
+              <a
+                href="/#contact"
+                className="text-ele-text-light hover:text-ele-text transition-colors duration-300 text-lg"
               >
                 Contact
-              </Link>
+              </a>
             </div>
           </div>
 

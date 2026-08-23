@@ -51,6 +51,21 @@
     --color-ele-text-light: #FFCDB2;
     --color-ele-peach: #FFB4A2;
     --color-ele-text: #ffffff;
+    --color-bg: #0D0A0F;
+    --color-bg2: #130F16;
+    --color-bg3: #1A1420;
+    --color-card: #1F1828;
+    --color-border: rgba(255, 180, 120, 0.08);
+    --color-border2: rgba(255, 180, 120, 0.18);
+    --color-text: #F5EEE8;
+    --color-muted: #9A8A80;
+    --color-faint: #4E3F3A;
+    --color-sun: #FF9A5C;
+    --color-sun2: #E8772A;
+    --color-dusk: #FF6B6B;
+    --color-magenta: #C96FD8;
+    --color-gold: #FFD166;
+    --color-blush: #FF8FA3;
   }
 
   #social .button-icon {
@@ -117,3 +132,6 @@ code {
   background: var(--code-bg);
 }
 
+html {
+  scroll-behavior: smooth;
+}
