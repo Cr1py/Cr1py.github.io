@@ -9,11 +9,11 @@ const Footer = ({ className }: { className?: string }) => {
     <footer
       className={`h-20 ${className}`}
     >
-      <div className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex flex-row items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto h-20 px-4 sm:px-6 lg:px-8 flex flex-row items-center justify-between gap-4">
  
         {/* Copyright */}
         <div>
-            © {currentYear} {personalInfo.name} — Built with ❤️
+            © {currentYear} {personalInfo.name} - Thanks for stopping by!
         </div>
  
         {/* Social Links */}

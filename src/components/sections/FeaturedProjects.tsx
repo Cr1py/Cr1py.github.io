@@ -71,27 +71,27 @@ const FeaturedProjects = () => {
                         {project.description}
                       </p>
 
-                    {/* technologies */}
-                    <div className="flex flex-nowrap gap-2 mt-5 overflow-hidden">
-                    {project.technologies.slice(0, 3).map((tech) => (
-                        <motion.span
-                        key={tech}
-                        className="font-mono text-[10px] sm:text-[11px] px-2.5 py-1 rounded border border-ele-border text-ele-text-light/60 bg-ele-dark transition-all duration-200 tracking-wide hover:border-ele-pink hover:text-ele-pink whitespace-nowrap shrink-0"
-                        whileHover={{ y: -2 }}
-                        >
-                        {tech}
-                        </motion.span>
-                    ))}
+                      {/* technologies */}
+                      <div className="flex flex-nowrap gap-2 mt-5 overflow-hidden">
+                        {project.technologies.slice(0, 3).map((tech) => (
+                          <motion.span
+                            key={tech}
+                            className="font-mono text-[10px] px-2.5 py-1 rounded border border-ele-border text-ele-text-light/60 bg-ele-dark transition-all duration-200 tracking-wide hover:border-ele-pink hover:text-ele-pink whitespace-nowrap shrink-0"
+                            whileHover={{ y: -2 }}
+                          >
+                            {tech}
+                          </motion.span>
+                        ))}
 
-                    {project.technologies.length > 3 && (
-                        <motion.span
-                        className="font-mono text-[10px] sm:text-[11px] px-2.5 py-1 rounded border border-ele-border text-ele-text-light/60 bg-ele-dark tracking-wide whitespace-nowrap shrink-0"
-                        whileHover={{ y: -2 }}
-                        >
-                        +{project.technologies.length - 3}
-                        </motion.span>
-                    )}
-                    </div>
+                        {project.technologies.length > 3 && (
+                          <motion.span
+                            className="font-mono text-[10px] sm:text-[11px] px-2.5 py-1 rounded border border-ele-border text-ele-text-light/60 bg-ele-dark tracking-wide whitespace-nowrap shrink-0"
+                            whileHover={{ y: -2 }}
+                          >
+                            +{project.technologies.length - 3}
+                          </motion.span>
+                        )}
+                      </div>
                     </div>
                   </Link>
                 </motion.div>
