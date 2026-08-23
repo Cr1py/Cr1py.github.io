@@ -1,4 +1,5 @@
 import capstoneImg from "../../assets/capstoneImg.png";
+import capstoneDemo from "../../assets/preview.html?url";
 import piCamsImg from "../../assets/piCams.png";
 import riipenLogo from "../../assets/Riipen-Logo.png";
 import mcGroundFloor from "../../assets/MC-groundfloor.png";
@@ -48,7 +49,7 @@ export const projects: Project[] = [
     ],
     imageUrl: capstoneImg,
     docUrl: 'https://docs.google.com/document/d/1O5qf_DMcFqYfs4oCuyddA4Y3oEUy9TBw4a7ZQiWutMM/edit?tab=t.rm89jsjypd',
-    demoUrl: '',
+    demoUrl: capstoneDemo,
     category: 'School',
     featured: true,
     date: '2026-04'
@@ -102,7 +103,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/Cr1py/Pi-Cams',
     docUrl: 'https://docs.google.com/document/d/1E7uFqbcq4rbA7CDt9fvQErw7aQOaYISQcTtDdHzvz8g/edit?tab=t.0',
     category: 'School',
-    featured: false,
+    featured: true,
     date: '2023-09'
   },
   {
