@@ -103,7 +103,7 @@ const ProjectDetail = () => {
         {/* Long Description */}
         <div className="mb-6">
           <ul className="text-left list-disc list-inside space-y-2 text-ele-text-light">
-            {project.longDescription.map((longDescription, i) => (
+            {(project.longDescription ?? []).map((longDescription, i) => (
               <li key={i} className="pl-2">
                 {longDescription}
               </li>
