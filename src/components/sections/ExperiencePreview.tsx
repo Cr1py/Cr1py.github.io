@@ -47,37 +47,39 @@ const ExperiencePreview = () => {
             <FaBriefcase className="w-8 h-8 text-ele-pink" />
           </div>
           <div className="flex-1">
-            <h3 className="text-2xl text-left font-bold text-ele-pink mb-2">
+            <h3 className="text-2xl text-left font-bold text-ele-pink mb-1">
               {latestExperience.title}
             </h3>
-            <h4 className="text-xl text-left text-ele-text-light mb-2">
+            <h4 className="text-xl text-left text-ele-text-light mb-1">
               {latestExperience.company}
             </h4>
-            <p className="text-sm sm:text-base text-left text-ele-text-light/70 mb-4">
-              {latestExperience.location} •{" "}
-              {new Date(latestExperience.startDate).toLocaleDateString(
-                "en-US",
-                {
-                  month: "long",
-                  year: "numeric",
-                }
-              )}
-              {latestExperience.endDate
-                ? ` - ${new Date(latestExperience.endDate).toLocaleDateString(
-                    "en-US",
-                    {
-                      month: "long",
-                      year: "numeric",
-                    }
-                  )}`
-                : " - Present"}
-            </p>
-            <p className="text-sm sm:text-base text-left text-ele-text-light/70 mb-4">
+            <div className="mb-2">
+              <p className="text-sm sm:text-base text-left text-ele-text-light/70">
+                {latestExperience.location} •{" "}
+                {new Date(latestExperience.startDate).toLocaleDateString(
+                  "en-US",
+                  {
+                    month: "long",
+                    year: "numeric",
+                  }
+                )}
+                {latestExperience.endDate
+                  ? ` - ${new Date(latestExperience.endDate).toLocaleDateString(
+                      "en-US",
+                      {
+                        month: "long",
+                        year: "numeric",
+                      }
+                    )}`
+                  : " - Present"}
+              </p>
+            </div>
+            <p className="text-sm sm:text-base text-left text-ele-text-light/70">
               {latestExperience.description}
             </p>
             {latestExperience.achievements &&
               latestExperience.achievements.length > 0 && (
-                <ul className="list-disc text-left list-inside space-y-1 text-ele-text-light mb-6">
+                <ul className="list-disc text-left list-inside space-y-1 text-ele-text-light mt-2 mb-6">
                   {latestExperience.achievements
                     .slice(0, 2)
                     .map((achievement, i) => (
