@@ -100,8 +100,8 @@ const Header = ({ className = "" }: HeaderProps) => {
 
               <Link
                 to="/projects"
-                className={`${
-                  isActive("/projects")
+                className={`flex items-center gap-2 ${
+                  isProjectActive
                     ? "text-pink-400"
                     : "text-ele-text-light hover:text-ele-text"
                 } transition-colors duration-300 text-lg`}

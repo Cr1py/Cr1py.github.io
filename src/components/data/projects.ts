@@ -1,4 +1,5 @@
 import capstoneImg from "../../assets/capstoneImg.png";
+import piCamsImg from "../../assets/piCams.png";
 import riipenLogo from "../../assets/Riipen-Logo.png";
 import mcGroundFloor from "../../assets/MC-groundfloor.png";
 import customDiscordImg1 from "../../assets/customDiscordImg1.png";
@@ -8,7 +9,7 @@ export interface Project {
   title: string;
   description: string;
   shortDescription?: string;
-  longDescription?: string;
+  longDescription?: string[];
   technologies: string[];
   imageUrl: string;
   demoUrl?: string;
@@ -22,14 +23,18 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 'proj-autograder',
-    title: 'Western University Course Auto Grader',
+    title: 'Course Auto Grader',
     description:
-      'A modular Python autograder system developed as a group capstone project for Western University, designed to securely automate assignment grading through Gradescope.',
+      'Built in collaboration within a team of 3, and supervised by Dr. Daniel Servos, this modular Python autograder system was developed as a group capstone project for Western University. This system is designed to automate the process of grading Python programming assignments through Gradescope.',
     shortDescription:
-      'Modular Python autograder system for Gradescope',
-    longDescription:
-      'Designed and developed a modular Python autograder system with a custom KDL-based configuration file. Built isolated Python code execution with resource limits and a Pydantic-validated data pipeline between the sandbox and host process. Generated detailed grading reports with expected vs. actual output comparisons and exception handling using Jinja and HTML/CSS.',
-    technologies: [
+      'Python autograder system for a Western University 1st Year Course',
+    longDescription: [
+      'A reusable custom KDL based configuration file was defined for the professor and teaching assistants to set test cases for the assignment that needed to be graded.',
+      'A configuration parser interpreted instructor defined grading specifications written in KDL and made test cases, inputs, expected outputs, and grading requirements available to other modules.',
+      'The runner executed student submissions within an isolated sandbox, provided configured test inputs, and captured program output, while the output checker compared student results against expected outputs to determine test performance.',
+      'The Gradescope output formatter converted test results into a .json file (the format required by Gradescope) and generated an HTML/CSS interface that allowed students to review their test results and identify errors.',
+    ],
+      technologies: [
       'Python',
       'KDL',
       'Docker',
@@ -43,6 +48,7 @@ export const projects: Project[] = [
     ],
     imageUrl: capstoneImg,
     docUrl: 'https://docs.google.com/document/d/1O5qf_DMcFqYfs4oCuyddA4Y3oEUy9TBw4a7ZQiWutMM/edit?tab=t.rm89jsjypd',
+    demoUrl: '',
     category: 'School',
     featured: true,
     date: '2026-04'
@@ -54,9 +60,11 @@ export const projects: Project[] = [
       'A data processing and natural language processing Riipen project, focused on transforming unstructured web data into structured datasets for NLP analysis.',
     shortDescription:
       'Web data pipeline and NLP preprocessing project',
-    longDescription:
-      'Built a data pipeline to scrape, parse, and clean unstructured web data into structured datasets using Beautiful Soup 4 and Pandas. Implemented text preprocessing techniques including regular expressions and tokenization with NLTK to support downstream NLP feature extraction across multiple datasets.',
-    technologies: [
+    longDescription: [
+      'Built a data pipeline to scrape, parse, and clean unstructured web data into structured datasets using Beautiful Soup 4 and Pandas.',
+      'Implemented text preprocessing techniques including regular expressions and tokenization with NLTK to support downstream NLP feature extraction across multiple datasets.',
+    ],
+      technologies: [
       'Python',
       'NLTK',
       'Pandas',
@@ -70,21 +78,29 @@ export const projects: Project[] = [
   },
   {
     id: 'proj-picams',
-    title: 'Natural Language Processing',
+    title: 'Pi Cams',
     description:
-      'A data processing and natural language processing Riipen project, focused on transforming unstructured web data into structured datasets for NLP analysis.',
+      'A group project focused on developing a Raspberry Pi-based surveillance system that uses real-time video processing and facial recognition to monitor activity and provide security alerts.',
     shortDescription:
-      'Web data pipeline and NLP preprocessing project',
-    longDescription:
-      'Built a data pipeline to scrape, parse, and clean unstructured web data into structured datasets using Beautiful Soup 4 and Pandas. Implemented text preprocessing techniques including regular expressions and tokenization with NLTK to support downstream NLP feature extraction across multiple datasets.',
-    technologies: [
-      'Python',
-      'NLTK',
-      'Pandas',
-      'Beautiful Soup 4',
-      'Google Colab'
+      'A Raspberry Pi suveillance application built with ',
+    longDescription: [
+      'Connected and configured a camera with a Raspberry Pi, using C++ and Python to support video capture, motion detection, and real-time processing.',
+      'Developed a React web interface with TypeScript that allowed users to monitor the surveillance system, receive security alerts, and interact with system controls.',
+      'Uses MySQL for storing and managing system data.',
+      'Uses real-time video processing with Python and OpenCV to capture camera footage and analyze frames for motion and facial detection.',
     ],
-    imageUrl: riipenLogo,
+      technologies: [
+      'Python',
+      'C++',
+      'React',
+      'TypeScript',
+      'MySQL',
+      'Raspberry Pi',
+      'OpenCV'
+    ],
+    imageUrl: piCamsImg,
+    githubUrl: 'https://github.com/Cr1py/Pi-Cams',
+    docUrl: 'https://docs.google.com/document/d/1E7uFqbcq4rbA7CDt9fvQErw7aQOaYISQcTtDdHzvz8g/edit?tab=t.0',
     category: 'School',
     featured: false,
     date: '2023-09'
@@ -96,9 +112,11 @@ export const projects: Project[] = [
       'A campus mapping application developed as a group project to provide an interactive interface for navigating Western University buildings and points of interest.',
     shortDescription:
       'Interactive campus building and point-of-interest map',
-    longDescription:
-      'Built a REST API using GET and POST requests to handle data exchange between the frontend and building and point-of-interest datasets. Developed the frontend user interface using Java, JavaScript, HTML, and CSS as part of a group project.',
-    technologies: [
+    longDescription: [
+      'Built a REST API using GET and POST requests to handle data exchange between the frontend and building and point-of-interest datasets.', 
+      'Developed the frontend user interface using Java, JavaScript, HTML, and CSS as part of a group project.',
+    ],
+      technologies: [
       'Java',
       'JavaScript',
       'HTML',
@@ -118,9 +136,10 @@ export const projects: Project[] = [
       'Used Better Discord plugin to add a custom CSS theme to my Discord client.',
     shortDescription:
       'Custom Discord user interface',
-    longDescription:
+    longDescription: [
       'Used Better Discord plugin to add a custom CSS theme to my Discord client.',
-    technologies: [
+    ],
+      technologies: [
       'CSS',
       'Better Discord'
     ],
