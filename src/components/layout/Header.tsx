@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import Logo from "./Logo";
 import { TbPlayCardStarFilled } from "react-icons/tb";
 import { PiBowlFoodFill } from "react-icons/pi";
 import {
@@ -70,7 +71,8 @@ const Header = ({ className = "" }: HeaderProps) => {
     >
       <nav className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 relative">
         <div className="flex items-center justify-between h-full">
-          <Link to="/" className="flex-shrink-0">
+          <Link to="/#intro" className="flex-shrink-0">
+            <Logo showName={true} size="sm" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -253,7 +255,7 @@ const Header = ({ className = "" }: HeaderProps) => {
                   </div>
                 </div>
                 <Link
-                  to="/contact"
+                  to="/#contact"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`block px-4 py-2 rounded-lg transition-colors ${
                     isActive("/contact")
