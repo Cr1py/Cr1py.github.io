@@ -29,7 +29,7 @@ const Home = () => {
           block: "start",
         });
       }
-   }
+    }
 
     // Small delay to make sure the sections are rendered
     const timeout = setTimeout(scrollToSection, 0);

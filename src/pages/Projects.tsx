@@ -59,9 +59,11 @@ const Projects = () => {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl font-bold text-ele-pink"
+          className="text-4xl font-bold"
         >
-          Projects
+          <div className="text-left text-3xl sm:text-4xl font-bold text-dusk">
+            Projects
+          </div>
         </motion.h1>
  
         {/* Filter Button */}
@@ -70,22 +72,22 @@ const Projects = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
           onClick={() => setIsFilterOpen(!isFilterOpen)}
-          className={`relative flex items-center gap-2 px-6 py-3 px-3.5 py-1.5 rounded-full border transition-colors ${
+          className={`relative flex items-center gap-2 px-4 py-2 rounded-lg border transition-colors ${
             isFilterOpen
-              ? "bg-ele-pink text-ele-dark border-ele-pink"
-              : "bg-ele-dark/50 text-ele-text-light border-ele-purple/20 hover:border-ele-pink"
+              ? "bg-blush/5 text-blush border-blush"
+              : "text-text border-text"
           }`}
         >
           <FaFilter />
           <span>Filters</span>
           {selectedTags.length > 0 && (
-            <span className="absolute -top-2 -right-2 bg-ele-purple text-ele-dark text-xs font-bold rounded w-6 h-6 flex items-center justify-center">
+            <span className="absolute -top-2 -right-2 bg-sun rounded text-text/70 text-xs font-bold w-6 h-6 flex items-center justify-center">
               {selectedTags.length}
             </span>
           )}
         </motion.button>
       </div>
- 
+
       {/* Filter Box */}
       <AnimatePresence>
         {isFilterOpen && (
@@ -97,7 +99,7 @@ const Projects = () => {
             className="mb-12 overflow-hidden"
           >
             <div className="backdrop-blur-sm rounded-lg border p-6">
-              <h2 className="text-xl font-semibold text-ele-text mb-2">
+              <h2 className="text-left text-xl font-semibold text-text mb-2">
                 Filter by Technology
               </h2>
               <div className="flex flex-wrap gap-2 mb-2 mt-4">
@@ -105,10 +107,10 @@ const Projects = () => {
                   <button
                     key={tag}
                     onClick={() => toggleTag(tag)}
-                    className={`px-4 py-2 rounded border transition-all duration-200 tracking-wide ${
+                    className={`px-4 py-2 rounded border transition-colors ${
                       selectedTags.includes(tag)
-                        ? "font-mono text-[11px] px-3.5 py-1.5 "
-                        : "font-mono text-[11px] px-3.5 py-1.5 hover:border-ele-pink hover:text-ele-pink"
+                        ? "font-mono text-[11px] px-3.5 py-1.5 bg-blush/5 text-blush border-blush"
+                        : "font-mono text-[11px] px-3.5 py-1.5"
                     }`}
                   >
                     {tag}
@@ -116,10 +118,10 @@ const Projects = () => {
                 ))}
               </div>
               {selectedTags.length > 0 && (
-                <div className="text-center mt-4 pt-4 border-t border-ele-purple/20">
+                <div className="text-center mt-4 pt-4 border-t">
                   <button
                     onClick={() => setSelectedTags([])}
-                    className="inline-flex items-center gap-2 text-ele-text-light hover:text-ele-pink transition-colors"
+                    className="inline-flex items-center gap-2 text-text hover:text-blush transition-colors"
                   >
                     <FaTimes />
                     Clear all filters
@@ -130,7 +132,7 @@ const Projects = () => {
           </motion.div>
         )}
       </AnimatePresence>
- 
+
       {/* Projects Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <AnimatePresence mode="wait">
@@ -139,7 +141,7 @@ const Projects = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="col-span-full text-center text-ele-text-light py-12"
+              className="col-span-full text-center text-text py-12"
             >
               No projects match the selected filters.
             </motion.div>
@@ -150,7 +152,7 @@ const Projects = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-ele-dark/50 backdrop-blur-sm rounded-lg border border-ele-purple/20 overflow-hidden group hover:border-ele-pink/20 transition-colors"
+                className="bg-magenta/5 backdrop-blur-sm rounded-lg border border-blush/25 overflow-hidden group"
               >
                 <Link to={`/projects/${project.id}`}>
                   {/* Project Image */}
@@ -165,43 +167,41 @@ const Projects = () => {
                   {/* Project Details */}
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-2">
-                      <h2 className="text-left text-xl font-bold text-ele-pink group-hover:text-ele-purple transition-colors">
+                      <h2 className="text-left text-xl font-bold text-text">
                         {project.title}
                       </h2>
                     </div>
  
                     {/* Date */}
                     {project.date && (
-                      <div className="flex items-center gap-2 text-ele-text-light text-sm mb-3">
+                      <div className="flex items-center gap-2 text-text/70 text-sm mb-3">
                         <FaCalendarAlt className="w-3 h-3" />
                         <span>{formatDate(project.date)}</span>
                       </div>
                     )}
  
                     {/* Short Description or Description */}
-                    <p className="text-left text-ele-text-light mb-4 line-clamp-2">
+                    <p className="text-left mb-4 line-clamp-2">
                       {project.shortDescription || project.description}
                     </p>
  
                     {/* Technologies */}
                     <div className="flex flex-nowrap gap-2 mt-5 overflow-hidden">
                       {project.technologies.slice(0, 3).map((tech) => (
-                        <motion.span
+                        <span
                           key={tech}
-                          className="font-mono text-[10px] px-2.5 py-1 rounded border border-ele-border text-ele-text-light/60 bg-ele-dark transition-all duration-200 tracking-wide hover:border-ele-pink hover:text-ele-pink whitespace-nowrap shrink-0"
-                          whileHover={{ y: -2 }}
+                          className="font-mono text-[10px] px-2.5 py-1 rounded border border-blush/25 text-blush bg-blush/5 whitespace-nowrap shrink-0"
                         >
                           {tech}
-                        </motion.span>
+                        </span>
                       ))}
 
                       {project.technologies.length > 3 && (
-                        <motion.span
-                          className="font-mono text-[10px] sm:text-[11px] px-2.5 py-1 rounded border border-ele-border text-ele-text-light/60 bg-ele-dark tracking-wide whitespace-nowrap shrink-0"
-                          whileHover={{ y: -2 }}
+                        <span
+                          className="font-mono text-[10px] px-2.5 py-1 rounded border border-blush/25 text-blush bg-blush/5 whitespace-nowrap shrink-0"
                         >
                           +{project.technologies.length - 3}
-                        </motion.span>
+                        </span>
                       )}
                     </div>
  
@@ -212,7 +212,7 @@ const Projects = () => {
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 text-ele-text-light hover:text-ele-pink transition-colors"
+                          className="flex items-center gap-2 text-text hover:text-blush transition-colors"
                           onClick={(e) => e.stopPropagation()}
                         >
                           <FaGithub className="w-4 h-4" />
@@ -224,7 +224,7 @@ const Projects = () => {
                           href={project.demoUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 text-ele-text-light hover:text-ele-pink transition-colors"
+                          className="flex items-center gap-2 text-text hover:text-blush transition-colors"
                           onClick={(e) => e.stopPropagation()}
                         >
                           <FaExternalLinkAlt className="w-3 h-3" />
@@ -236,7 +236,7 @@ const Projects = () => {
                           href={project.docUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 text-ele-text-light hover:text-ele-pink transition-colors"
+                          className="flex items-center gap-2 text-text hover:text-blush transition-colors"
                           onClick={(e) => e.stopPropagation()}
                         >
                           <FaExternalLinkAlt className="w-3 h-3" />

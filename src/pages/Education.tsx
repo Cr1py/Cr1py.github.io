@@ -11,9 +11,11 @@ const Education = () => {
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-left text-3xl sm:text-4xl font-bold text-ele-pink mb-8 text-center"
+        className="mb-8"
       >
-        Education
+        <div className="text-left text-3xl sm:text-4xl font-bold text-dusk">
+          Education
+        </div>
       </motion.h1>
 
       {/* Education Timeline */}
@@ -21,36 +23,36 @@ const Education = () => {
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-2xl font-bold text-ele-text flex items-center gap-3"
+          className="text-2xl font-bold text-text flex items-center gap-3"
         >
-          <FaGraduationCap className="text-ele-pink" />
+          <FaGraduationCap className="text-magenta"/>
           Academic Background
         </motion.h2>
-        <div className="space-y-8 mt-8">
+        <div className="space-y-8 mt-4">
           {education.map((edu, index) => (
             <motion.div
               key={edu.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-ele-dark/50 backdrop-blur-sm rounded-lg border border-ele-purple/20 p-6 hover:border-ele-pink/20 transition-colors"
+              className="bg-magenta/5 rounded-lg border border-blush/25 p-6"
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div className="flex-1">
-                  <h3 className="text-left text-xl font-bold text-ele-pink mb-2">
+                  <h3 className="text-left text-xl font-bold text-text mb-2">
                     {edu.degree}
                   </h3>
-                  <h4 className="text-left text-lg text-ele-text-light mb-1">
+                  <h4 className="text-left text-lg text-text/70 mb-1">
                     {edu.school}
                   </h4>
-                  <p className="text-left text-ele-text-light text-sm mb-2">
+                  <p className="text-left text-text/70 text-sm mb-2">
                     {edu.location} • {edu.period}
                   </p>
                 </div>
               </div>
             
               {edu.description && edu.description.length > 0 && (
-                <ul className="list-disc list-inside text-left space-y-2 text-ele-text-light">
+                <ul className="list-disc list-inside text-left space-y-2">
                   {edu.description.map((desc, i) => (
                     <li key={i} className="pl-2">
                       {desc}
@@ -60,7 +62,7 @@ const Education = () => {
               )}
 
               {edu.focus && edu.focus.length > 0 && (
-              <h4 className="text-left text-lg font-semibold text-ele-pink mt-4">
+              <h4 className="text-left text-lg font-semibold text-text mt-4">
                 Relevant Courses
               </h4>
               )}
@@ -70,7 +72,7 @@ const Education = () => {
                   {edu.focus.map((focus, i) => (
                     <span
                       key={i}
-                      className="font-mono text-[11px] px-3.5 py-1.5 rounded border bg-ele-space/50 text-ele-text-light border border-ele-purple/20"
+                      className="font-mono text-[11px] px-3.5 py-1.5 rounded border bg-blush/4 text-blush border border-blush/25"
                     >
                       {focus}
                     </span>
@@ -85,40 +87,40 @@ const Education = () => {
       {/* Certifications */}
       {certifications.length > 0 && (
         <div className="mb-16">
-          <h2 className="text-2xl font-bold text-ele-text mb-8 flex items-center gap-3">
-            <FaCertificate className="text-ele-pink" />
+          <h2 className="text-2xl font-bold text-text flex items-center gap-3">
+            <FaCertificate className="text-sky"/>
             Certifications
           </h2>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mt-4">
             {certifications.map((cert, index) => (
               <motion.div
                 key={cert.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-ele-dark/50 backdrop-blur-sm rounded-lg border border-ele-purple/20 p-6 hover:border-ele-pink/20 transition-colors"
+                className="bg-magenta/5 rounded-lg border border-blush/25 p-6"
               >
-                <h3 className="text-left text-lg font-bold text-ele-pink mb-2">
+                <h3 className="text-left text-lg font-bold text-text mb-2">
                   {cert.name}
                 </h3>
 
                 <div className="mb-2">
                   {cert.issuer && (
-                    <p className="text-left text-ele-text-light text-sm">
+                    <p className="text-left text-text text-sm">
                       {cert.issuer}
                     </p>
                   )}  
                 </div>
                 <div className="mb-2">
                   {cert.date && (
-                    <p className="text-left text-ele-text-light text-sm">
+                    <p className="text-left text-text text-sm">
                       {cert.date}
                     </p>
                   )}
                 </div>
                 <div className="mb-2">
                   {cert.description && (
-                    <p className="text-left text-ele-text-light text-sm">
+                    <p className="text-left text-sm">
                         {cert.description}
                     </p>
                   )}
@@ -129,7 +131,7 @@ const Education = () => {
                     href={cert.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-ele-text-light hover:text-ele-pink transition-colors"
+                    className="flex items-center gap-2 text-text hover:text-blush transition-colors"
                     onClick={(e) => e.stopPropagation()}
                 >
                     <FaExternalLinkAlt className="w-3 h-3" />
@@ -145,25 +147,25 @@ const Education = () => {
       {/* Honours & Awards */}
       {honours.length > 0 && (
         <div className="mb-16">
-          <h2 className="text-2xl font-bold text-ele-text mb-8 flex items-center gap-3">
-            <FaTrophy className="text-ele-pink" />
+          <h2 className="text-2xl font-bold text-text mb-8 flex items-center gap-3">
+            <FaTrophy className="text-gold"/>
             Honours & Awards
           </h2>
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-2 mt-4">
             {honours.map((honour, index) => (
               <motion.div
                 key={honour.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-ele-dark/50 backdrop-blur-sm rounded-lg border border-ele-purple/20 p-6 hover:border-ele-pink/20 transition-colors"
+                className="bg-magenta/5 rounded-lg border border-blush/25 p-6"
               >
-                <h3 className="text-left text-lg font-bold text-ele-pink mb-2">
+                <h3 className="text-left text-lg font-bold text-text mb-2">
                   {honour.title}
                 </h3>
                 <div className="mb-2">
                   {honour.organization && (
-                    <p className="text-left text-ele-text-light text-sm">
+                    <p className="text-left text-sm">
                       {honour.organization}
                     </p>
                   )}

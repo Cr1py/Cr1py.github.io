@@ -36,9 +36,10 @@ const Experience = () => {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-3xl sm:text-4xl font-bold text-ele-pink"
         >
-          Experience
+          <div className="text-3xl sm:text-4xl font-bold text-dusk">
+            Experience
+          </div>
         </motion.h1>
 
         {/* Filter Button */}
@@ -47,16 +48,16 @@ const Experience = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
           onClick={() => setIsFilterOpen(!isFilterOpen)}
-          className={`relative flex items-center gap-2 px-6 py-3 px-3.5 py-1.5 rounded-full border transition-colors ${
+          className={`relative flex items-center gap-2 px-4 py-2 rounded-lg border transition-colors ${
             isFilterOpen
-              ? "bg-ele-pink text-ele-dark border-ele-pink"
-              : "bg-ele-dark/50 text-ele-text-light border-ele-purple/20 hover:border-ele-pink"
+              ? "bg-blush/5 text-blush border-blush"
+              : "text-text border-text"
           }`}
         >
           <FaFilter />
           <span>Filters</span>
           {selectedTags.length > 0 && (
-            <span className="absolute -top-2 -right-2 bg-ele-purple text-ele-dark text-xs font-bold rounded w-6 h-6 flex items-center justify-center">
+            <span className="absolute -top-2 -right-2 bg-sun rounded text-text/70 text-xs font-bold w-6 h-6 flex items-center justify-center">
               {selectedTags.length}
             </span>
           )}
@@ -74,7 +75,7 @@ const Experience = () => {
             className="mb-12 overflow-hidden"
           >
             <div className="backdrop-blur-sm rounded-lg border p-6">
-              <h2 className="text-xl font-semibold text-ele-text mb-2">
+              <h2 className="text-left text-xl font-semibold text-text mb-2">
                 Filter by Technology
               </h2>
               <div className="flex flex-wrap gap-2 mb-2 mt-4">
@@ -84,8 +85,8 @@ const Experience = () => {
                     onClick={() => toggleTag(tag)}
                     className={`px-4 py-2 rounded border transition-colors ${
                       selectedTags.includes(tag)
-                        ? "font-mono text-[11px] px-3.5 py-1.5"
-                        : "font-mono text-[11px] px-3.5 py-1.5 hover:border-ele-pink"
+                        ? "font-mono text-[11px] px-3.5 py-1.5 bg-blush/5 text-blush border-blush"
+                        : "font-mono text-[11px] px-3.5 py-1.5"
                     }`}
                   >
                     {tag}
@@ -96,7 +97,7 @@ const Experience = () => {
                 <div className="text-center mt-4 pt-4 border-t">
                   <button
                     onClick={() => setSelectedTags([])}
-                    className="inline-flex items-center gap-2 text-ele-text-light hover:text-ele-pink transition-colors"
+                    className="inline-flex items-center gap-2 text-text hover:text-blush transition-colors"
                   >
                     <FaTimes />
                     Clear all filters
@@ -115,14 +116,14 @@ const Experience = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="text-center text-ele-text-light py-12"
+              className="text-center text-text py-12"
             >
               No experiences match the selected filters.
             </motion.div>
           ) : (
-            <div className="relative">
+            <div className="relative"> {/* Experience */}
               {/* Timeline line - hidden on mobile, shown on desktop */}
-              <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-ele-purple/20" />
+              <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-dusk" />
 
               {filteredExperiences.map((experience, index) => (
                 <motion.div
@@ -133,12 +134,12 @@ const Experience = () => {
                   className="relative mb-24 last:mb-0"
                 >
                   {/* Timeline dot - hidden on mobile, shown on desktop */}
-                  <div className="hidden lg:block absolute left-1/2 top-1/2 w-4 h-4 bg-ele-pink rounded transform -translate-x-1/2" />
+                  <div className="hidden lg:block absolute left-1/2 top-1/2 w-4 h-4 bg-dusk rounded transform -translate-x-1/2" />
 
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Image - Alternating sides */}
                     <div
-                      className={`relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-lg overflow-hidden bg-ele-dark/20 ${
+                      className={`relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-lg overflow-hidden ${
                         index % 2 === 0 ? "lg:order-2" : "lg:order-1"
                       }`}
                     >
@@ -157,16 +158,16 @@ const Experience = () => {
                           : "lg:order-2 lg:pl-12"
                       } px-0 lg:px-0`}
                     >
-                      <div className="bg-ele-dark/50 backdrop-blur-sm rounded-lg border border-ele-purple/20 p-8">
+                      <div className="bg-magenta/5 backdrop-blur-sm rounded-lg border border-blush/25 p-8">
                         {/* Header */}
                         <div className="mb-6">
-                          <h2 className="text-left text-2xl font-bold text-ele-text mb-4">
+                          <h2 className="text-left text-2xl font-bold text-text mb-4">
                             {experience.title}
                           </h2>
-                          <h3 className="text-left text-xl text-ele-pink mb-2">
+                          <h3 className="text-left text-xl text-text/70 mb-2">
                             {experience.company}
                           </h3>
-                          <div className="text-left text-ele-text-light">
+                          <div className="text-left text-text/70">
                             <p>{experience.location}</p>
                             <p>
                               {new Date(
@@ -189,16 +190,16 @@ const Experience = () => {
                         </div>
 
                         {/* Description */}
-                        <p className="text-left text-ele-text-light mb-6">
+                        <p className="text-left mb-6">
                           {experience.description}
                         </p>
 
                         {/* Key Achievements */}
                         <div className="mb-6">
-                          <h4 className="text-left text-lg font-semibold text-ele-pink mb-2 mt-4">
+                          <h4 className="text-left text-lg font-semibold text-text mb-2 mt-4">
                             Key Achievements
                           </h4>
-                          <ul className="text-left list-disc list-inside space-y-2 text-ele-text-light">
+                          <ul className="text-left list-disc list-inside space-y-2">
                             {experience.achievements.map((achievement, i) => (
                               <li key={i} className="pl-2">
                                 {achievement}
@@ -209,18 +210,15 @@ const Experience = () => {
 
                         {/* Technologies */}
                         <div>
-                          <h4 className="text-left text-lg font-semibold text-ele-pink mb-3">
+                          <h4 className="text-left text-lg font-semibold text-text mb-3">
                             Technologies & Skills
                           </h4>
                           <div className="flex flex-wrap gap-2">
                             {experience.technologies.map((tech) => (
                               <span
                                 key={tech}
-                                className={`px-3 py-1 text-sm rounded border ${
-                                  selectedTags.includes(tech)
-                                    ? "font-mono text-[11px] px-3.5 py-1.5 bg-ele-pink text-ele-dark border-ele-pink"
-                                    : "font-mono text-[11px] px-3.5 py-1.5 bg-ele-space/50 text-ele-text-light border-ele-purple/20"
-                                }`}
+                                className={`px-3 py-1 text-sm rounded border font-mono text-[11px] px-3.5 py-1.5 bg-blush/5 text-blush border-blush/25 $`
+                                }
                               >
                                 {tech}
                               </span>

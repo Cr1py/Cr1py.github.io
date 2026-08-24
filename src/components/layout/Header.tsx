@@ -11,7 +11,6 @@ import {
   FaTimes,
   FaPaperPlane
 } from "react-icons/fa";
-import ContactSection from "../sections/ContactSection"
 
 type HeaderProps = {
   className?: string;
@@ -67,7 +66,7 @@ const Header = ({ className = "" }: HeaderProps) => {
 
   return (
     <header
-      className={`h-16 bg-ele-dark/90 backdrop-blur-sm border-b border-ele-purple/20 ${className}`}
+      className={`h-16 bg-magenta/5 backdrop-blur-sm border-b border-blush/25 ${className}`}
     >
       <nav className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 relative">
         <div className="flex items-center justify-between h-full">
@@ -82,8 +81,8 @@ const Header = ({ className = "" }: HeaderProps) => {
                 to="/experience"
                 className={`${
                   isActive("/experience")
-                    ? "text-pink-400"
-                    : "text-ele-text-light hover:text-ele-text"
+                    ? "text-blush"
+                    : "hover:text-blush"
                 } transition-colors duration-300 text-lg`}
               >
                 Experience
@@ -93,8 +92,8 @@ const Header = ({ className = "" }: HeaderProps) => {
                 to="/education"
                 className={`${
                   isActive("/education")
-                    ? "text-pink-400"
-                    : "text-ele-text-light hover:text-ele-text"
+                    ? "text-blush"
+                    : "hover:text-blush"
                 } transition-colors duration-300 text-lg`}
               >
                 Education
@@ -104,8 +103,8 @@ const Header = ({ className = "" }: HeaderProps) => {
                 to="/projects"
                 className={`flex items-center gap-2 ${
                   isProjectActive
-                    ? "text-pink-400"
-                    : "text-ele-text-light hover:text-ele-text"
+                    ? "text-blush"
+                    : "hover:text-blush"
                 } transition-colors duration-300 text-lg`}
               >
                 Projects
@@ -118,13 +117,13 @@ const Header = ({ className = "" }: HeaderProps) => {
                   onMouseLeave={() => setIsHobbiesOpen(false)}
                   className={`flex items-center gap-2 ${
                     isHobbyActive
-                      ? "text-pink-400"
-                      : "text-ele-text-light hover:text-ele-text"
+                    ? "text-blush"
+                    : "hover:text-blush"
                   } transition-colors duration-300 text-lg`}
                 >
                   Hobbies
                   <FaChevronDown
-                    className={`w-4 h-4 transition-transform duration-300 ${
+                    className={`w-4 h-4 transition-transform duration-300${
                       isHobbiesOpen ? "rotate-180" : ""
                     }`}
                   />
@@ -139,16 +138,16 @@ const Header = ({ className = "" }: HeaderProps) => {
                       transition={{ duration: 0.2 }}
                       onMouseEnter={() => setIsHobbiesOpen(true)}
                       onMouseLeave={() => setIsHobbiesOpen(false)}
-                      className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 py-2 w-48 bg-ele-dark/95 backdrop-blur-sm rounded-lg border border-ele-purple/20 shadow-xl"
+                      className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 py-2 w-48 bg-magenta/5 backdrop-blur-sm rounded-lg border border-blush/20 shadow-xl"
                     >
                       {HOBBY_LINKS.map((link) => (
                         <Link
                           key={link.to}
                           to={link.to}
-                          className={`flex items-center gap-3 px-4 py-3 hover:bg-pink-400/10 transition-colors ${
+                          className={`flex items-center gap-3 px-4 py-3 hover:bg-blush-400/10 transition-colors ${
                             isActive(link.to)
-                              ? "text-pink-400"
-                              : "text-ele-text-light hover:text-ele-pink"
+                            ? "text-blush"
+                            : "hover:text-blush"
                           }`}
                         >
                           {link.icon}
@@ -162,7 +161,7 @@ const Header = ({ className = "" }: HeaderProps) => {
 
               <a
                 href="/#contact"
-                className="text-ele-text-light hover:text-ele-text transition-colors duration-300 text-lg"
+                className="hover:text-blush transition-colors duration-300 text-lg"
               >
                 Contact
               </a>
@@ -172,7 +171,7 @@ const Header = ({ className = "" }: HeaderProps) => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="sm:hidden text-ele-text-light hover:text-ele-pink transition-colors p-2"
+            className="sm:hidden hover:text-ele-blush transition-colors p-2"
             aria-label="Toggle mobile menu"
             aria-expanded={isMobileMenuOpen}
           >
@@ -193,7 +192,7 @@ const Header = ({ className = "" }: HeaderProps) => {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.2 }}
-              className="sm:hidden overflow-hidden border-t border-ele-purple/20 absolute top-full left-0 right-0 bg-ele-dark/95 backdrop-blur-sm z-50 shadow-lg"
+              className="sm:hidden overflow-hidden border-t border-blush/20 absolute top-full left-0 right-0 bg-blush/95 backdrop-blur-sm z-50 shadow-lg"
             >
               <div className="py-4 space-y-4">
                 <Link
@@ -201,8 +200,8 @@ const Header = ({ className = "" }: HeaderProps) => {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`block px-4 py-2 rounded-lg transition-colors ${
                     isActive("/experience")
-                      ? "text-pink-400 bg-pink-400/10"
-                      : "text-ele-text-light hover:text-ele-pink hover:bg-pink-400/5"
+                      ? "text-blush bg-blush-400/10"
+                      : "hover:text-blush hover:bg-blush-400/5"
                   }`}
                 >
                   Experience
@@ -213,8 +212,8 @@ const Header = ({ className = "" }: HeaderProps) => {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`block px-4 py-2 rounded-lg transition-colors ${
                     isActive("/education")
-                      ? "text-pink-400 bg-pink-400/10"
-                      : "text-ele-text-light hover:text-ele-pink hover:bg-pink-400/5"
+                      ? "text-blush-400 bg-blush-400/10"
+                      : "hover:text-ele-blush hover:bg-blush-400/5"
                   }`}
                 >
                   Education
@@ -225,15 +224,15 @@ const Header = ({ className = "" }: HeaderProps) => {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`block px-4 py-2 rounded-lg transition-colors ${
                     isActive("/projects")
-                      ? "text-pink-400 bg-pink-400/10"
-                      : "text-ele-text-light hover:text-ele-pink hover:bg-pink-400/5"
+                      ? "text-blush-400 bg-blush-400/10"
+                      : "hover:text-ele-blush hover:bg-blush-400/5"
                   }`}
                 >
                   Projects
                 </Link>
 
                 <div className="px-4">
-                  <div className="text-ele-text-light font-semibold mb-2">
+                  <div className="font-semibold mb-2">
                     Hobbies
                   </div>
                   <div className="pl-4 space-y-2">
@@ -244,8 +243,8 @@ const Header = ({ className = "" }: HeaderProps) => {
                         onClick={() => setIsMobileMenuOpen(false)}
                         className={`flex items-center gap-3 px-4 py-2 rounded-lg transition-colors ${
                           isActive(link.to)
-                            ? "text-pink-400 bg-pink-400/10"
-                            : "text-ele-text-light hover:text-ele-pink hover:bg-pink-400/5"
+                            ? "text-blush-400 bg-blush-400/10"
+                            : "hover:text-ele-blush hover:bg-blush-400/5"
                         }`}
                       >
                         {link.icon}
@@ -259,8 +258,8 @@ const Header = ({ className = "" }: HeaderProps) => {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`block px-4 py-2 rounded-lg transition-colors ${
                     isActive("/contact")
-                      ? "text-pink-400 bg-pink-400/10"
-                      : "text-ele-text-light hover:text-ele-pink hover:bg-pink-400/5"
+                      ? "text-blush-400 bg-blush-400/10"
+                      : "hover:text-ele-blush hover:bg-blush-400/5"
                   }`}
                 >
                   Contact
