@@ -25,7 +25,7 @@ const ContactSection = () => {
 
           {/* Input */}
           <div className="gap-3 mt-8">
-            <p className="text-sm sm:text-base text-left text-text/70 whitespace-pre-line mb-4">I'm always happy to hear from interesting people: whether it's a project idea, a collaboration, or just a hello.</p>
+            <p className="text-sm sm:text-base text-left whitespace-pre-line mb-4">I'm always happy to hear from interesting people: whether it's a project idea, a collaboration, or just a hello.</p>
             
             <a className="block font-mono text-left text-[15px] text-sun no-underline border border-sun/25 bg-sun/5 py-4 px-6 rounded-lg mb-8 transition-all duration-200 tracking-[0.02em] hover:bg-blush/10 hover:border-blush hover:text-blush mt-4"
             href="mailto:{personalInfo.email}"

@@ -81,7 +81,7 @@ const Header = ({ className = "" }: HeaderProps) => {
                 to="/experience"
                 className={`${
                   isActive("/experience")
-                    ? "text-text/70"
+                    ? "text-blush"
                     : "hover:text-blush"
                 } transition-colors duration-300 text-lg`}
               >
@@ -92,7 +92,7 @@ const Header = ({ className = "" }: HeaderProps) => {
                 to="/education"
                 className={`${
                   isActive("/education")
-                    ? "text-text/70"
+                    ? "text-blush"
                     : "hover:text-blush"
                 } transition-colors duration-300 text-lg`}
               >
@@ -103,7 +103,7 @@ const Header = ({ className = "" }: HeaderProps) => {
                 to="/projects"
                 className={`flex items-center gap-2 ${
                   isProjectActive
-                    ? "text-text/70"
+                    ? "text-blush"
                     : "hover:text-blush"
                 } transition-colors duration-300 text-lg`}
               >
@@ -117,7 +117,7 @@ const Header = ({ className = "" }: HeaderProps) => {
                   onMouseLeave={() => setIsHobbiesOpen(false)}
                   className={`flex items-center gap-2 ${
                     isHobbyActive
-                    ? "text-text/70"
+                    ? "text-blush"
                     : "hover:text-blush"
                   } transition-colors duration-300 text-lg`}
                 >
@@ -146,8 +146,8 @@ const Header = ({ className = "" }: HeaderProps) => {
                           to={link.to}
                           className={`flex items-center gap-3 px-4 py-3 hover:bg-blush-400/10 transition-colors ${
                             isActive(link.to)
-                              ? "text-blush"
-                              : "hover:text-blush"
+                            ? "text-blush"
+                            : "hover:text-blush"
                           }`}
                         >
                           {link.icon}
@@ -161,7 +161,7 @@ const Header = ({ className = "" }: HeaderProps) => {
 
               <a
                 href="/#contact"
-                className="hover:text-ele-text transition-colors duration-300 text-lg"
+                className="hover:text-blush transition-colors duration-300 text-lg"
               >
                 Contact
               </a>

@@ -63,7 +63,7 @@ const FeaturedProjects = () => {
 
                     {/* project Information */}
                     <div className="p-6">
-                      <h3 className="text-left text-xl font-bold text-sun mb-2 group-hover:text-ele-purple transition-colors">
+                      <h3 className="text-left text-xl font-bold text-text mb-2">
                         {project.title}
                       </h3>
 

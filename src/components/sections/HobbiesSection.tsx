@@ -58,9 +58,7 @@ const HobbiesSection = () => {
                     transition={{ duration: 0.4 }}
                   >
                     <div className="absolute inset-0 blur-xl bg-sun/8 rounded-full" />
-                    <span className="relative flex items-center justify-center text-gold">
-                      <hobby.icon />
-                    </span>
+                    <span className="relative">{hobby.icon}</span>
                   </motion.div>
 
                   {/* Title with Animation */}

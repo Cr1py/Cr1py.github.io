@@ -17,10 +17,10 @@ const ProjectDetail = () => {
   if (!project) {
     return (
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-        <h1 className="text-2xl text-ele-pink mb-4">Project Not Found</h1>
+        <h1 className="text-2xl text-text mb-4">Project Not Found</h1>
         <Link
           to="/projects"
-          className="inline-flex items-center text-ele-text-light hover:text-ele-pink transition-colors"
+          className="inline-flex items-center text-text hover:text-blush transition-colors"
         >
           <FaArrowLeft className="mr-2" />
           Back to Projects
@@ -46,7 +46,7 @@ const ProjectDetail = () => {
       >
         <button
           onClick={() => navigate("/projects")}
-          className="inline-flex items-center text-ele-text-light hover:text-ele-pink transition-colors"
+          className="inline-flex items-center text-text hover:text-blush transition-colors"
         >
           <FaArrowLeft className="mr-2" />
           Back to Projects
@@ -73,20 +73,20 @@ const ProjectDetail = () => {
         transition={{ delay: 0.1 }}
         className="mb-8"
       >
-        <h1 className="text-left text-3xl sm:text-4xl font-bold text-ele-pink mb-4">
+        <div className="text-left text-3xl sm:text-4xl font-bold text-text mb-4">
           {project.title}
-        </h1>
+        </div>
 
         {/* Date and Category */}
         <div className="flex flex-wrap items-center gap-4 mb-4">
           {project.date && (
-            <div className="flex items-center gap-2 text-ele-text-light">
+            <div className="flex items-center gap-2 text-text/70">
               <FaCalendarAlt className="w-4 h-4" />
               <span>{formatDate(project.date)}</span>
             </div>
           )}
           {project.category && (
-            <span className="px-3 py-1 text-sm rounded bg-ele-purple/10 text-ele-purple border border-ele-purple/20">
+            <span className="px-3 py-1 text-sm rounded bg-blush/5 text-blush border border-blush/25">
               {project.category.toUpperCase()}
             </span>
           )}
@@ -94,7 +94,7 @@ const ProjectDetail = () => {
 
         {/* Description */}
         <div className="mb-4">
-          <p className="text-left text-ele-text-light text-lg leading-relaxed">
+          <p className="text-left text-lg leading-relaxed">
             {project.description}
           </p>
         </div>
@@ -102,7 +102,7 @@ const ProjectDetail = () => {
 
         {/* Long Description */}
         <div className="mb-6">
-          <ul className="text-left list-disc list-inside space-y-2 text-ele-text-light">
+          <ul className="text-left list-disc list-inside space-y-2">
             {(project.longDescription ?? []).map((longDescription, i) => (
               <li key={i} className="pl-2">
                 {longDescription}
@@ -119,14 +119,14 @@ const ProjectDetail = () => {
         transition={{ delay: 0.2 }}
         className="mb-8"
       >
-        <h2 className="text-left text-xl font-semibold text-ele-pink">
+        <h2 className="text-left text-xl font-semibold text-text">
           Technologies Used
         </h2>
         <div className="flex flex-wrap gap-2 mt-4">
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="font-mono px-3 py-1 text-sm rounded bg-ele-space/50 text-ele-text-light border border-ele-purple/20"
+              className="font-mono px-3 py-1 text-sm rounded bg-blush/5 text-blush border border-blush/25"
             >
               {tech}
             </span>
@@ -146,7 +146,7 @@ const ProjectDetail = () => {
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-ele-dark/50 border border-ele-purple/20 rounded-lg text-ele-text-light hover:text-ele-pink hover:border-ele-pink transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-sun/5 border border-sun/25 rounded-lg text-sun hover:text-blush hover:border-blush transition-colors"
           >
             <FaGithub className="w-5 h-5" />
             <span>View on GitHub</span>
@@ -157,7 +157,7 @@ const ProjectDetail = () => {
             href={project.demoUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-ele-dark/50 border border-ele-purple/20 rounded-lg text-ele-text-light hover:text-ele-pink hover:border-ele-pink transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-sun/5 border border-sun/25 rounded-lg text-sun hover:text-blush hover:border-blush transition-colors"
           >
             <FaExternalLinkAlt className="w-5 h-5" />
             <span>Live Demo</span>
@@ -168,7 +168,7 @@ const ProjectDetail = () => {
             href={project.docUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-ele-dark/50 border border-ele-purple/20 rounded-lg text-ele-text-light hover:text-ele-pink hover:border-ele-pink transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-sun/5 border border-sun/25 rounded-lg text-sun hover:text-blush hover:border-blush transition-colors"
           >
             <FaExternalLinkAlt className="w-5 h-5" />
             <span>Documentation</span>

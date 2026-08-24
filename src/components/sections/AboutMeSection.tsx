@@ -87,14 +87,14 @@ const AboutMeSection = () => {
 
         {/* Right Section - About Text */}
         <motion.div
-          className="text-sm sm:text-base text-left text-text/70 whitespace-pre-line"
+          className="text-sm sm:text-base text-left whitespace-pre-line"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
         >
-            I am <span className="font-bold text-gold">software developer</span> love working with people to solve problems and I am constantly looking for ways to learn and improve myself. 
-            Whether I'm building software, analyzing data, or working with a team, <span className="font-bold text-gold">I enjoy taking on new challenges and finding new solutions.</span> {"\n"}
+            I am <span className="font-bold text-text">software developer</span> love working with people to solve problems and I am constantly looking for ways to learn and improve myself. 
+            Whether I'm building software, analyzing data, or working with a team, <span className="font-bold text-text">I enjoy taking on new challenges and finding new solutions.</span> {"\n"}
             I hope you'll be able to learn more about my personality, my work, and what I can bring to the table as you browse my website. Thanks for stopping by!
 
           {/* Skills */}

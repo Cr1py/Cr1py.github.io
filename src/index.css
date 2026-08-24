@@ -16,6 +16,7 @@
   --color-magenta: #C96FD8;
   --color-gold: #FFD166;
   --color-blush: #FF8FA3;
+  --color-sky: #4b96eb;
 }
 
 
@@ -32,6 +33,7 @@
   --color-magenta: #C96FD8;
   --color-gold: #FFD166;
   --color-blush: #FF8FA3;
+  --color-sky: #4b96eb;
   
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -40,7 +42,7 @@
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
-  color-scheme: light dark;
+  color-scheme: dark;
   color: var(--text);
   background: var(--bg);
   font-synthesis: none;
@@ -71,11 +73,7 @@ body {
 }
 
 h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
+h2,
 
 h1 {
   font-size: 56px;
