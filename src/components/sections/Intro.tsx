@@ -60,7 +60,7 @@ const Intro = () => {
             className="text-sun hover:text-blush transition-colors"
             aria-label="LinkedIn"
           >
-            <FaLinkedin className="items-center w-12 h-12" />
+            <FaLinkedin className="items-center w-12 h-12 fill-none hover:fill-blush/20 stroke-[4]" />
           </a>
         )}
         {personalInfo.socials.github && (
@@ -71,7 +71,7 @@ const Intro = () => {
             className="text-sun hover:text-blush transition-colors"
             aria-label="GitHub"
           >
-            <FaGithub className="items-center w-12 h-12" />
+            <FaGithub className="items-center w-12 h-12 fill-none hover:fill-blush/20 stroke-[4]" />
           </a>
         )}
         </motion.div>
