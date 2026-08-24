@@ -19,22 +19,22 @@ const ContactSection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          <h3 className="text-left text-3xl sm:text-4xl font-bold text-ele-pink mb-4">
+          <h3 className="text-left text-3xl sm:text-4xl font-bold text-text mb-4">
             Let's talk.
           </h3>
 
           {/* Input */}
           <div className="gap-3 mt-8">
-            <p className="text-sm sm:text-base text-left text-ele-text-light/70 whitespace-pre-line mb-4">I'm always happy to hear from interesting people: whether it's a project idea, a collaboration, or just a hello.</p>
+            <p className="text-sm sm:text-base text-left text/70 whitespace-pre-line mb-4">I'm always happy to hear from interesting people: whether it's a project idea, a collaboration, or just a hello.</p>
             
-            <a className="block [font-family:'Space_Mono',monospace] text-left text-[15px] text-sun no-underline border border-sun/25 bg-sun/5 py-4 px-6 rounded-lg mb-8 transition-all duration-200 tracking-[0.02em] hover:bg-sun/10 hover:border-sun mt-4"
+            <a className="block font-mono text-left text-[15px] text-sun no-underline border border-sun/25 bg-sun/5 py-4 px-6 rounded-lg mb-8 transition-all duration-200 tracking-[0.02em] hover:bg-sun/10 hover:border-sun mt-4"
             href="mailto:{personalInfo.email}"
             >
             {personalInfo.email} →
             </a>
             
             {/* Social Links */}
-            <div className="flex items-center justify-start gap-4 text-ele-text-light">
+            <div className="flex items-center justify-start gap-4">
               {personalInfo.socials.github && (
                 <a
                 href={personalInfo.socials.github}
@@ -68,7 +68,7 @@ const ContactSection = () => {
           transition={{ delay: 0.3 }}
         >
           {/* Terminal Design */}
-          <div className="bg-bg3 border border-border rounded-2xl p-10 [font-family:'Space_Mono',monospace] text-xs leading-loose">
+          <div className="bg-bg3 border border-blush/25 rounded-2xl p-10 [font-family:'Space_Mono',monospace] text-xs leading-loose">
            <div className="text-faint">// Christine Bautista... get in touch</div>
             &nbsp;
             <div>

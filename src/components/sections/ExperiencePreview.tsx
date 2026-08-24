@@ -20,7 +20,7 @@ const ExperiencePreview = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-3xl sm:text-4xl font-bold text-ele-pink mb-4">
+          <h3 className="text-left text-3xl sm:text-4xl font-bold text-dusk mb-4">
             Experience
           </h3>
         </motion.h2>
@@ -29,7 +29,7 @@ const ExperiencePreview = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="text-sm sm:text-base text-center text-ele-text-light/70 mb-6"
+          className="text-left text-sm sm:text-base text-center text-ele-text-light/70 mb-6"
         >
           Here is a brief overview of my career journey, highlighting my most recent experience. If you want to dive deeper, feel free to follow the link below!
         </motion.p>
@@ -40,14 +40,14 @@ const ExperiencePreview = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.2 }}
-        className="bg-ele-dark/50 backdrop-blur-sm rounded-lg border border-ele-purple/20 p-8 hover:border-ele-pink/20 transition-colors"
+        className="backdrop-blur-sm rounded-lg border border-blush/25 p-8 hover:border-blush/20 transition-colors"
       >
         <div className="flex items-start gap-4 mb-4">
           <div className="flex-shrink-0">
-            <FaBriefcase className="w-8 h-8 text-ele-pink" />
+            <FaBriefcase className="w-8 h-8 text-sun" />
           </div>
           <div className="flex-1">
-            <h3 className="text-2xl text-left font-bold text-ele-pink mb-1">
+            <h3 className="text-2xl text-left font-bold text-sun mb-1">
               {latestExperience.title}
             </h3>
             <h4 className="text-xl text-left text-ele-text-light mb-1">

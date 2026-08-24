@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { FaGithub, FaLinkedin, FaDownload, FaEye } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaDownload} from "react-icons/fa"
 import { personalInfo } from "../data/personal-info"
 import resume from "/src/assets/CBautista_Resume.pdf"
 
@@ -14,7 +14,7 @@ const Intro = () => {
         transition={{ delay: 0.2 }}
       >
         <motion.div
-          className="text-xl sm:text-2xl text-ele-text-light font-mono mb-2"
+          className="text-xl sm:text-2xl font-mono mb-2 text-text"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
@@ -22,13 +22,13 @@ const Intro = () => {
           Hey there,
         </motion.div>
         <motion.h1
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-dusk font-bold tracking-tight mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
         >
-          <span className="text-ele-text-light">I'm </span>
-          <span className="text-ele-pink">Christine</span>
+          <span className="text-dusk">I'm </span>
+          <span className="text-dusk">Christine</span>
         </motion.h1>
         <motion.div
           className="text-base sm:text-lg text-ele-text-light italic mb-6"
@@ -47,39 +47,20 @@ const Intro = () => {
         >
           <a
             href={resume}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-ele-pink text-ele-dark font-semibold rounded-lg hover:bg-ele-purple transition-colors duration-300 group"
-          >
-            <FaEye className="w-4 h-4 group-hover:scale-110 transition-transform" />
-            View CV
-          </a>
-          <a
-            href={resume}
-            className="inline-flex items-center gap-2 px-6 py-3 border border-ele-pink text-ele-pink font-semibold rounded-lg hover:bg-ele-pink hover:text-ele-dark transition-colors duration-300 group"
+            className="inline-flex items-center gap-2 px-6 py-3 text-sun no-underline border border-sun/25 bg-sun/5 rounded-lg transition-all tracking-[0.02em] hover:bg-sun/10 hover:border-sun duration-300 group font:mono text-[18px]"
           >
             <FaDownload className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
             Download CV
           </a>
-        </motion.div>
-      </motion.div>
-
-      {/* Right Section - Social Links */}
-      <motion.div
-        className="flex-1 flex flex-row lg:flex-col items-center lg:items-end justify-center lg:justify-center space-x-6 lg:space-x-0 lg:space-y-6 w-full lg:w-auto"
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.7 }}
-      >
-        {personalInfo.socials.linkedin && (
+          {personalInfo.socials.linkedin && (
           <a
             href={personalInfo.socials.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-ele-text-light hover:text-ele-pink transition-colors"
+            className="text-sun"
             aria-label="LinkedIn"
           >
-            <FaLinkedin className="w-6 h-6 sm:w-8 sm:h-8" />
+            <FaLinkedin className="items-center w-12 h-12" />
           </a>
         )}
         {personalInfo.socials.github && (
@@ -87,12 +68,45 @@ const Intro = () => {
             href={personalInfo.socials.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-ele-text-light hover:text-ele-pink transition-colors"
+            className="text-sun"
             aria-label="GitHub"
           >
-            <FaGithub className="w-6 h-6 sm:w-8 sm:h-8" />
+            <FaGithub className="items-center w-12 h-12" />
           </a>
         )}
+        </motion.div>
+      </motion.div>
+
+      {/* Right Section - Social Links */}
+      <motion.div
+        className="text-sm sm:text-base text-left text-ele-text-light/70 whitespace-pre-line"
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.7 }}
+      >
+          {/* Terminal Design */}
+          <div className="bg-bg3 border border-blush/25 rounded-2xl p-8 [font-family:'Space_Mono',monospace] text-xs leading-loose">
+           <div className="text-faint">// Welcome to my website!</div>
+            &nbsp;
+            <div>
+              <span className="text-magenta"> const </span> christine = <span className="text-text">{'{'}</span>
+            </div>
+            <div>
+              &nbsp;&nbsp;email: <span className="text-blush">"{personalInfo.email}"</span>,
+            </div>
+            <div>
+              &nbsp;&nbsp;role: <span className="text-blush">"software developer"</span>,
+            </div>
+            <div>
+              &nbsp;&nbsp;currentLocation: <span className="text-blush">"Canada"</span>,
+            </div>
+            <div>
+              &nbsp;&nbsp;relocation: <span className="text-dusk">true</span>,
+            </div>
+            <div>
+              <span className="text-text">{'}'}</span>
+            </div>
+          </div>
       </motion.div>
     </div>
   );

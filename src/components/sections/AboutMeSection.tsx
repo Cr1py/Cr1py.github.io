@@ -31,7 +31,7 @@ const AboutMeSection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          <h3 className="text-left text-3xl sm:text-4xl font-bold text-ele-pink mb-4">
+          <h3 className="text-left text-3xl sm:text-4xl font-bold text-dusk mb-4">
             A little about me...
           </h3>
 
@@ -39,49 +39,49 @@ const AboutMeSection = () => {
           <div className="grid grid-cols-2 gap-3 mt-8">
 
             <motion.div
-              className="bg-ele-dark border border-ele-border rounded-lg p-5 transition-colors duration-200 hover:border-ele-pink"
+              className="bg-ele-dark border border-blush/25 rounded-lg p-5 transition-colors duration-200 hover:border-ele-pink"
               whileHover={{ y: -3 }}
             >
-              <div className="font-mono text-2xl sm:text-3xl font-bold text-ele-pink tracking-tight">
+              <div className="font-mono text-2xl sm:text-3xl font-bold text-sun tracking-tight">
                 BSc
               </div>
-              <div className="text-xs text-ele-text-light/60 mt-1">
+              <div className="text-xs text-sun/50 mt-1">
                 Computer Science
               </div>
             </motion.div>
 
             <motion.div
-              className="bg-ele-dark border border-ele-border rounded-lg p-5 transition-colors duration-200 hover:border-ele-pink"
+              className="bg-ele-dark border border-blush/25 rounded-lg p-5 transition-colors duration-200 hover:border-ele-pink"
               whileHover={{ y: -3 }}
             >
-              <div className="font-mono text-2xl sm:text-3xl font-bold text-ele-pink tracking-tight">
+              <div className="font-mono text-2xl sm:text-3xl font-bold text-sun tracking-tight">
                 2026
               </div>
-              <div className="text-xs text-ele-text-light/60 mt-1">
+              <div className="text-xs text-sun/50 mt-1">
                 University of Western Ontario
               </div>
             </motion.div>
 
             <motion.div
-              className="bg-ele-dark border border-ele-border rounded-lg p-5 transition-colors duration-200 hover:border-ele-pink"
+              className="bg-ele-dark border border-blush/25 rounded-lg p-5 transition-colors duration-200 hover:border-ele-pink"
               whileHover={{ y: -3 }}
             >
-              <div className="font-mono text-2xl sm:text-3xl font-bold text-ele-pink tracking-tight">
+              <div className="font-mono text-2xl sm:text-3xl font-bold text-sun tracking-tight">
                 3+
               </div>
-              <div className="text-xs text-ele-text-light/60 mt-1">
+              <div className="text-xs text-sun/50 mt-1">
                 Internship Experiences
               </div>
             </motion.div>
 
             <motion.div
-              className="bg-ele-dark border border-ele-border rounded-lg p-5 transition-colors duration-200 hover:border-ele-pink"
+              className="bg-ele-dark border border-blush/25 rounded-lg p-5 transition-colors duration-200 hover:border-ele-pink"
               whileHover={{ y: -3 }}
             >
-              <div className="font-mono text-2xl sm:text-3xl font-bold text-ele-pink tracking-tight">
+              <div className="font-mono text-2xl sm:text-3xl font-bold text-sun tracking-tight">
                 ∞
               </div>
-              <div className="text-xs text-ele-text-light/60 mt-1">
+              <div className="text-xs text-sun/50 mt-1">
                 Things to Learn
               </div>
             </motion.div>
@@ -97,8 +97,8 @@ const AboutMeSection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
         >
-            I am <span className="font-bold">software developer</span> love working with people to solve problems and I am constantly looking for ways to learn and improve myself. 
-            Whether I'm building software, analyzing data, or working with a team, <span className="font-bold">I enjoy taking on new challenges and finding new solutions.</span> {"\n"}
+            I am <span className="font-bold text-sun">software developer</span> love working with people to solve problems and I am constantly looking for ways to learn and improve myself. 
+            Whether I'm building software, analyzing data, or working with a team, <span className="font-bold text-sun">I enjoy taking on new challenges and finding new solutions.</span> {"\n"}
             I hope you'll be able to learn more about my personality, my work, and what I can bring to the table as you browse my website. Thanks for stopping by!
 
           {/* Skills */}
@@ -106,7 +106,7 @@ const AboutMeSection = () => {
             {skills.map((skill) => (
               <motion.span
                 key={skill}
-                className="font-mono text-[11px] px-3.5 py-1.5 rounded border border-ele-border text-ele-text-light/60 bg-ele-dark transition-all duration-200 tracking-wide hover:border-ele-pink hover:text-ele-pink"
+                className="font-mono text-[11px] px-3.5 py-1.5 rounded border border-blush/25 text-blush/60 transition-all duration-200 tracking-wide hover:border-blush hover:text-blush"
                 whileHover={{ y: -2 }}
               >
                 {skill}

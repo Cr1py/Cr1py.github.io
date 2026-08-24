@@ -19,10 +19,10 @@ const Logo = ({ className = "", showName = true, size = "sm" }: LogoProps) => {
 
   return (
     <div className={`flex items-center group ${className}`}>
-        <span className={`font-space-grotesk font-bold ${textSizeClasses[size]} text-ele-text`}>
+        <span className={`font-mono font-bold ${textSizeClasses[size]} text-dusk`}>
           christine
         </span>
-        <span className={`font-space-grotesk font-bold ${textSizeClasses[size]} text-ele-text`}> 
+        <span className={`font-mono font-bold ${textSizeClasses[size]}`}> 
           .dev
         </span>
     </div>
