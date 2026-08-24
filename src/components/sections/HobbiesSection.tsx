@@ -62,7 +62,7 @@ const HobbiesSection = () => {
 
                   {/* Title with Animation */}
                   <motion.h3
-                    className="text-2xl font-bold text-text/70 mb-3"
+                    className="text-2xl font-bold text-text mb-3"
                     animate={{
                       y: activeHobby === hobby.id ? -10 : 0,
                       scale: activeHobby === hobby.id ? 1.2 : 1,
