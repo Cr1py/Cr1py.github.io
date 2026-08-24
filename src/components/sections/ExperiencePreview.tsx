@@ -19,10 +19,10 @@ const ExperiencePreview = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          className="text-left mb-4"
         >
-          <h3 className="text-left text-3xl sm:text-4xl font-bold text-dusk mb-4">
-            Experience
-          </h3>
+          <span className="text-text">My </span>
+          <span className="text-dusk">Experience</span>
         </motion.h2>
       </div>
 
@@ -38,14 +38,14 @@ const ExperiencePreview = () => {
             <FaBriefcase className="w-8 h-8 text-sun" />
           </div>
           <div className="flex-1">
-            <h3 className="text-2xl text-left font-bold text-sun mb-1">
+            <h3 className="text-2xl text-left text-sun mb-1">
               {latestExperience.title}
             </h3>
             <h4 className="text-xl text-left text-text mb-1">
               {latestExperience.company}
             </h4>
             <div className="mb-2">
-              <p className="text-sm sm:text-base text-left text-text/90">
+              <p className="text-sm sm:text-base font-syne text-left text-text/90">
                 {latestExperience.location} •{" "}
                 {new Date(latestExperience.startDate).toLocaleDateString(
                   "en-US",

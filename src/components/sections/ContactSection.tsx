@@ -19,9 +19,10 @@ const ContactSection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          <h3 className="text-left text-3xl sm:text-4xl font-bold text-dusk mb-4">
-            Let's talk.
-          </h3>
+          <h2 className="text-left font-syne font-black mb-4">
+            <span className="text-text">Let's </span>
+            <span className="text-dusk">Talk.</span>
+          </h2>
 
           {/* Input */}
           <div className="gap-3 mt-8">

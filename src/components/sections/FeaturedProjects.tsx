@@ -33,10 +33,10 @@ const FeaturedProjects = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          className="text-left font-syne font-black mb-4"
         >
-          <h3 className="text-left text-3xl sm:text-4xl font-bold text-dusk mb-4">
-            Featured Projects
-          </h3>
+          <span className="text-text">Featured </span>
+          <span className="text-dusk">Projects</span>
           
         </motion.h2>
         <div className="relative px-4 sm:px-8 lg:px-12 mt-6">

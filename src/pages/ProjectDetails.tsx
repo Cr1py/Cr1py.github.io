@@ -17,7 +17,7 @@ const ProjectDetail = () => {
   if (!project) {
     return (
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-        <h1 className="text-2xl text-text mb-4">Project Not Found</h1>
+        <h4 className="text-2xl text-text mb-4">Project Not Found</h4>
         <Link
           to="/projects"
           className="inline-flex items-center text-text hover:text-blush transition-colors"
@@ -73,9 +73,9 @@ const ProjectDetail = () => {
         transition={{ delay: 0.1 }}
         className="mb-8"
       >
-        <div className="text-left text-3xl sm:text-4xl font-bold text-text mb-4">
+        <h3 className="text-left text-3xl sm:text-4xl text-sun mb-4">
           {project.title}
-        </div>
+        </h3>
 
         {/* Date and Category */}
         <div className="flex flex-wrap items-center gap-4 mb-4">

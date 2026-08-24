@@ -79,7 +79,7 @@ export const projects: Project[] = [
   },
   {
     id: 'proj-picams',
-    title: 'Pi Cams',
+    title: 'Pi\n Cams',
     description:
       'A group project focused on developing a Raspberry Pi-based surveillance system that uses real-time video processing and facial recognition to monitor activity and provide security alerts.',
     shortDescription:

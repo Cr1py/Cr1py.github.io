@@ -22,13 +22,12 @@ const Intro = () => {
           Hey there,
         </motion.div>
         <motion.h1
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-dusk font-bold tracking-tight mb-4"
+          className="text-dusk font-syne font-black tracking-tight mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
         >
-          <span className="text-dusk">I'm </span>
-          <span className="text-dusk">Christine</span>
+          I'm Christine
         </motion.h1>
         <motion.div
           className="text-base sm:text-lg text-text/70 italic mb-6"
