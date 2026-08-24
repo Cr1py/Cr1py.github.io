@@ -11,11 +11,9 @@ const Education = () => {
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="mb-8"
+        className="text-left text-dusk mb-8"
       >
-        <div className="text-left text-3xl sm:text-4xl font-bold text-dusk">
-          Education
-        </div>
+        Education
       </motion.h1>
 
       {/* Education Timeline */}
@@ -23,7 +21,7 @@ const Education = () => {
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-2xl font-bold text-text flex items-center gap-3"
+          className="text-2xl text-text flex items-center gap-3"
         >
           <FaGraduationCap className="text-magenta"/>
           Academic Background
@@ -39,10 +37,10 @@ const Education = () => {
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div className="flex-1">
-                  <h3 className="text-left text-xl font-bold text-text mb-2">
+                  <h3 className="text-left text-xl text-text mb-2">
                     {edu.degree}
                   </h3>
-                  <h4 className="text-left text-lg text-text/70 mb-1">
+                  <h4 className="text-left text-lg text-text mb-1">
                     {edu.school}
                   </h4>
                   <p className="text-left text-text/70 text-sm mb-2">
@@ -62,7 +60,7 @@ const Education = () => {
               )}
 
               {edu.focus && edu.focus.length > 0 && (
-              <h4 className="text-left text-lg font-semibold text-text mt-4">
+              <h4 className="text-left text-lg text-text mt-4">
                 Relevant Courses
               </h4>
               )}
@@ -87,7 +85,7 @@ const Education = () => {
       {/* Certifications */}
       {certifications.length > 0 && (
         <div className="mb-16">
-          <h2 className="text-2xl font-bold text-text flex items-center gap-3">
+          <h2 className="text-2xl text-text flex items-center gap-3">
             <FaCertificate className="text-sky"/>
             Certifications
           </h2>
@@ -100,20 +98,20 @@ const Education = () => {
                 transition={{ delay: index * 0.1 }}
                 className="bg-magenta/5 rounded-lg border border-blush/25 p-6"
               >
-                <h3 className="text-left text-lg font-bold text-text mb-2">
+                <h3 className="text-left text-lg text-text mb-2">
                   {cert.name}
                 </h3>
 
                 <div className="mb-2">
                   {cert.issuer && (
-                    <p className="text-left text-text text-sm">
+                    <p className="text-left text-text/70 text-sm">
                       {cert.issuer}
                     </p>
                   )}  
                 </div>
                 <div className="mb-2">
                   {cert.date && (
-                    <p className="text-left text-text text-sm">
+                    <p className="text-left text-text/70 text-sm">
                       {cert.date}
                     </p>
                   )}
@@ -147,7 +145,7 @@ const Education = () => {
       {/* Honours & Awards */}
       {honours.length > 0 && (
         <div className="mb-16">
-          <h2 className="text-2xl font-bold text-text mb-8 flex items-center gap-3">
+          <h2 className="text-2xl text-text mb-8 flex items-center gap-3">
             <FaTrophy className="text-gold"/>
             Honours & Awards
           </h2>
@@ -160,12 +158,12 @@ const Education = () => {
                 transition={{ delay: index * 0.1 }}
                 className="bg-magenta/5 rounded-lg border border-blush/25 p-6"
               >
-                <h3 className="text-left text-lg font-bold text-text mb-2">
+                <h3 className="text-left text-lg text-text mb-2">
                   {honour.title}
                 </h3>
                 <div className="mb-2">
                   {honour.organization && (
-                    <p className="text-left text-sm">
+                    <p className="text-left text-text/70 text-sm">
                       {honour.organization}
                     </p>
                   )}
@@ -173,7 +171,7 @@ const Education = () => {
 
                 <div className="mb-2">
                   {honour.date && (
-                    <p className="text-left text-ele-text-light text-sm">
+                    <p className="text-left text-text/70 text-sm">
                       {honour.date}
                     </p>
                   )}
@@ -181,7 +179,7 @@ const Education = () => {
 
                 <div>
                   {honour.description && (
-                    <p className="text-left text-ele-text-light text-sm">
+                    <p className="text-left text-sm">
                       {honour.description}
                     </p>
                   )}
@@ -192,7 +190,7 @@ const Education = () => {
                     href={honour.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-ele-text-light hover:text-ele-pink transition-colors mt-2"
+                    className="flex items-center gap-2 text-text hover:text-blush transition-colors mt-2"
                     onClick={(e) => e.stopPropagation()}
                 >
                     <FaExternalLinkAlt className="w-3 h-3" />

@@ -59,11 +59,9 @@ const Projects = () => {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl font-bold"
+          className="text-left text-dusk"
         >
-          <div className="text-left text-3xl sm:text-4xl font-bold text-dusk">
-            Projects
-          </div>
+          Projects
         </motion.h1>
  
         {/* Filter Button */}
@@ -81,7 +79,7 @@ const Projects = () => {
           <FaFilter />
           <span>Filters</span>
           {selectedTags.length > 0 && (
-            <span className="absolute -top-2 -right-2 bg-sun rounded text-text/70 text-xs font-bold w-6 h-6 flex items-center justify-center">
+            <span className="absolute -top-2 -right-2 bg-sun rounded text-text/70 text-xs w-6 h-6 flex items-center justify-center">
               {selectedTags.length}
             </span>
           )}
@@ -99,7 +97,7 @@ const Projects = () => {
             className="mb-12 overflow-hidden"
           >
             <div className="backdrop-blur-sm rounded-lg border p-6">
-              <h2 className="text-left text-xl font-semibold text-text mb-2">
+              <h2 className="text-left text-xl text-text mb-2">
                 Filter by Technology
               </h2>
               <div className="flex flex-wrap gap-2 mb-2 mt-4">
@@ -167,9 +165,9 @@ const Projects = () => {
                   {/* Project Details */}
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-2">
-                      <h2 className="text-left text-xl font-bold text-text">
+                      <h3 className="text-left text-xl text-text whitespace-pre-line">
                         {project.title}
-                      </h2>
+                      </h3>
                     </div>
  
                     {/* Date */}

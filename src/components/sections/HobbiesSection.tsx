@@ -11,14 +11,13 @@ const HobbiesSection = () => {
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-3xl sm:text-4xl font-bold text-ele-pink mb-12 text-center"
-      >
-        <h3 className="text-left text-3xl sm:text-4xl font-bold text-dusk mb-6">
-          Hobbies
-        </h3>
+        className="text-left font-syne font-black mb-4"
+        >
+          <span className="text-text">My </span>
+          <span className="text-dusk">Hobbies</span>
       </motion.h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative mt-6">
         {hobbies.map((hobby, index) => (
           <motion.div
             key={hobby.id}

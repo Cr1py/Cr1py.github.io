@@ -31,9 +31,10 @@ const AboutMeSection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          <h3 className="text-left text-3xl sm:text-4xl font-bold text-dusk mb-4">
-            A little about me...
-          </h3>
+          <h2 className="text-left font-syne mb-4">
+            <span className="text-text">A little </span>
+            <span className="text-dusk">About Me...</span>
+          </h2>
 
           {/* Stats */}
           <div className="grid grid-cols-2 gap-3 mt-8">

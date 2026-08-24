@@ -36,10 +36,9 @@ const Experience = () => {
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
+          className="text-left text-dusk"
         >
-          <div className="text-3xl sm:text-4xl font-bold text-dusk">
-            Experience
-          </div>
+          Experience
         </motion.h1>
 
         {/* Filter Button */}
@@ -75,9 +74,9 @@ const Experience = () => {
             className="mb-12 overflow-hidden"
           >
             <div className="backdrop-blur-sm rounded-lg border p-6">
-              <h2 className="text-left text-xl font-semibold text-text mb-2">
+              <h3 className="text-left text-xl text-text mb-2">
                 Filter by Technology
-              </h2>
+              </h3>
               <div className="flex flex-wrap gap-2 mb-2 mt-4">
                 {allTags.map((tag) => (
                   <button
@@ -161,12 +160,12 @@ const Experience = () => {
                       <div className="bg-magenta/5 backdrop-blur-sm rounded-lg border border-blush/25 p-8">
                         {/* Header */}
                         <div className="mb-6">
-                          <h2 className="text-left text-2xl font-bold text-text mb-4">
+                          <h3 className="text-left text-2xl text-sun mb-4">
                             {experience.title}
-                          </h2>
-                          <h3 className="text-left text-xl text-text/70 mb-2">
-                            {experience.company}
                           </h3>
+                          <h4 className="text-left text-xl text-text mb-2">
+                            {experience.company}
+                          </h4>
                           <div className="text-left text-text/70">
                             <p>{experience.location}</p>
                             <p>
@@ -196,7 +195,7 @@ const Experience = () => {
 
                         {/* Key Achievements */}
                         <div className="mb-6">
-                          <h4 className="text-left text-lg font-semibold text-text mb-2 mt-4">
+                          <h4 className="text-left text-lg text-text mb-2 mt-4">
                             Key Achievements
                           </h4>
                           <ul className="text-left list-disc list-inside space-y-2">
@@ -210,7 +209,7 @@ const Experience = () => {
 
                         {/* Technologies */}
                         <div>
-                          <h4 className="text-left text-lg font-semibold text-text mb-3">
+                          <h4 className="text-left text-lg text-text mb-3">
                             Technologies & Skills
                           </h4>
                           <div className="flex flex-wrap gap-2">
