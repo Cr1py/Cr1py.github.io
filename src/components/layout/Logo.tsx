@@ -22,7 +22,7 @@ const Logo = ({ className = "", showName = true, size = "sm" }: LogoProps) => {
         <span className={`font-mono font-bold ${textSizeClasses[size]} text-dusk`}>
           christine
         </span>
-        <span className={`font-mono font-bold ${textSizeClasses[size]}`}> 
+        <span className={`font-mono font-bold ${textSizeClasses[size]} text-text/70`}> 
           .dev
         </span>
     </div>

@@ -1,5 +1,5 @@
 import type { IconType } from "react-icons";
-import { FaPaintBrush, FaPaperPlane } from "react-icons/fa";
+import { FaPaintBrush} from "react-icons/fa";
 import { TbPlayCardStarFilled } from "react-icons/tb";
 import { PiBowlFoodFill } from "react-icons/pi";
 

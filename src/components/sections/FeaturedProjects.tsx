@@ -34,12 +34,12 @@ const FeaturedProjects = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-3xl sm:text-4xl font-bold text-ele-pink mb-6">
+          <h3 className="text-left text-3xl sm:text-4xl font-bold text-dusk mb-4">
             Featured Projects
           </h3>
+          
         </motion.h2>
-
-        <div className="relative px-4 sm:px-8 lg:px-12">
+        <div className="relative px-4 sm:px-8 lg:px-12 mt-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             <AnimatePresence mode="wait">
               {visibleProjects.map((project, index) => (
@@ -49,7 +49,7 @@ const FeaturedProjects = () => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -50 }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-ele-dark/50 backdrop-blur-sm rounded-lg overflow-hidden border border-ele-purple/20 group"
+                  className="bg-magenta/5 bg-magenta/5 rounded-lg border border-blush/25 overflow-hidden group"
                 >
                   <Link to={`/projects/${project.id}`}>
                     {/* project Image */}
@@ -63,11 +63,11 @@ const FeaturedProjects = () => {
 
                     {/* project Information */}
                     <div className="p-6">
-                      <h3 className="text-xl font-bold text-ele-pink mb-2 group-hover:text-ele-purple transition-colors">
+                      <h3 className="text-left text-xl font-bold text-sun mb-2 group-hover:text-ele-purple transition-colors">
                         {project.title}
                       </h3>
 
-                      <p className="text-ele-text-light mb-4 line-clamp-3">
+                      <p className="text-left text-text/70 mb-4 line-clamp-3">
                         {project.description}
                       </p>
 
@@ -76,8 +76,7 @@ const FeaturedProjects = () => {
                         {project.technologies.slice(0, 3).map((tech) => (
                           <motion.span
                             key={tech}
-                            className="font-mono text-[10px] px-2.5 py-1 rounded border border-ele-border text-ele-text-light/60 bg-ele-dark transition-all duration-200 tracking-wide hover:border-ele-pink hover:text-ele-pink whitespace-nowrap shrink-0"
-                            whileHover={{ y: -2 }}
+                            className="font-mono text-[10px] sm:text-[11px] px-2.5 py-1 bg-blush/5 rounded border border-blush/25 text-blush/60 transition-all duration-200 tracking-wide hover:border-blush hover:text-blush tracking-wide whitespace-nowrap shrink-0"
                           >
                             {tech}
                           </motion.span>
@@ -85,8 +84,7 @@ const FeaturedProjects = () => {
 
                         {project.technologies.length > 3 && (
                           <motion.span
-                            className="font-mono text-[10px] sm:text-[11px] px-2.5 py-1 rounded border border-ele-border text-ele-text-light/60 bg-ele-dark tracking-wide whitespace-nowrap shrink-0"
-                            whileHover={{ y: -2 }}
+                            className="font-mono text-[10px] sm:text-[11px] px-2.5 py-1 bg-blush/5 rounded border border-blush/25 text-blush/60 transition-all duration-200 tracking-wide hover:border-blush hover:text-blush tracking-wide whitespace-nowrap shrink-0"
                           >
                             +{project.technologies.length - 3}
                           </motion.span>
@@ -102,7 +100,7 @@ const FeaturedProjects = () => {
           {/* nav Arrows */}
           <button
             onClick={prevProjects}
-            className="hidden lg:flex absolute -left-6 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-ele-space/80 text-ele-text-light hover:text-ele-pink hover:scale-110 transition-all items-center justify-center"
+            className="hidden lg:flex absolute -left-6 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full text-sun hover:text-blush hover:scale-110 transition-all items-center justify-center"
             aria-label="Previous projects"
           >
             <FaArrowLeft className="w-5 h-5" />
@@ -110,7 +108,7 @@ const FeaturedProjects = () => {
 
           <button
             onClick={nextProjects}
-            className="hidden lg:flex absolute -right-6 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-ele-space/80 text-ele-text-light hover:text-ele-pink hover:scale-110 transition-all items-center justify-center"
+            className="hidden lg:flex absolute -right-6 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full text-sun hover:text-blush hover:scale-110 transition-all items-center justify-center"
             aria-label="Next projects"
           >
             <FaArrowRight className="w-5 h-5" />

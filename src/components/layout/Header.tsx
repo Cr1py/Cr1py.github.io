@@ -66,7 +66,7 @@ const Header = ({ className = "" }: HeaderProps) => {
 
   return (
     <header
-      className={`h-16 backdrop-blur-sm border-b border-blush/25 ${className}`}
+      className={`h-16 bg-magenta/5 backdrop-blur-sm border-b border-blush/25 ${className}`}
     >
       <nav className="max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 relative">
         <div className="flex items-center justify-between h-full">
@@ -81,8 +81,8 @@ const Header = ({ className = "" }: HeaderProps) => {
                 to="/experience"
                 className={`${
                   isActive("/experience")
-                    ? "text-blush"
-                    : "hover:text-ele-text"
+                    ? "text-text/70"
+                    : "hover:text-blush"
                 } transition-colors duration-300 text-lg`}
               >
                 Experience
@@ -92,8 +92,8 @@ const Header = ({ className = "" }: HeaderProps) => {
                 to="/education"
                 className={`${
                   isActive("/education")
-                    ? "text-blush"
-                    : "hover:text-ele-text"
+                    ? "text-text/70"
+                    : "hover:text-blush"
                 } transition-colors duration-300 text-lg`}
               >
                 Education
@@ -103,8 +103,8 @@ const Header = ({ className = "" }: HeaderProps) => {
                 to="/projects"
                 className={`flex items-center gap-2 ${
                   isProjectActive
-                    ? "text-blush"
-                    : "hover:text-ele-text"
+                    ? "text-text/70"
+                    : "hover:text-blush"
                 } transition-colors duration-300 text-lg`}
               >
                 Projects
@@ -117,8 +117,8 @@ const Header = ({ className = "" }: HeaderProps) => {
                   onMouseLeave={() => setIsHobbiesOpen(false)}
                   className={`flex items-center gap-2 ${
                     isHobbyActive
-                      ? "text-blush"
-                      : "hover:text-ele-text"
+                    ? "text-text/70"
+                    : "hover:text-blush"
                   } transition-colors duration-300 text-lg`}
                 >
                   Hobbies
@@ -138,7 +138,7 @@ const Header = ({ className = "" }: HeaderProps) => {
                       transition={{ duration: 0.2 }}
                       onMouseEnter={() => setIsHobbiesOpen(true)}
                       onMouseLeave={() => setIsHobbiesOpen(false)}
-                      className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 py-2 w-48 backdrop-blur-sm rounded-lg border border-blush/20 shadow-xl"
+                      className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 py-2 w-48 bg-magenta/5 backdrop-blur-sm rounded-lg border border-blush/20 shadow-xl"
                     >
                       {HOBBY_LINKS.map((link) => (
                         <Link
@@ -147,7 +147,7 @@ const Header = ({ className = "" }: HeaderProps) => {
                           className={`flex items-center gap-3 px-4 py-3 hover:bg-blush-400/10 transition-colors ${
                             isActive(link.to)
                               ? "text-blush"
-                              : "hover:text-ele-blush"
+                              : "hover:text-blush"
                           }`}
                         >
                           {link.icon}

@@ -39,49 +39,45 @@ const AboutMeSection = () => {
           <div className="grid grid-cols-2 gap-3 mt-8">
 
             <motion.div
-              className="bg-ele-dark border border-blush/25 rounded-lg p-5 transition-colors duration-200 hover:border-ele-pink"
-              whileHover={{ y: -3 }}
+              className="bg-magenta/5 border border-blush/25 rounded-lg p-5 transition-all duration-200 tracking-wide hover:border-blush"
             >
-              <div className="font-mono text-2xl sm:text-3xl font-bold text-sun tracking-tight">
+              <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-sun tracking-tight">
                 BSc
               </div>
-              <div className="text-xs text-sun/50 mt-1">
+              <div className="text-left text-xs text-text/70 mt-1">
                 Computer Science
               </div>
             </motion.div>
 
             <motion.div
-              className="bg-ele-dark border border-blush/25 rounded-lg p-5 transition-colors duration-200 hover:border-ele-pink"
-              whileHover={{ y: -3 }}
+              className="bg-magenta/5 border border-blush/25 rounded-lg p-5 transition-all duration-200 tracking-wide hover:border-blush"
             >
-              <div className="font-mono text-2xl sm:text-3xl font-bold text-sun tracking-tight">
+              <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-sun tracking-tight">
                 2026
               </div>
-              <div className="text-xs text-sun/50 mt-1">
+              <div className="text-left text-xs text-text/70 mt-1">
                 University of Western Ontario
               </div>
             </motion.div>
 
             <motion.div
-              className="bg-ele-dark border border-blush/25 rounded-lg p-5 transition-colors duration-200 hover:border-ele-pink"
-              whileHover={{ y: -3 }}
+              className="bg-magenta/5 border border-blush/25 rounded-lg p-5 transition-all duration-200 tracking-wide hover:border-blush"
             >
-              <div className="font-mono text-2xl sm:text-3xl font-bold text-sun tracking-tight">
+              <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-sun tracking-tight">
                 3+
               </div>
-              <div className="text-xs text-sun/50 mt-1">
+              <div className="text-left text-xs text-text/70 mt-1">
                 Internship Experiences
               </div>
             </motion.div>
 
             <motion.div
-              className="bg-ele-dark border border-blush/25 rounded-lg p-5 transition-colors duration-200 hover:border-ele-pink"
-              whileHover={{ y: -3 }}
+              className="bg-magenta/5 border border-blush/25 rounded-lg p-5 transition-all duration-200 tracking-wide hover:border-blush"
             >
-              <div className="font-mono text-2xl sm:text-3xl font-bold text-sun tracking-tight">
+              <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-sun tracking-tight">
                 ∞
               </div>
-              <div className="text-xs text-sun/50 mt-1">
+              <div className="text-left text-xs text-text/70 mt-1">
                 Things to Learn
               </div>
             </motion.div>
@@ -91,14 +87,14 @@ const AboutMeSection = () => {
 
         {/* Right Section - About Text */}
         <motion.div
-          className="text-sm sm:text-base text-left text-ele-text-light/70 whitespace-pre-line"
+          className="text-sm sm:text-base text-left text-text/70 whitespace-pre-line"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
         >
-            I am <span className="font-bold text-sun">software developer</span> love working with people to solve problems and I am constantly looking for ways to learn and improve myself. 
-            Whether I'm building software, analyzing data, or working with a team, <span className="font-bold text-sun">I enjoy taking on new challenges and finding new solutions.</span> {"\n"}
+            I am <span className="font-bold text-gold">software developer</span> love working with people to solve problems and I am constantly looking for ways to learn and improve myself. 
+            Whether I'm building software, analyzing data, or working with a team, <span className="font-bold text-gold">I enjoy taking on new challenges and finding new solutions.</span> {"\n"}
             I hope you'll be able to learn more about my personality, my work, and what I can bring to the table as you browse my website. Thanks for stopping by!
 
           {/* Skills */}
@@ -106,7 +102,7 @@ const AboutMeSection = () => {
             {skills.map((skill) => (
               <motion.span
                 key={skill}
-                className="font-mono text-[11px] px-3.5 py-1.5 rounded border border-blush/25 text-blush/60 transition-all duration-200 tracking-wide hover:border-blush hover:text-blush"
+                className="font-mono text-[11px] px-3.5 py-1.5 bg-blush/5 rounded border border-blush/25 text-blush/60 transition-all duration-200 tracking-wide hover:border-blush hover:text-blush"
                 whileHover={{ y: -2 }}
               >
                 {skill}

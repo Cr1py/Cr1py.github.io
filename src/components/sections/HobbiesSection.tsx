@@ -13,7 +13,7 @@ const HobbiesSection = () => {
         animate={{ opacity: 1, y: 0 }}
         className="text-3xl sm:text-4xl font-bold text-ele-pink mb-12 text-center"
       >
-        <h3 className="text-3xl sm:text-4xl font-bold text-ele-pink mb-6">
+        <h3 className="text-left text-3xl sm:text-4xl font-bold text-dusk mb-6">
           Hobbies
         </h3>
       </motion.h2>
@@ -33,7 +33,7 @@ const HobbiesSection = () => {
           >
             {/* Card */}
             <Link to={`/hobbies/${hobby.id}`}>
-              <div className="relative h-96 bg-ele-dark/50 backdrop-blur-sm rounded-lg overflow-hidden border border-ele-purple/20">
+              <div className="relative h-75 bg-magenta/5 rounded border border-blush/25 rounded-lg overflow-hidden">
                 {/* Background Image with Parallax */}
                 <motion.div
                   className="absolute inset-0"
@@ -42,7 +42,7 @@ const HobbiesSection = () => {
                   }}
                   transition={{ duration: 0.4 }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-t from-ele-dark/90 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-magenta/10 to-transparent" />
                 </motion.div>
 
                 {/* Content */}
@@ -57,17 +57,18 @@ const HobbiesSection = () => {
                     }}
                     transition={{ duration: 0.4 }}
                   >
-                    <div className="absolute inset-0 blur-xl bg-ele-pink/30 rounded-full" />
-                    <span className="relative flex items-center justify-center">
+                    <div className="absolute inset-0 blur-xl bg-sun/8 rounded-full" />
+                    <span className="relative flex items-center justify-center text-gold">
                       <hobby.icon />
                     </span>
                   </motion.div>
 
                   {/* Title with Animation */}
                   <motion.h3
-                    className="text-2xl font-bold text-ele-text mb-3"
+                    className="text-2xl font-bold text-text/70 mb-3"
                     animate={{
-                      x: activeHobby === hobby.id ? 10 : 0,
+                      y: activeHobby === hobby.id ? -10 : 0,
+                      scale: activeHobby === hobby.id ? 1.2 : 1,
                     }}
                     transition={{ duration: 0.4 }}
                   >
@@ -76,7 +77,7 @@ const HobbiesSection = () => {
 
                   {/* Description with Slide Up Animation */}
                   <motion.p
-                    className="text-sm sm:text-base text-left text-ele-text-light/70 whitespace-pre-line line-clamp-6"
+                    className="text-sm sm:text-base text-left text-text/70 whitespace-pre-line line-clamp-6"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{
                       opacity: activeHobby === hobby.id ? 1 : 0,
@@ -89,7 +90,7 @@ const HobbiesSection = () => {
 
                   {/* Interactive Elements */}
                   <motion.div
-                    className="absolute top-0 left-0 right-0 h-1 bg-ele-pink origin-left"
+                    className="absolute top-0 left-0 right-0 h-1 bg-blush/25 origin-left"
                     initial={{ scaleX: 0 }}
                     animate={{
                       scaleX: activeHobby === hobby.id ? 1 : 0,
@@ -99,7 +100,7 @@ const HobbiesSection = () => {
 
                   {/* Hover Indicator */}
                   <motion.div
-                    className="absolute bottom-4 right-4 text-ele-pink"
+                    className="absolute bottom-4 right-4 text-blush"
                     animate={{
                       opacity: activeHobby === hobby.id ? 1 : 0,
                       scale: activeHobby === hobby.id ? 1 : 0.8,
@@ -125,12 +126,6 @@ const HobbiesSection = () => {
             </Link>
           </motion.div>
         ))}
-
-        {/* Background Elements */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-0 w-32 h-32 bg-ele-pink/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-0 w-40 h-40 bg-ele-purple/5 rounded-full blur-3xl" />
-        </div>
       </div>
     </div>
   );

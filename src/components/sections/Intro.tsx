@@ -31,7 +31,7 @@ const Intro = () => {
           <span className="text-dusk">Christine</span>
         </motion.h1>
         <motion.div
-          className="text-base sm:text-lg text-ele-text-light italic mb-6"
+          className="text-base sm:text-lg text-text/70 italic mb-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
@@ -47,7 +47,7 @@ const Intro = () => {
         >
           <a
             href={resume}
-            className="inline-flex items-center gap-2 px-6 py-3 text-sun no-underline border border-sun/25 bg-sun/5 rounded-lg transition-all tracking-[0.02em] hover:bg-sun/10 hover:border-sun duration-300 group font:mono text-[18px]"
+            className="inline-flex items-center gap-2 px-6 py-3 text-sun no-underline border border-sun/25 bg-sun/5 rounded-lg transition-all tracking-[0.02em] duration-300 hover:bg-blush/10 hover:border-blush hover:text-blush"
           >
             <FaDownload className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
             Download CV
@@ -57,7 +57,7 @@ const Intro = () => {
             href={personalInfo.socials.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sun"
+            className="text-sun hover:text-blush transition-colors"
             aria-label="LinkedIn"
           >
             <FaLinkedin className="items-center w-12 h-12" />
@@ -68,7 +68,7 @@ const Intro = () => {
             href={personalInfo.socials.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sun"
+            className="text-sun hover:text-blush transition-colors"
             aria-label="GitHub"
           >
             <FaGithub className="items-center w-12 h-12" />
@@ -85,8 +85,8 @@ const Intro = () => {
         transition={{ delay: 0.7 }}
       >
           {/* Terminal Design */}
-          <div className="bg-bg3 border border-blush/25 rounded-2xl p-8 [font-family:'Space_Mono',monospace] text-xs leading-loose">
-           <div className="text-faint">// Welcome to my website!</div>
+          <div className="bg-magenta/5 border border-blush/25 rounded-2xl p-8 [font-family:'Space_Mono',monospace] text-xs leading-loose">
+           <div className="text-gold">// Welcome to my website!</div>
             &nbsp;
             <div>
               <span className="text-magenta"> const </span> christine = <span className="text-text">{'{'}</span>
