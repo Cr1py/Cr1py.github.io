@@ -19,28 +19,28 @@ const Home = () => {
       </section> 
 
       {/* About Me */}
-      <section>
+      <section id="education">
         <div>
           <AboutMeSection />
         </div>
       </section>   
 
       {/* Experience Preview */}
-      <section>
+      <section id="experience">
         <div>
           <ExperiencePreview />
         </div>
       </section> 
 
       {/* Featured Projects */}
-      <section>
+      <section id="projects">
         <div>
           <FeaturedProjects />
         </div>
       </section>  
 
       {/* Hobbies Preview */}
-      <section>
+      <section id="hobbies">
         <div>
           <HobbiesSection />
         </div>

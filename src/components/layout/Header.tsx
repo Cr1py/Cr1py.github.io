@@ -77,17 +77,7 @@ const Header = ({ className = "" }: HeaderProps) => {
           {/* Desktop Navigation */}
           <div className="hidden sm:block">
             <div className="flex items-center space-x-10">
-              <Link
-                to="/experience"
-                className={`${
-                  isActive("/experience")
-                    ? "text-blush"
-                    : "hover:text-blush"
-                } transition-colors duration-300 text-lg`}
-              >
-                Experience
-              </Link>
-              
+
               <Link
                 to="/education"
                 className={`${
@@ -99,16 +89,19 @@ const Header = ({ className = "" }: HeaderProps) => {
                 Education
               </Link>
 
-              <Link
-                to="/projects"
-                className={`flex items-center gap-2 ${
-                  isProjectActive
-                    ? "text-blush"
-                    : "hover:text-blush"
-                } transition-colors duration-300 text-lg`}
+              <a
+                href="/#experience"
+                className="hover:text-blush transition-colors duration-300 text-lg"
+              >
+                Experience
+              </a>
+      
+              <a
+                href="/#projects"
+                className="hover:text-blush transition-colors duration-300 text-lg"
               >
                 Projects
-              </Link>
+              </a>
             
               {/* Hobbies Dropdown */}
               <div className="relative">
@@ -192,59 +185,61 @@ const Header = ({ className = "" }: HeaderProps) => {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.2 }}
-              className="sm:hidden overflow-hidden border-t border-blush/20 absolute top-full left-0 right-0 bg-blush/95 backdrop-blur-sm z-50 shadow-lg"
+              className="sm:hidden overflow-hidden border-t border-lavender/25 absolute top-full left-0 right-0 bg-[var(--bg)] backdrop-blur-sm z-50 shadow-lg"
             >
-              <div className="py-4 space-y-4">
-                <Link
-                  to="/experience"
+              <div className="py-4 px-4 space-y-2">
+
+                {/* Experience */}
+                <a
+                  href="/#experience"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block px-4 py-2 rounded-lg transition-colors ${
-                    isActive("/experience")
-                      ? "text-blush bg-blush-400/10"
-                      : "hover:text-blush hover:bg-blush-400/5"
-                  }`}
+                  className="block px-4 py-3 rounded-lg transition-colors hover:text-blush hover:bg-blush/5"
                 >
                   Experience
-                </Link>
+                </a>
 
+                {/* Education */}
                 <Link
                   to="/education"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block px-4 py-2 rounded-lg transition-colors ${
+                  className={`block px-4 py-3 rounded-lg transition-colors ${
                     isActive("/education")
-                      ? "text-blush-400 bg-blush-400/10"
-                      : "hover:text-ele-blush hover:bg-blush-400/5"
+                      ? "text-blush bg-blush/5"
+                      : "hover:text-blush hover:bg-blush/5"
                   }`}
                 >
                   Education
                 </Link>
 
-                <Link
-                  to="/projects"
+                {/* Projects */}
+                <a
+                  href="/#projects"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block px-4 py-2 rounded-lg transition-colors ${
-                    isActive("/projects")
-                      ? "text-blush-400 bg-blush-400/10"
-                      : "hover:text-ele-blush hover:bg-blush-400/5"
-                  }`}
+                  className="block px-4 py-3 rounded-lg transition-colors hover:text-blush hover:bg-blush/5"
                 >
                   Projects
-                </Link>
+                </a>
 
-                <div className="px-4">
-                  <div className="font-semibold mb-2">
+                {/* Hobbies */}
+                <div className="px-4 py-2">
+                  <div
+                    className={`font-semibold mb-2 ${
+                      isHobbyActive ? "text-blush" : "text-text"
+                    }`}
+                  >
                     Hobbies
                   </div>
-                  <div className="pl-4 space-y-2">
+
+                  <div className="pl-4 space-y-1">
                     {HOBBY_LINKS.map((link) => (
                       <Link
                         key={link.to}
                         to={link.to}
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className={`flex items-center gap-3 px-4 py-2 rounded-lg transition-colors ${
+                        className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
                           isActive(link.to)
-                            ? "text-blush-400 bg-blush-400/10"
-                            : "hover:text-ele-blush hover:bg-blush-400/5"
+                            ? "text-blush bg-blush/5"
+                            : "hover:text-blush hover:bg-blush/5"
                         }`}
                       >
                         {link.icon}
@@ -253,17 +248,16 @@ const Header = ({ className = "" }: HeaderProps) => {
                     ))}
                   </div>
                 </div>
-                <Link
-                  to="/#contact"
+
+                {/* Contact */}
+                <a
+                  href="/#contact"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block px-4 py-2 rounded-lg transition-colors ${
-                    isActive("/contact")
-                      ? "text-blush-400 bg-blush-400/10"
-                      : "hover:text-ele-blush hover:bg-blush-400/5"
-                  }`}
+                  className="block px-4 py-3 rounded-lg transition-colors hover:text-blush hover:bg-blush/5"
                 >
                   Contact
-                </Link>
+                </a>
+
               </div>
             </motion.div>
           )}
