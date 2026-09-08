@@ -49,7 +49,7 @@ const FeaturedProjects = () => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -50 }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-magenta/5 bg-magenta/5 rounded-lg border border-blush/25 overflow-hidden group"
+                  className="bg-magenta/5 bg-magenta/5 rounded-lg border border-lavender/25 overflow-hidden group"
                 >
                   <Link to={`/projects/${project.id}`}>
                     {/* project Image */}

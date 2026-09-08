@@ -69,7 +69,7 @@ const ContactSection = () => {
           transition={{ delay: 0.3 }}
         >
           {/* Terminal Design */}
-          <div className="bg-magenta/5 border border-blush/25 rounded-2xl p-10 [font-family:'Space_Mono',monospace] text-xs leading-loose">
+          <div className="bg-magenta/5 border border-lavender/25 rounded-2xl p-10 [font-family:'Space_Mono',monospace] text-xs leading-loose">
            <div className="text-gold">// Christine Bautista... get in touch</div>
             &nbsp;
             <div>

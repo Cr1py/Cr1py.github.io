@@ -10,7 +10,7 @@
   --color-dusk: #FF8FA3;
   --color-magenta: #C96FD8;
   --color-gold: #FFD166;
-  --color-blush: #CBC5EA;
+  --color-blush: #FF8FA3;
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -110,7 +110,7 @@
 
 @layer components {
   .card {
-    @apply bg-magenta/5 border border-blush/25 transition-all duration-200;
+    @apply bg-magenta/5 border border-lavender/25 transition-all duration-200;
   }
   .card:hover {
     @apply border-blush;
@@ -124,7 +124,7 @@
   }
   
   .terminal-block {
-    @apply bg-magenta/5 border border-blush/25 [font-family:'Space_Mono',monospace] text-xs leading-loose;
+    @apply bg-magenta/5 border border-lavender/25 [font-family:'Space_Mono',monospace] text-xs leading-loose;
   }
   
   .link-accent {

@@ -33,7 +33,7 @@ const Education = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-magenta/5 rounded-lg border border-blush/25 p-6"
+              className="bg-magenta/5 rounded-lg border border-lavender/25 p-6"
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div className="flex-1">
@@ -70,7 +70,7 @@ const Education = () => {
                   {edu.focus.map((focus, i) => (
                     <span
                       key={i}
-                      className="font-mono text-[11px] px-3.5 py-1.5 rounded border bg-blush/4 text-blush border border-blush/25"
+                      className="font-mono text-[11px] px-3.5 py-1.5 rounded border bg-blush/4 text-blush border border-lavender/25"
                     >
                       {focus}
                     </span>
@@ -86,7 +86,7 @@ const Education = () => {
       {certifications.length > 0 && (
         <div className="mb-16">
           <h2 className="text-2xl text-text flex items-center gap-3">
-            <FaCertificate className="text-sky"/>
+            <FaCertificate className="text-lavender"/>
             Certifications
           </h2>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mt-4">
@@ -96,7 +96,7 @@ const Education = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-magenta/5 rounded-lg border border-blush/25 p-6"
+                className="bg-magenta/5 rounded-lg border border-lavender/25 p-6"
               >
                 <h3 className="text-left text-lg text-text mb-2">
                   {cert.name}
@@ -156,7 +156,7 @@ const Education = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-magenta/5 rounded-lg border border-blush/25 p-6"
+                className="bg-magenta/5 rounded-lg border border-lavender/25 p-6"
               >
                 <h3 className="text-left text-lg text-text mb-2">
                   {honour.title}
