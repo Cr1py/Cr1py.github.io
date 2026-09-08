@@ -31,7 +31,7 @@ const ExperiencePreview = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.2 }}
-        className="card bg-magenta/5 rounded-lg border border-blush/25 p-8"
+        className="card rounded-lg p-8"
       >
         <div className="flex items-start gap-4 mb-4">
           <div className="flex-shrink-0">
@@ -84,13 +84,12 @@ const ExperiencePreview = () => {
             latestExperience.technologies.length > 0 && (
                 <div className="flex flex-wrap gap-2 mb-4">
                 {latestExperience.technologies.slice(0, 6).map((tech, i) => (
-                    <motion.span
+                    <span
                     key={i}
-                    className="font-mono text-[11px] px-3.5 py-1.5 bg-blush/5 rounded border border-blush/25 text-blush/60 transition-all duration-200 tracking-wide hover:border-blush hover:text-blush"
-                    whileHover={{ y: -2 }}
+                    className="tag-pill"
                     >
                     {tech}
-                    </motion.span>
+                    </span>
                 ))}
                 </div>
             )}
@@ -99,7 +98,7 @@ const ExperiencePreview = () => {
 
         <Link
           to="/experience"
-          className="flex items-center text-sun hover:text-blush transition-colors group"
+          className="flex items-center link-accent group"
         >
           View Full Experience
           <FaArrowRight className="ml-2 transform group-hover:translate-x-1 transition-transform" />

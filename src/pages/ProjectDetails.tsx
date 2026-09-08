@@ -20,7 +20,7 @@ const ProjectDetail = () => {
         <h4 className="text-2xl text-text mb-4">Project Not Found</h4>
         <Link
           to="/projects"
-          className="inline-flex items-center text-text hover:text-blush transition-colors"
+          className="inline-flex items-center link-hover"
         >
           <FaArrowLeft className="mr-2" />
           Back to Projects
@@ -46,7 +46,7 @@ const ProjectDetail = () => {
       >
         <button
           onClick={() => navigate("/projects")}
-          className="inline-flex items-center text-text hover:text-blush transition-colors"
+          className="inline-flex items-center link-hover"
         >
           <FaArrowLeft className="mr-2" />
           Back to Projects
@@ -126,7 +126,7 @@ const ProjectDetail = () => {
           {project.technologies.map((tech) => (
             <span
               key={tech}
-              className="font-mono px-3 py-1 text-sm rounded bg-blush/5 text-blush border border-blush/25"
+              className="tag-pill"
             >
               {tech}
             </span>
@@ -146,7 +146,7 @@ const ProjectDetail = () => {
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-sun/5 border border-sun/25 rounded-lg text-sun hover:text-blush hover:border-blush transition-colors"
+            className="btn-outline"
           >
             <FaGithub className="w-5 h-5" />
             <span>View on GitHub</span>
@@ -157,7 +157,7 @@ const ProjectDetail = () => {
             href={project.demoUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-sun/5 border border-sun/25 rounded-lg text-sun hover:text-blush hover:border-blush transition-colors"
+            className="btn-outline"
           >
             <FaExternalLinkAlt className="w-5 h-5" />
             <span>Live Demo</span>
@@ -168,7 +168,7 @@ const ProjectDetail = () => {
             href={project.docUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-sun/5 border border-sun/25 rounded-lg text-sun hover:text-blush hover:border-blush transition-colors"
+            className="btn-outline"
           >
             <FaExternalLinkAlt className="w-5 h-5" />
             <span>Documentation</span>

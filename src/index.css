@@ -5,18 +5,12 @@
   --text-h: #f3f4f6;
   --bg: #16171d;
   --color-card: #1F1828;
-  --color-border: rgba(255, 180, 120, 0.08);
-  --color-border2: rgba(255, 180, 120, 0.18);
   --color-text: #F5EEE8;
-  --color-muted: #9A8A80;
-  --color-faint: #4E3F3A;
   --color-sun: #FF9A5C;
-  --color-sun2: #E8772A;
   --color-dusk: #FF6B6B;
   --color-magenta: #C96FD8;
   --color-gold: #FFD166;
   --color-blush: #FF8FA3;
-  --color-sky: #4b96eb;
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -54,59 +48,94 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-}
+@layer base {
+  body {
+    margin: 0;
+  }
 
-h1 {
-  font-size: 60px;
-  font-weight: 900;
-  font-family: var(--font-syne);
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
+  h1 {
+    font-size: 60px;
+    font-weight: 900;
+    font-family: var(--font-syne);
+    letter-spacing: -1.68px;
+    margin: 32px 0;
+    @media (max-width: 1024px) {
+      font-size: 36px;
+      margin: 20px 0;
+    }
+  }
+  h2 {
+    font-size: 30px;
+    font-weight: 900;
+    font-family: var(--font-syne);
+    line-height: 118%;
+    letter-spacing: -0.24px;
+    margin: 0 0 8px;
+    @media (max-width: 1024px) {
+      font-size: 20px;
+    }
+  }
+  h3 {
+    font-weight: 800;
+    font-family: var(--font-syne);
+  }
+  h4 {
+    font-weight: 700;
+    font-family: var(--font-syne);
+  }
+  p {
+    margin: 0;
+  }
+
+  code,
+  .counter {
+    font-family: var(--mono);
+    display: inline-flex;
+    border-radius: 4px;
+    color: var(--text-h);
+  }
+
+  code {
+    font-size: 15px;
+    line-height: 135%;
+    padding: 4px 8px;
+    background: var(--code-bg);
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 }
-h2 {
-  font-size: 30px;
-  font-weight: 900;
-  font-family: var(--font-syne);
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
+
+
+@layer components {
+  .card {
+    @apply bg-magenta/5 border border-blush/25 transition-all duration-200;
   }
-}
-h3 {
-  font-weight: 800;
-  font-family: var(--font-syne);
-}
-h4 {
-  font-weight: 700;
-  font-family: var(--font-syne);
-}
-p {
-  margin: 0;
-}
+  .card:hover {
+    @apply border-blush;
+  }
+  
+  .tag-pill {
+    @apply font-mono text-[11px] px-3.5 py-1.5 bg-blush/5 rounded border border-blush/25 text-blush/60 tracking-wide transition-all duration-200;
+  }
+  .tag-pill:hover {
+    @apply border-blush text-blush;
+  }
+  
+  .terminal-block {
+    @apply bg-magenta/5 border border-blush/25 [font-family:'Space_Mono',monospace] text-xs leading-loose;
+  }
+  
+  .link-accent {
+    @apply text-sun hover:text-blush transition-colors;
+  }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
-}
-
-html {
-  scroll-behavior: smooth;
+  .link-hover {
+    @apply text-text hover:text-blush transition-colors;
+  }
+ 
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-sun/5 border border-sun/25 rounded-lg text-sun transition-colors hover:text-blush hover:border-blush;
+  }
 }

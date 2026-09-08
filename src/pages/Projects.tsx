@@ -96,7 +96,7 @@ const Projects = () => {
             transition={{ duration: 0.3 }}
             className="mb-12 overflow-hidden"
           >
-            <div className="backdrop-blur-sm rounded-lg border p-6">
+            <div className="card backdrop-blur-sm rounded-lg p-6">
               <h2 className="text-left text-xl text-text mb-2">
                 Filter by Technology
               </h2>
@@ -105,10 +105,8 @@ const Projects = () => {
                   <button
                     key={tag}
                     onClick={() => toggleTag(tag)}
-                    className={`px-4 py-2 rounded border transition-colors ${
-                      selectedTags.includes(tag)
-                        ? "font-mono text-[11px] px-3.5 py-1.5 bg-blush/5 text-blush border-blush"
-                        : "font-mono text-[11px] px-3.5 py-1.5"
+                    className={`tag-pill ${
+                      selectedTags.includes(tag) ? "border-blush text-blush" : ""
                     }`}
                   >
                     {tag}
@@ -119,7 +117,7 @@ const Projects = () => {
                 <div className="text-center mt-4 pt-4 border-t">
                   <button
                     onClick={() => setSelectedTags([])}
-                    className="inline-flex items-center gap-2 text-text hover:text-blush transition-colors"
+                    className="inline-flex items-center gap-2 link-hover"
                   >
                     <FaTimes />
                     Clear all filters
@@ -150,7 +148,7 @@ const Projects = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
-                className="bg-magenta/5 backdrop-blur-sm rounded-lg border border-blush/25 overflow-hidden group"
+                className="card backdrop-blur-sm rounded-lg overflow-hidden group"
               >
                 <Link to={`/projects/${project.id}`}>
                   {/* Project Image */}
@@ -188,7 +186,7 @@ const Projects = () => {
                       {project.technologies.slice(0, 3).map((tech) => (
                         <span
                           key={tech}
-                          className="font-mono text-[10px] px-2.5 py-1 rounded border border-blush/25 text-blush bg-blush/5 whitespace-nowrap shrink-0"
+                          className="tag-pill text-[10px] px-2.5 py-1 text-blush whitespace-nowrap shrink-0"
                         >
                           {tech}
                         </span>
@@ -196,7 +194,7 @@ const Projects = () => {
 
                       {project.technologies.length > 3 && (
                         <span
-                          className="font-mono text-[10px] px-2.5 py-1 rounded border border-blush/25 text-blush bg-blush/5 whitespace-nowrap shrink-0"
+                          className="tag-pill text-[10px] px-2.5 py-1 text-blush whitespace-nowrap shrink-0"
                         >
                           +{project.technologies.length - 3}
                         </span>
@@ -210,7 +208,7 @@ const Projects = () => {
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 text-text hover:text-blush transition-colors"
+                          className="flex items-center gap-2 link-hover"
                           onClick={(e) => e.stopPropagation()}
                         >
                           <FaGithub className="w-4 h-4" />
@@ -222,7 +220,7 @@ const Projects = () => {
                           href={project.demoUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 text-text hover:text-blush transition-colors"
+                          className="flex items-center gap-2 link-hover"
                           onClick={(e) => e.stopPropagation()}
                         >
                           <FaExternalLinkAlt className="w-3 h-3" />
@@ -234,7 +232,7 @@ const Projects = () => {
                           href={project.docUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 text-text hover:text-blush transition-colors"
+                          className="flex items-center gap-2 link-hover"
                           onClick={(e) => e.stopPropagation()}
                         >
                           <FaExternalLinkAlt className="w-3 h-3" />
