@@ -1,111 +1,244 @@
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { useState, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { experiences } from "../data/experience";
-import { FaBriefcase, FaArrowRight } from "react-icons/fa";
+import { FaTimes, FaFilter } from "react-icons/fa";
 
-const ExperiencePreview = () => {
-    // gets the most recent experience (highest ID)
-    const latestExperience = experiences.reduce((latest, experience) => {
-    const latestId = parseInt(latest.id.replace('exp-', ''));
-    const currentId = parseInt(experience.id.replace('exp-', ''));
+const Experience = () => {
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [isFilterOpen, setIsFilterOpen] = useState<boolean>(false);
 
-    return currentId > latestId ? experience : latest;
+  // Get unique tags from all experiences
+  const allTags = useMemo(() => {
+    const tags = new Set<string>();
+    experiences.forEach((exp) => {
+      exp.technologies.forEach((tech) => tags.add(tech));
     });
+    return Array.from(tags).sort();
+  }, []);
+
+  // Filter experiences based on selected tags
+  const filteredExperiences = useMemo(() => {
+    if (selectedTags.length === 0) return experiences;
+    return experiences.filter((exp) =>
+      selectedTags.every((tag) => exp.technologies.includes(tag))
+    );
+  }, [selectedTags]);
+
+  const toggleTag = (tag: string) => {
+    setSelectedTags((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
+    );
+  };
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-10">
-      <div className="text-center mb-6">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="flex items-center justify-between mb-8">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-left mb-4"
+          className="text-left mb-0"
         >
           <span className="text-text">My </span>
           <span className="text-dusk">Experience</span>
         </motion.h2>
+
+        {/* Filter Button */}
+        <motion.button
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          onClick={() => setIsFilterOpen(!isFilterOpen)}
+          className={`relative flex items-center gap-2 px-4 py-2 rounded-lg border transition-colors ${
+            isFilterOpen
+              ? "bg-blush/5 text-blush border-blush"
+              : "text-text border-text"
+          }`}
+        >
+          <FaFilter />
+          <span>Filters</span>
+
+          {selectedTags.length > 0 && (
+            <span className="absolute -top-2 -right-2 bg-lavender rounded text-text/70 text-xs font-bold w-6 h-6 flex items-center justify-center">
+              {selectedTags.length}
+            </span>
+          )}
+        </motion.button>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.2 }}
-        className="card rounded-lg p-8"
-      >
-        <div className="flex items-start gap-4 mb-4">
-          <div className="flex-shrink-0">
-            <FaBriefcase className="w-8 h-8 text-sun" />
-          </div>
-          <div className="flex-1">
-            <h3 className="text-2xl text-left text-sun mb-1">
-              {latestExperience.title}
-            </h3>
-            <h4 className="text-xl text-left text-text mb-1">
-              {latestExperience.company}
-            </h4>
-            <div className="mb-2">
-              <p className="text-sm sm:text-base font-syne text-left text-text/90">
-                {latestExperience.location} •{" "}
-                {new Date(latestExperience.startDate).toLocaleDateString(
-                  "en-US",
-                  {
-                    month: "long",
-                    year: "numeric",
-                  }
-                )}
-                {latestExperience.endDate
-                  ? ` - ${new Date(latestExperience.endDate).toLocaleDateString(
-                      "en-US",
-                      {
-                        month: "long",
-                        year: "numeric",
-                      }
-                    )}`
-                  : " - Present"}
-              </p>
-            </div>
-            <p className="text-sm sm:text-base text-left text-text/70">
-              {latestExperience.description}
-            </p>
-            {latestExperience.achievements &&
-              latestExperience.achievements.length > 0 && (
-                <ul className="list-disc text-left list-inside space-y-1 text-text/70 mt-2 mb-6">
-                  {latestExperience.achievements
-                    .slice(0, 2)
-                    .map((achievement, i) => (
-                      <li key={i} className="pl-2">
-                        {achievement}
-                      </li>
-                    ))}
-                </ul>
-              )}
-            {latestExperience.technologies &&
-            latestExperience.technologies.length > 0 && (
-                <div className="flex flex-wrap gap-2 mb-4">
-                {latestExperience.technologies.slice(0, 6).map((tech, i) => (
-                    <span
-                    key={i}
-                    className="tag-pill"
-                    >
-                    {tech}
-                    </span>
+      {/* Filter Box */}
+      <AnimatePresence>
+        {isFilterOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="mb-12 overflow-hidden"
+          >
+            <div className="card backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-left text-xl text-text mb-2">
+                Filter by Technology
+              </h3>
+              <div className="flex flex-wrap gap-2 mb-2 mt-4">
+                {allTags.map((tag) => (
+                  <button
+                    key={tag}
+                    onClick={() => toggleTag(tag)}
+                    className={`tag-pill ${
+                      selectedTags.includes(tag) ? "border-blush text-blush" : ""
+                    }`}
+                  >
+                    {tag}
+                  </button>
                 ))}
+              </div>
+              {selectedTags.length > 0 && (
+                <div className="text-center mt-4 pt-4 border-t">
+                  <button
+                    onClick={() => setSelectedTags([])}
+                    className="inline-flex items-center gap-2 text-text hover:text-blush transition-colors"
+                  >
+                    <FaTimes />
+                    Clear all filters
+                  </button>
                 </div>
-            )}
-          </div>
-        </div>
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-        <Link
-          to="/experience"
-          className="flex items-center link-accent group"
-        >
-          View Full Experience
-          <FaArrowRight className="ml-2 transform group-hover:translate-x-1 transition-transform" />
-        </Link>
-      </motion.div>
+      <div className="max-w-[1400px] mx-auto">
+        <AnimatePresence mode="wait">
+          {filteredExperiences.length === 0 ? (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="text-center text-text py-12"
+            >
+              No experiences match the selected filters.
+            </motion.div>
+          ) : (
+            <div className="relative"> {/* Experience */}
+              {/* Timeline line - hidden on mobile, shown on desktop */}
+              <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-dusk" />
+
+              {filteredExperiences.map((experience, index) => (
+                <motion.div
+                  key={experience.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="relative mb-24 last:mb-0"
+                >
+                  {/* Timeline dot - hidden on mobile, shown on desktop */}
+                  <div className="hidden lg:block absolute left-1/2 top-1/2 w-4 h-4 bg-dusk rounded transform -translate-x-1/2" />
+
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    {/* Image - Alternating sides */}
+                    <div
+                      className={`relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-lg overflow-hidden ${
+                        index % 2 === 0 ? "lg:order-2" : "lg:order-1"
+                      }`}
+                    >
+                      <img
+                        src={experience.imageUrl}
+                        alt={`${experience.company} office`}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+
+                    {/* Content - Always opposite to image */}
+                    <div
+                      className={`${
+                        index % 2 === 0
+                          ? "lg:order-1 lg:pr-12"
+                          : "lg:order-2 lg:pl-12"
+                      } px-0 lg:px-0`}
+                    >
+                      <div className="card backdrop-blur-sm rounded-lg p-8">
+                        {/* Header */}
+                        <div className="mb-6">
+                          <h3 className="text-left text-2xl text-lavender mb-4">
+                            {experience.title}
+                          </h3>
+                          <h4 className="text-left text-xl text-text mb-2">
+                            {experience.company}
+                          </h4>
+                          <div className="text-left text-text/70">
+                            <p>{experience.location}</p>
+                            <p>
+                              {new Date(
+                                experience.startDate
+                              ).toLocaleDateString("en-US", {
+                                month: "long",
+                                year: "numeric",
+                              })}
+                              {" - "}
+                              {experience.endDate
+                                ? new Date(
+                                    experience.endDate
+                                  ).toLocaleDateString("en-US", {
+                                    month: "long",
+                                    year: "numeric",
+                                  })
+                                : "Present"}
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Description */}
+                        <p className="text-left mb-6">
+                          {experience.description}
+                        </p>
+
+                        {/* Key Achievements */}
+                        <div className="mb-6">
+                          <h4 className="text-left text-lg text-text mb-2 mt-4">
+                            Key Achievements
+                          </h4>
+                          <ul className="text-left list-disc list-inside space-y-2">
+                            {experience.achievements.map((achievement, i) => (
+                              <li key={i} className="pl-2">
+                                {achievement}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+
+                        {/* Technologies */}
+                        <div>
+                          <h4 className="text-left text-lg text-text mb-3">
+                            Technologies & Skills
+                          </h4>
+                          <div className="flex flex-wrap gap-2">
+                            {experience.technologies.map((tech) => (
+                              <span
+                                key={tech}
+                                className={`tag-pill ${
+                                  selectedTags.includes(tech)
+                                    ? "border-blush text-blush"
+                                    : ""
+                                }`}
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
+        </AnimatePresence>
+      </div>
     </div>
   );
 };
 
-export default ExperiencePreview;
+export default Experience;

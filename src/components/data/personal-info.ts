@@ -30,6 +30,6 @@ export const personalInfo: PersonalInfo = {
   },
   socials: {
     github: 'https://github.com/Cr1py',
-    linkedin: 'https://www.linkedin.com/in/christine-bautista-3a926519b/',
+    linkedin: 'https://www.linkedin.com/in/cbautista25/',
   }
 };

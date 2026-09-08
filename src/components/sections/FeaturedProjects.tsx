@@ -1,29 +1,16 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import { projects } from "../data/projects";
 
 const FeaturedProjects = () => {
-  const [startIndex, setStartIndex] = useState(0);
+  // only shows the first 3 featured projects in case I leave some labelled as true
+  const featuredProjects = projects
+    .filter((project) => project.featured)
+    .slice(0, 3);
 
-  // Filter to only show featured projects
-  const featuredProjects = projects.filter((project) => project.featured);
-
-  const visibleProjects = featuredProjects.slice(startIndex, startIndex + 3);
-
-  const nextProjects = () => {
-    setStartIndex((prev) =>
-      prev + 3 >= featuredProjects.length ? 0 : prev + 3
-    );
-  };
-
-  const prevProjects = () => {
-    setStartIndex((prev) =>
-      prev - 3 < 0
-        ? Math.floor((featuredProjects.length - 1) / 3) * 3
-        : prev - 3
-    );
+  const goToProjects = () => {
+    window.location.href = "/projects";
   };
 
   return (
@@ -33,105 +20,73 @@ const FeaturedProjects = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-left font-syne font-black mb-4"
+          className="flex items-center text-left font-syne font-black mb-4 gap-2"
         >
-          <span className="text-text">Featured </span>
+          <span className="text-text">Featured</span>
           <span className="text-dusk">Projects</span>
-          
-        </motion.h2>
-        <div className="relative px-4 sm:px-8 lg:px-12 mt-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            <AnimatePresence mode="wait">
-              {visibleProjects.map((project, index) => (
-                <motion.div
-                  key={project.id}
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -50 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-magenta/5 bg-magenta/5 rounded-lg border border-blush/25 overflow-hidden group"
-                >
-                  <Link to={`/projects/${project.id}`}>
-                    {/* project Image */}
-                    <div className="aspect-video overflow-hidden">
-                      <img
-                        src={project.imageUrl}
-                        alt={project.title}
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                    </div>
-
-                    {/* project Information */}
-                    <div className="p-6">
-                      <h3 className="text-left text-xl font-bold text-text mb-2">
-                        {project.title}
-                      </h3>
-
-                      <p className="text-left text-text/70 mb-4 line-clamp-3">
-                        {project.description}
-                      </p>
-
-                      {/* technologies */}
-                      <div className="flex flex-nowrap gap-2 mt-5 overflow-hidden">
-                        {project.technologies.slice(0, 3).map((tech) => (
-                          <motion.span
-                            key={tech}
-                            className="font-mono text-[10px] sm:text-[11px] px-2.5 py-1 bg-blush/5 rounded border border-blush/25 text-blush/60 transition-all duration-200 tracking-wide hover:border-blush hover:text-blush tracking-wide whitespace-nowrap shrink-0"
-                          >
-                            {tech}
-                          </motion.span>
-                        ))}
-
-                        {project.technologies.length > 3 && (
-                          <motion.span
-                            className="font-mono text-[10px] sm:text-[11px] px-2.5 py-1 bg-blush/5 rounded border border-blush/25 text-blush/60 transition-all duration-200 tracking-wide hover:border-blush hover:text-blush tracking-wide whitespace-nowrap shrink-0"
-                          >
-                            +{project.technologies.length - 3}
-                          </motion.span>
-                        )}
-                      </div>
-                    </div>
-                  </Link>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </div>
-
-          {/* nav Arrows */}
-          <button
-            onClick={prevProjects}
-            className="hidden lg:flex absolute -left-6 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full text-sun hover:text-blush hover:scale-110 transition-all items-center justify-center"
-            aria-label="Previous projects"
-          >
-            <FaArrowLeft className="w-5 h-5" />
-          </button>
 
           <button
-            onClick={nextProjects}
-            className="hidden lg:flex absolute -right-6 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full text-sun hover:text-blush hover:scale-110 transition-all items-center justify-center"
-            aria-label="Next projects"
+            onClick={goToProjects}
+            className="flex items-center justify-center w-12 h-12 rounded-full text-lavender hover:text-blush hover:scale-110 transition-all"
+            aria-label="View all projects"
           >
             <FaArrowRight className="w-5 h-5" />
           </button>
+        </motion.h2>
 
-          {/* project Indicators */}
-          <div className="flex justify-center mt-8 gap-2">
-            {Array.from({
-              length: Math.ceil(featuredProjects.length / 3),
-            }).map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setStartIndex(index * 3)}
-                className={`w-2 h-2 rounded-full transition-colors ${
-                  Math.floor(startIndex / 3) === index
-                    ? "bg-ele-pink"
-                    : "bg-ele-purple/20 hover:bg-ele-purple/40"
-                }`}
-                aria-label={`Go to projects set ${index + 1}`}
-                aria-current={
-                  Math.floor(startIndex / 3) === index ? "true" : "false"
-                }
-              />
+        <div className="relative mt-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {featuredProjects.map((project, index) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-magenta/5 rounded-lg border border-lavender/25 overflow-hidden group"
+              >
+                <Link to={`/projects/${project.id}`}>
+                  {/* Project Image */}
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src={project.imageUrl}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+
+                  {/* Project Information */}
+                  <div className="p-6">
+                    <h3 className="text-left text-xl font-bold text-text mb-2">
+                      {project.title}
+                    </h3>
+
+                    <p className="text-left text-text/70 mb-4 line-clamp-3">
+                      {project.description}
+                    </p>
+
+                    {/* Technologies */}
+                    <div className="flex flex-nowrap gap-2 mt-5 overflow-hidden">
+                      {project.technologies.slice(0, 3).map((tech) => (
+                        <motion.span
+                          key={tech}
+                          className="font-mono text-[10px] sm:text-[11px] px-2.5 py-1 bg-blush/5 rounded border border-blush/25 text-blush/60 transition-all duration-200 tracking-wide hover:border-blush hover:text-blush whitespace-nowrap shrink-0"
+                        >
+                          {tech}
+                        </motion.span>
+                      ))}
+
+                      {project.technologies.length > 3 && (
+                        <motion.span
+                          className="font-mono text-[10px] sm:text-[11px] px-2.5 py-1 bg-blush/5 rounded border border-blush/25 text-blush/60 transition-all duration-200 tracking-wide hover:border-blush hover:text-blush whitespace-nowrap shrink-0"
+                        >
+                          +{project.technologies.length - 3}
+                        </motion.span>
+                      )}
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -141,3 +96,4 @@ const FeaturedProjects = () => {
 };
 
 export default FeaturedProjects;
+

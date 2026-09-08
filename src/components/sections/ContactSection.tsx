@@ -28,7 +28,7 @@ const ContactSection = () => {
           <div className="gap-3 mt-8">
             <p className="text-sm sm:text-base text-left whitespace-pre-line mb-4">I'm always happy to hear from interesting people: whether it's a project idea, a collaboration, or just a hello.</p>
             
-            <a className="block font-mono text-left text-[15px] text-sun no-underline border border-sun/25 bg-sun/5 py-4 px-6 rounded-lg mb-8 transition-all duration-200 tracking-[0.02em] hover:bg-blush/10 hover:border-blush hover:text-blush mt-4"
+            <a className="block font-mono text-left text-[15px] text-lavender no-underline border border-lavender/25 bg-lavender/5 py-4 px-6 rounded-lg mb-8 transition-all duration-200 tracking-[0.02em] hover:bg-blush/10 hover:border-blush hover:text-blush mt-4"
             href="mailto:{personalInfo.email}"
             >
             {personalInfo.email} →
@@ -41,7 +41,7 @@ const ContactSection = () => {
                 href={personalInfo.socials.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sun hover:text-blush transition-colors"
+                className="text-lavender hover:text-blush transition-colors"
                 >
                 <FaGithub className="w-8 h-8" />
                 </a>
@@ -51,7 +51,7 @@ const ContactSection = () => {
                 href={personalInfo.socials.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sun hover:text-blush transition-colors"
+                className="text-lavender hover:text-blush transition-colors"
                 >
                 <FaLinkedin className="w-8 h-8" />
                 </a>
@@ -69,7 +69,7 @@ const ContactSection = () => {
           transition={{ delay: 0.3 }}
         >
           {/* Terminal Design */}
-          <div className="bg-magenta/5 border border-blush/25 rounded-2xl p-10 [font-family:'Space_Mono',monospace] text-xs leading-loose">
+          <div className="bg-magenta/5 border border-lavender/25 rounded-2xl p-10 [font-family:'Space_Mono',monospace] text-xs leading-loose">
            <div className="text-gold">// Christine Bautista... get in touch</div>
             &nbsp;
             <div>

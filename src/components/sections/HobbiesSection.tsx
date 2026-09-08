@@ -32,7 +32,7 @@ const HobbiesSection = () => {
           >
             {/* Card */}
             <Link to={`/hobbies/${hobby.id}`}>
-              <div className="relative h-75 bg-magenta/5 rounded border border-blush/25 rounded-lg overflow-hidden">
+              <div className="relative h-75 bg-magenta/5 rounded border border-lavender/25 rounded-lg overflow-hidden">
                 {/* Background Image with Parallax */}
                 <motion.div
                   className="absolute inset-0"
@@ -56,7 +56,7 @@ const HobbiesSection = () => {
                     }}
                     transition={{ duration: 0.4 }}
                   >
-                    <div className="absolute inset-0 blur-xl bg-sun/8 rounded-full" />
+                    <div className="absolute inset-0 blur-xl bg-lavender/8 rounded-full" />
                     <span className="relative">{hobby.icon}</span>
                   </motion.div>
 
@@ -87,7 +87,7 @@ const HobbiesSection = () => {
 
                   {/* Interactive Elements */}
                   <motion.div
-                    className="absolute top-0 left-0 right-0 h-1 bg-blush/25 origin-left"
+                    className="absolute top-0 left-0 right-0 h-1 bg-blush/80 origin-left"
                     initial={{ scaleX: 0 }}
                     animate={{
                       scaleX: activeHobby === hobby.id ? 1 : 0,

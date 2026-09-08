@@ -10,7 +10,7 @@ import '../App.css'
 
 const Home = () => {
   return (
-    <div >
+    <div>
       {/* Intro */}
       <section id="intro">
         <div>
@@ -19,28 +19,28 @@ const Home = () => {
       </section> 
 
       {/* About Me */}
-      <section>
+      <section id="aboutme">
         <div>
           <AboutMeSection />
         </div>
       </section>   
 
       {/* Experience Preview */}
-      <section>
+      <section id="experience">
         <div>
           <ExperiencePreview />
         </div>
       </section> 
 
       {/* Featured Projects */}
-      <section>
+      <section id="projects">
         <div>
           <FeaturedProjects />
         </div>
       </section>  
 
       {/* Hobbies Preview */}
-      <section>
+      <section id="hobbies">
         <div>
           <HobbiesSection />
         </div>
