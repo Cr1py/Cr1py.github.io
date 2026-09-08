@@ -28,13 +28,8 @@ const PROJECT_LINKS = [
 
 const Header = ({ className = "" }: HeaderProps) => {
   const location = useLocation();
-  const [isHobbiesOpen, setIsHobbiesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
-
-  const isActive = (path: string) => location.pathname === path;
-  const isHobbyActive = location.pathname.startsWith("/hobbies/");
-  const isProjectActive = location.pathname.startsWith("/projects")
 
   // Close mobile menu when route changes
   useEffect(() => {
@@ -99,54 +94,12 @@ const Header = ({ className = "" }: HeaderProps) => {
                 Projects
               </a>
             
-              {/* Hobbies Dropdown */}
-              <div className="relative">
-                <button
-                  onMouseEnter={() => setIsHobbiesOpen(true)}
-                  onMouseLeave={() => setIsHobbiesOpen(false)}
-                  className={`flex items-center gap-2 ${
-                    isHobbyActive
-                    ? "text-blush"
-                    : "hover:text-blush"
-                  } transition-colors duration-300 text-lg`}
-                >
-                  Hobbies
-                  <FaChevronDown
-                    className={`w-4 h-4 transition-transform duration-300${
-                      isHobbiesOpen ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-
-                <AnimatePresence>
-                  {isHobbiesOpen && (
-                    <motion.div
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.2 }}
-                      onMouseEnter={() => setIsHobbiesOpen(true)}
-                      onMouseLeave={() => setIsHobbiesOpen(false)}
-                      className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 py-2 w-48 bg-[var(--bg)] rounded-lg border border-blush/20 shadow-xl"
-                    >
-                      {HOBBY_LINKS.map((link) => (
-                        <Link
-                          key={link.to}
-                          to={link.to}
-                          className={`flex items-center gap-3 px-4 py-3 hover:bg-blush/10 transition-colors ${
-                            isActive(link.to)
-                            ? "text-blush"
-                            : "hover:text-blush"
-                          }`}
-                        >
-                          {link.icon}
-                          {link.label}
-                        </Link>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
+              <a
+                href="/#hobbies"
+                className="hover:text-blush transition-colors duration-300 text-lg"
+              >
+                Hobbies
+              </a>
 
               <a
                 href="/#contact"
@@ -185,7 +138,6 @@ const Header = ({ className = "" }: HeaderProps) => {
             >
               <div className="py-4 px-4 space-y-2">
 
-                {/* About */}
                 <a
                   href="/#aboutme"
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -194,7 +146,6 @@ const Header = ({ className = "" }: HeaderProps) => {
                   About Me
                 </a>
 
-                {/* Experience */}
                 <a
                   href="/#experience"
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -203,7 +154,6 @@ const Header = ({ className = "" }: HeaderProps) => {
                   Experience
                 </a>
 
-                {/* Projects */}
                 <a
                   href="/#projects"
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -212,36 +162,14 @@ const Header = ({ className = "" }: HeaderProps) => {
                   Projects
                 </a>
 
-                {/* Hobbies */}
-                <div className="px-4 py-2">
-                  <div
-                    className={`font-semibold mb-2 ${
-                      isHobbyActive ? "text-blush" : "text-text"
-                    }`}
-                  >
-                    Hobbies
-                  </div>
+                <a
+                  href="/#hobbies"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block px-4 py-3 rounded-lg transition-colors hover:text-blush hover:bg-blush/5"
+                >
+                  Hobbies
+                </a>
 
-                  <div className="pl-4 space-y-1">
-                    {HOBBY_LINKS.map((link) => (
-                      <Link
-                        key={link.to}
-                        to={link.to}
-                        onClick={() => setIsMobileMenuOpen(false)}
-                        className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
-                          isActive(link.to)
-                            ? "text-blush bg-blush/5"
-                            : "hover:text-blush hover:bg-blush/5"
-                        }`}
-                      >
-                        {link.icon}
-                        {link.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Contact */}
                 <a
                   href="/#contact"
                   onClick={() => setIsMobileMenuOpen(false)}
