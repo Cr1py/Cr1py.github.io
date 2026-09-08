@@ -29,7 +29,7 @@ const AboutMeSection = () => {
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
+          transition={{ delay: 0.9 }}
         >
           <h2 className="text-left font-syne mb-4">
             <span className="text-text">A little </span>
@@ -39,9 +39,7 @@ const AboutMeSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 gap-3 mt-8">
 
-            <motion.div
-              className="bg-magenta/5 border border-blush/25 rounded-lg p-5 transition-all duration-200 tracking-wide hover:border-blush"
-            >
+            <motion.div className="card rounded-lg p-5 tracking-wide">
               <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-sun tracking-tight">
                 BSc
               </div>
@@ -50,9 +48,7 @@ const AboutMeSection = () => {
               </div>
             </motion.div>
 
-            <motion.div
-              className="bg-magenta/5 border border-blush/25 rounded-lg p-5 transition-all duration-200 tracking-wide hover:border-blush"
-            >
+            <motion.div className="card rounded-lg p-5 tracking-wide">
               <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-sun tracking-tight">
                 2026
               </div>
@@ -61,9 +57,7 @@ const AboutMeSection = () => {
               </div>
             </motion.div>
 
-            <motion.div
-              className="bg-magenta/5 border border-blush/25 rounded-lg p-5 transition-all duration-200 tracking-wide hover:border-blush"
-            >
+            <motion.div className="card rounded-lg p-5 tracking-wide">
               <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-sun tracking-tight">
                 3+
               </div>
@@ -72,9 +66,7 @@ const AboutMeSection = () => {
               </div>
             </motion.div>
 
-            <motion.div
-              className="bg-magenta/5 border border-blush/25 rounded-lg p-5 transition-all duration-200 tracking-wide hover:border-blush"
-            >
+            <motion.div className="card rounded-lg p-5 tracking-wide">
               <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-sun tracking-tight">
                 ∞
               </div>
@@ -92,7 +84,7 @@ const AboutMeSection = () => {
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 1 }}
         >
             I am <span className="font-bold text-text">software developer</span> love working with people to solve problems and I am constantly looking for ways to learn and improve myself. 
             Whether I'm building software, analyzing data, or working with a team, <span className="font-bold text-text">I enjoy taking on new challenges and finding new solutions.</span> {"\n"}
@@ -101,13 +93,12 @@ const AboutMeSection = () => {
           {/* Skills */}
           <div className="flex flex-wrap gap-2 mt-6">
             {skills.map((skill) => (
-              <motion.span
+              <span
                 key={skill}
-                className="font-mono text-[11px] px-3.5 py-1.5 bg-blush/5 rounded border border-blush/25 text-blush/60 transition-all duration-200 tracking-wide hover:border-blush hover:text-blush"
-                whileHover={{ y: -2 }}
+                className="tag-pill"
               >
                 {skill}
-              </motion.span>
+              </span>
             ))}
           </div>
 

@@ -73,7 +73,7 @@ const Experience = () => {
             transition={{ duration: 0.3 }}
             className="mb-12 overflow-hidden"
           >
-            <div className="backdrop-blur-sm rounded-lg border p-6">
+            <div className="card backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-left text-xl text-text mb-2">
                 Filter by Technology
               </h3>
@@ -82,10 +82,8 @@ const Experience = () => {
                   <button
                     key={tag}
                     onClick={() => toggleTag(tag)}
-                    className={`px-4 py-2 rounded border transition-colors ${
-                      selectedTags.includes(tag)
-                        ? "font-mono text-[11px] px-3.5 py-1.5 bg-blush/5 text-blush border-blush"
-                        : "font-mono text-[11px] px-3.5 py-1.5"
+                    className={`tag-pill ${
+                      selectedTags.includes(tag) ? "border-blush text-blush" : ""
                     }`}
                   >
                     {tag}
@@ -157,7 +155,7 @@ const Experience = () => {
                           : "lg:order-2 lg:pl-12"
                       } px-0 lg:px-0`}
                     >
-                      <div className="bg-magenta/5 backdrop-blur-sm rounded-lg border border-blush/25 p-8">
+                      <div className="card backdrop-blur-sm rounded-lg p-8">
                         {/* Header */}
                         <div className="mb-6">
                           <h3 className="text-left text-2xl text-sun mb-4">
@@ -216,8 +214,11 @@ const Experience = () => {
                             {experience.technologies.map((tech) => (
                               <span
                                 key={tech}
-                                className={`px-3 py-1 text-sm rounded border font-mono text-[11px] px-3.5 py-1.5 bg-blush/5 text-blush border-blush/25 $`
-                                }
+                                className={`tag-pill ${
+                                  selectedTags.includes(tech)
+                                    ? "border-blush text-blush"
+                                    : ""
+                                }`}
                               >
                                 {tech}
                               </span>

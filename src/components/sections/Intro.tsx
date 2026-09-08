@@ -56,7 +56,7 @@ const Intro = () => {
             href={personalInfo.socials.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sun hover:text-blush transition-colors"
+            className="link-accent"
             aria-label="LinkedIn"
           >
             <FaLinkedin className="items-center w-12 h-12 fill-none hover:fill-blush/20 stroke-[4]" />
@@ -67,7 +67,7 @@ const Intro = () => {
             href={personalInfo.socials.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sun hover:text-blush transition-colors"
+            className="link-accent"
             aria-label="GitHub"
           >
             <FaGithub className="items-center w-12 h-12 fill-none hover:fill-blush/20 stroke-[4]" />
@@ -84,7 +84,7 @@ const Intro = () => {
         transition={{ delay: 0.7 }}
       >
           {/* Terminal Design */}
-          <div className="bg-magenta/5 border border-blush/25 rounded-2xl p-8 [font-family:'Space_Mono',monospace] text-xs leading-loose">
+          <div className="terminal-block rounded-2xl p-8">
            <div className="text-gold">// Welcome to my website!</div>
             &nbsp;
             <div>
