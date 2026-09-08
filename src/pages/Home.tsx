@@ -19,7 +19,7 @@ const Home = () => {
       </section> 
 
       {/* About Me */}
-      <section id="education">
+      <section id="aboutme">
         <div>
           <AboutMeSection />
         </div>

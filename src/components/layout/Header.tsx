@@ -78,16 +78,12 @@ const Header = ({ className = "" }: HeaderProps) => {
           <div className="hidden sm:block">
             <div className="flex items-center space-x-10">
 
-              <Link
-                to="/education"
-                className={`${
-                  isActive("/education")
-                    ? "text-blush"
-                    : "hover:text-blush"
-                } transition-colors duration-300 text-lg`}
+              <a
+                href="/#aboutme"
+                className="hover:text-blush transition-colors duration-300 text-lg"
               >
-                Education
-              </Link>
+                About Me
+              </a>
 
               <a
                 href="/#experience"
@@ -189,6 +185,15 @@ const Header = ({ className = "" }: HeaderProps) => {
             >
               <div className="py-4 px-4 space-y-2">
 
+                {/* About */}
+                <a
+                  href="/#aboutme"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block px-4 py-3 rounded-lg transition-colors hover:text-blush hover:bg-blush/5"
+                >
+                  About Me
+                </a>
+
                 {/* Experience */}
                 <a
                   href="/#experience"
@@ -197,19 +202,6 @@ const Header = ({ className = "" }: HeaderProps) => {
                 >
                   Experience
                 </a>
-
-                {/* Education */}
-                <Link
-                  to="/education"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block px-4 py-3 rounded-lg transition-colors ${
-                    isActive("/education")
-                      ? "text-blush bg-blush/5"
-                      : "hover:text-blush hover:bg-blush/5"
-                  }`}
-                >
-                  Education
-                </Link>
 
                 {/* Projects */}
                 <a
