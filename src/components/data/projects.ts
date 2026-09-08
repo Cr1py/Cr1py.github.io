@@ -1,3 +1,4 @@
+import floorPlanImg from "../../assets/floorPlanImg.png";
 import capstoneImg from "../../assets/capstoneImg.png";
 import capstoneDemo from "../../assets/preview.html?url";
 import piCamsImg from "../../assets/piCams.png";
@@ -22,9 +23,42 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+    {
+    id: 'ai-room-layout-preview',
+    title: 'AI Room Layout Preview',
+    description:
+      'Inspired by my obsession of the Feng Shui guy and sims 4, this app allows the user to upload a blank floor plan and receive a render of what the place may look like when furnished. This project is mostly just for me to explore puter and integrating ai models in a project.',
+    shortDescription:
+      'AI powered floor plan renderer built with React and Puter.js.',
+    longDescription: [
+      'The user can drag a floor plan into the upload area or click to select a file. The file is then prepared for processing, and a short progress animation is shown.',
+      'Once the upload is finished, the floor plan is saved and displayed as a preview. Any previous results or error messages are cleared, and the “Generate 3D View” button becomes available.',
+      'The user clicks “Generate 3D View.” If they are not logged in, they will be prompted to log in because the generation is Handled by Puter which requires signing in. The system then sends the uploaded floor plan to the AI for processing.',
+      'The AI analyzes the floor plan and creates a 3D-style version.',
+      'Once the AI finishes, the generated image is displayed. If something goes wrong, an error message is shown instead.',
+      'The user can compare the original floor plan with the AI-generated version using a slider. After generating a result, the button changes to “Regenerate,” allowing the user to create a new version and replace the previous result.',
+    ],
+      technologies: [
+      'Puter.js',
+      'React', 
+      'TypeScript',
+      'HTML',
+      'CSS',
+      'Tailwind',
+      'Vite',
+      'Git'
+    ],
+    imageUrl: floorPlanImg,
+    githubUrl: 'https://github.com/Cr1py/AI-Room-Layout-Preview',
+    demoUrl: 'https://cr1py.github.io/AI-Room-Layout-Preview/',
+    category: 'Personal',
+    featured: true,
+    date: '2026-08'
+  },
+
   {
     id: 'proj-autograder',
-    title: 'Course Auto Grader',
+    title: 'Western Course Auto Grader',
     description:
       'Built in collaboration within a team of 3, and supervised by Dr. Daniel Servos, this modular Python autograder system was developed as a group capstone project for Western University. This system is designed to automate the process of grading Python programming assignments through Gradescope.',
     shortDescription:
@@ -54,6 +88,7 @@ export const projects: Project[] = [
     featured: true,
     date: '2026-04'
   },
+
   {
     id: 'proj-nlp',
     title: 'Riipen NLP Project',
@@ -74,9 +109,10 @@ export const projects: Project[] = [
     ],
     imageUrl: riipenLogo,
     category: 'Freelance',
-    featured: true,
+    featured: false,
     date: '2024-03'
   },
+
   {
     id: 'proj-picams',
     title: 'Pi\n Cams',
@@ -106,6 +142,7 @@ export const projects: Project[] = [
     featured: true,
     date: '2023-09'
   },
+
   {
     id: 'proj-western-maps',
     title: 'Campus Building Map',
@@ -127,9 +164,10 @@ export const projects: Project[] = [
     imageUrl: mcGroundFloor,
     githubUrl: 'https://github.com/Cr1py/Western_Maps',
     category: 'School',
-    featured: true,
+    featured: false,
     date: '2022-09'
   },
+
   {
     id: 'proj-custom-discord',
     title: 'Custom Discord UI',
@@ -146,7 +184,7 @@ export const projects: Project[] = [
     ],
     imageUrl: customDiscordImg1,
     category: 'Personal',
-    featured: true,
+    featured: false,
     date: '2021-11'
   }
 ];
