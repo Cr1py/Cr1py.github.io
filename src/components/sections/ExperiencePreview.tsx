@@ -35,10 +35,10 @@ const ExperiencePreview = () => {
       >
         <div className="flex items-start gap-4 mb-4">
           <div className="flex-shrink-0">
-            <FaBriefcase className="w-8 h-8 text-sun" />
+            <FaBriefcase className="w-8 h-8 text-lavender" />
           </div>
           <div className="flex-1">
-            <h3 className="text-2xl text-left text-sun mb-1">
+            <h3 className="text-2xl text-left text-lavender mb-1">
               {latestExperience.title}
             </h3>
             <h4 className="text-xl text-left text-text mb-1">

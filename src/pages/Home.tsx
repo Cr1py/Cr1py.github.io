@@ -10,7 +10,7 @@ import '../App.css'
 
 const Home = () => {
   return (
-    <div >
+    <div>
       {/* Intro */}
       <section id="intro">
         <div>

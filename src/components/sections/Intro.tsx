@@ -5,7 +5,7 @@ import resume from "/src/assets/Christine_Bautista_Resume.pdf";
 
 const Intro = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 gap-8 lg:gap-4">
+    <div className="flex flex-col lg:flex-row items-center justify-between w-full min-h-[calc(100svh-5rem)] max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 gap-8 lg:gap-4">
       {/* Left Section - Text */}
       <motion.div
         className="flex-1 text-center lg:text-left w-full"
@@ -46,7 +46,7 @@ const Intro = () => {
         >
           <a
             href={resume}
-            className="inline-flex items-center gap-2 px-6 py-3 text-sun no-underline border border-sun/25 bg-sun/5 rounded-lg transition-all tracking-[0.02em] duration-300 hover:bg-blush/10 hover:border-blush hover:text-blush"
+            className="inline-flex items-center gap-2 px-6 py-3 text-lavender no-underline border border-lavender/25 bg-lavender/5 rounded-lg transition-all tracking-[0.02em] duration-300 hover:bg-blush/10 hover:border-blush hover:text-blush"
           >
             <FaDownload className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
             Download CV

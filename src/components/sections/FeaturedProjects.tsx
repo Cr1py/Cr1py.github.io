@@ -100,7 +100,7 @@ const FeaturedProjects = () => {
           {/* nav Arrows */}
           <button
             onClick={prevProjects}
-            className="hidden lg:flex absolute -left-6 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full text-sun hover:text-blush hover:scale-110 transition-all items-center justify-center"
+            className="hidden lg:flex absolute -left-6 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full text-lavender hover:text-blush hover:scale-110 transition-all items-center justify-center"
             aria-label="Previous projects"
           >
             <FaArrowLeft className="w-5 h-5" />
@@ -108,7 +108,7 @@ const FeaturedProjects = () => {
 
           <button
             onClick={nextProjects}
-            className="hidden lg:flex absolute -right-6 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full text-sun hover:text-blush hover:scale-110 transition-all items-center justify-center"
+            className="hidden lg:flex absolute -right-6 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full text-lavender hover:text-blush hover:scale-110 transition-all items-center justify-center"
             aria-label="Next projects"
           >
             <FaArrowRight className="w-5 h-5" />

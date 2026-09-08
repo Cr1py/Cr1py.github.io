@@ -56,7 +56,7 @@ const HobbiesSection = () => {
                     }}
                     transition={{ duration: 0.4 }}
                   >
-                    <div className="absolute inset-0 blur-xl bg-sun/8 rounded-full" />
+                    <div className="absolute inset-0 blur-xl bg-lavender/8 rounded-full" />
                     <span className="relative">{hobby.icon}</span>
                   </motion.div>
 

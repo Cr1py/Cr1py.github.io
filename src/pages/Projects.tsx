@@ -79,7 +79,7 @@ const Projects = () => {
           <FaFilter />
           <span>Filters</span>
           {selectedTags.length > 0 && (
-            <span className="absolute -top-2 -right-2 bg-sun rounded text-text/70 text-xs w-6 h-6 flex items-center justify-center">
+            <span className="absolute -top-2 -right-2 bg-lavender rounded text-text/70 text-xs w-6 h-6 flex items-center justify-center">
               {selectedTags.length}
             </span>
           )}

@@ -40,7 +40,7 @@ const AboutMeSection = () => {
           <div className="grid grid-cols-2 gap-3 mt-8">
 
             <motion.div className="card rounded-lg p-5 tracking-wide">
-              <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-sun tracking-tight">
+              <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-lavender tracking-tight">
                 BSc
               </div>
               <div className="text-left text-xs text-text/70 mt-1">
@@ -49,7 +49,7 @@ const AboutMeSection = () => {
             </motion.div>
 
             <motion.div className="card rounded-lg p-5 tracking-wide">
-              <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-sun tracking-tight">
+              <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-lavender tracking-tight">
                 2026
               </div>
               <div className="text-left text-xs text-text/70 mt-1">
@@ -58,7 +58,7 @@ const AboutMeSection = () => {
             </motion.div>
 
             <motion.div className="card rounded-lg p-5 tracking-wide">
-              <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-sun tracking-tight">
+              <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-lavender tracking-tight">
                 3+
               </div>
               <div className="text-left text-xs text-text/70 mt-1">
@@ -67,7 +67,7 @@ const AboutMeSection = () => {
             </motion.div>
 
             <motion.div className="card rounded-lg p-5 tracking-wide">
-              <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-sun tracking-tight">
+              <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-lavender tracking-tight">
                 ∞
               </div>
               <div className="text-left text-xs text-text/70 mt-1">

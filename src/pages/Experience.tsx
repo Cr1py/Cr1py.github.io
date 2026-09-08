@@ -56,7 +56,7 @@ const Experience = () => {
           <FaFilter />
           <span>Filters</span>
           {selectedTags.length > 0 && (
-            <span className="absolute -top-2 -right-2 bg-sun rounded text-text/70 text-xs font-bold w-6 h-6 flex items-center justify-center">
+            <span className="absolute -top-2 -right-2 bg-lavender rounded text-text/70 text-xs font-bold w-6 h-6 flex items-center justify-center">
               {selectedTags.length}
             </span>
           )}
@@ -158,7 +158,7 @@ const Experience = () => {
                       <div className="card backdrop-blur-sm rounded-lg p-8">
                         {/* Header */}
                         <div className="mb-6">
-                          <h3 className="text-left text-2xl text-sun mb-4">
+                          <h3 className="text-left text-2xl text-lavender mb-4">
                             {experience.title}
                           </h3>
                           <h4 className="text-left text-xl text-text mb-2">

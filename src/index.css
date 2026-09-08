@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --text: #9ca3af;
-  --text-h: #f3f4f6;
+  --text: #EAEAEA;
+  --text-h: #EAEAEA;
   --bg: #16171d;
   --color-card: #1F1828;
   --color-text: #F5EEE8;
-  --color-sun: #FF9A5C;
-  --color-dusk: #FF6B6B;
+  --color-lavender: #CBC5EA;
+  --color-dusk: #FF8FA3;
   --color-magenta: #C96FD8;
   --color-gold: #FFD166;
-  --color-blush: #FF8FA3;
+  --color-blush: #CBC5EA;
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
@@ -128,7 +128,7 @@
   }
   
   .link-accent {
-    @apply text-sun hover:text-blush transition-colors;
+    @apply text-lavender hover:text-blush transition-colors;
   }
 
   .link-hover {
@@ -136,6 +136,6 @@
   }
  
   .btn-outline {
-    @apply inline-flex items-center gap-2 px-6 py-3 bg-sun/5 border border-sun/25 rounded-lg text-sun transition-colors hover:text-blush hover:border-blush;
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-lavender/5 border border-lavender/25 rounded-lg text-lavender transition-colors hover:text-blush hover:border-blush;
   }
 }
