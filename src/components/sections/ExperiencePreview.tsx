@@ -122,7 +122,7 @@ const Experience = () => {
             </motion.div>
           ) : (
             <div className="relative"> {/* Experience */}
-              {/* Timeline line - hidden on mobile, shown on desktop */}
+              {/* Timeline line */}
               <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-dusk" />
 
               {filteredExperiences.map((experience, index) => (
@@ -133,11 +133,11 @@ const Experience = () => {
                   transition={{ delay: index * 0.1 }}
                   className="relative mb-24 last:mb-0"
                 >
-                  {/* Timeline dot - hidden on mobile, shown on desktop */}
+                  {/* Timeline dot */}
                   <div className="hidden lg:block absolute left-1/2 top-1/2 w-4 h-4 bg-dusk rounded transform -translate-x-1/2" />
 
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    {/* Image - Alternating sides */}
+                    {/* Image */}
                     <div
                       className={`relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-lg overflow-hidden ${
                         index % 2 === 0 ? "lg:order-2" : "lg:order-1"
@@ -150,7 +150,7 @@ const Experience = () => {
                       />
                     </div>
 
-                    {/* Content - Always opposite to image */}
+                    {/* Content */}
                     <div
                       className={`${
                         index % 2 === 0

@@ -9,10 +9,6 @@ const FeaturedProjects = () => {
     .filter((project) => project.featured)
     .slice(0, 3);
 
-  const goToProjects = () => {
-    window.location.href = "/projects";
-  };
-
   return (
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 lg:pt-10">
       <div className="relative">
@@ -25,13 +21,13 @@ const FeaturedProjects = () => {
           <span className="text-text">Featured</span>
           <span className="text-dusk">Projects</span>
 
-          <button
-            onClick={goToProjects}
+          <Link
+            to="/projects"
             className="flex items-center justify-center w-12 h-12 rounded-full text-lavender hover:text-blush hover:scale-110 transition-all"
             aria-label="View all projects"
           >
             <FaArrowRight className="w-5 h-5" />
-          </button>
+          </Link>
         </motion.h2>
 
         <div className="relative mt-6">
