@@ -29,7 +29,7 @@ const AboutMeSection = () => {
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.9 }}
+          transition={{ delay: 0.2 }}
         >
           <h2 className="text-left font-syne mb-4">
             <span className="text-text">A little </span>
@@ -84,7 +84,7 @@ const AboutMeSection = () => {
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 1 }}
+          transition={{ delay: 0.3 }}
         >
             I am <span className="font-bold text-text">software developer</span> love working with people to solve problems and I am constantly looking for ways to learn and improve myself. 
             Whether I'm building software, analyzing data, or working with a team, <span className="font-bold text-text">I enjoy taking on new challenges and finding new solutions.</span> {"\n"}
