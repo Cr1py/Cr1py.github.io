@@ -11,46 +11,61 @@ import {
 } from "react-icons/fa";
 
 const Projects = () => {
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [isFilterOpen, setIsFilterOpen] = useState<boolean>(false);
 
-  // Get unique tags from all projects
-  const allTags = useMemo(() => {
-    const tags = new Set<string>();
+  // Get unique categories from all projects
+  const categories = useMemo(() => {
+    const categorySet = new Set<string>();
+
     projects.forEach((project) => {
-      project.technologies.forEach((tech) => tags.add(tech));
+      if (project.category) {
+        categorySet.add(project.category);
+      }
     });
-    return Array.from(tags).sort();
+
+    return Array.from(categorySet).sort();
   }, []);
 
   // Filter and sort projects by date (newest first)
   const filteredProjects = useMemo(() => {
     let filtered = projects;
-    if (selectedTags.length > 0) {
-      filtered = projects.filter((project) =>
-        selectedTags.every((tag) => project.technologies.includes(tag))
+
+    if (selectedCategories.length > 0) {
+      filtered = projects.filter(
+        (project) =>
+          project.category &&
+          selectedCategories.includes(project.category)
       );
     }
+
     // Sort by date (newest first), projects without dates go to the end
-    return filtered.sort((a, b) => {
+    return [...filtered].sort((a, b) => {
       if (!a.date && !b.date) return 0;
       if (!a.date) return 1;
       if (!b.date) return -1;
       return b.date.localeCompare(a.date);
     });
-  }, [selectedTags]);
+  }, [selectedCategories]);
 
-  const toggleTag = (tag: string) => {
-    setSelectedTags((prev) =>
-      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
+  const toggleCategory = (category: string) => {
+    setSelectedCategories((prev) =>
+      prev.includes(category)
+        ? prev.filter((c) => c !== category)
+        : [...prev, category]
     );
   };
 
   const formatDate = (dateString?: string) => {
     if (!dateString) return "Date TBD";
+
     const [year, month] = dateString.split("-");
     const date = new Date(parseInt(year), parseInt(month) - 1);
-    return date.toLocaleDateString("en-US", { month: "long", year: "numeric" });
+
+    return date.toLocaleDateString("en-US", {
+      month: "long",
+      year: "numeric",
+    });
   };
 
   return (
@@ -63,7 +78,7 @@ const Projects = () => {
         >
           Projects
         </motion.h1>
- 
+
         {/* Filter Button */}
         <motion.button
           initial={{ opacity: 0, y: 20 }}
@@ -78,9 +93,10 @@ const Projects = () => {
         >
           <FaFilter />
           <span>Filters</span>
-          {selectedTags.length > 0 && (
+
+          {selectedCategories.length > 0 && (
             <span className="absolute -top-2 -right-2 bg-lavender rounded text-text/70 text-xs w-6 h-6 flex items-center justify-center">
-              {selectedTags.length}
+              {selectedCategories.length}
             </span>
           )}
         </motion.button>
@@ -98,25 +114,29 @@ const Projects = () => {
           >
             <div className="card backdrop-blur-sm rounded-lg p-6">
               <h2 className="text-left text-xl text-text mb-2">
-                Filter by Technology
+                Filter Category
               </h2>
+
               <div className="flex flex-wrap gap-2 mb-2 mt-4">
-                {allTags.map((tag) => (
+                {categories.map((category) => (
                   <button
-                    key={tag}
-                    onClick={() => toggleTag(tag)}
+                    key={category}
+                    onClick={() => toggleCategory(category)}
                     className={`tag-pill ${
-                      selectedTags.includes(tag) ? "border-blush text-blush" : ""
+                      selectedCategories.includes(category)
+                        ? "border-blush text-blush"
+                        : ""
                     }`}
                   >
-                    {tag}
+                    {category}
                   </button>
                 ))}
               </div>
-              {selectedTags.length > 0 && (
+
+              {selectedCategories.length > 0 && (
                 <div className="text-center mt-4 pt-4 border-t">
                   <button
-                    onClick={() => setSelectedTags([])}
+                    onClick={() => setSelectedCategories([])}
                     className="inline-flex items-center gap-2 link-hover"
                   >
                     <FaTimes />
@@ -159,7 +179,7 @@ const Projects = () => {
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
- 
+
                   {/* Project Details */}
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-2">
@@ -167,7 +187,7 @@ const Projects = () => {
                         {project.title}
                       </h3>
                     </div>
- 
+
                     {/* Date */}
                     {project.date && (
                       <div className="flex items-center gap-2 text-text/70 text-sm mb-3">
@@ -175,12 +195,12 @@ const Projects = () => {
                         <span>{formatDate(project.date)}</span>
                       </div>
                     )}
- 
+
                     {/* Short Description or Description */}
                     <p className="text-left mb-4 line-clamp-2">
                       {project.shortDescription || project.description}
                     </p>
- 
+
                     {/* Technologies */}
                     <div className="flex flex-nowrap gap-2 mt-5 overflow-hidden">
                       {project.technologies.slice(0, 3).map((tech) => (
@@ -193,14 +213,12 @@ const Projects = () => {
                       ))}
 
                       {project.technologies.length > 3 && (
-                        <span
-                          className="tag-pill text-[10px] px-2.5 py-1 text-blush whitespace-nowrap shrink-0"
-                        >
+                        <span className="tag-pill text-[10px] px-2.5 py-1 text-blush whitespace-nowrap shrink-0">
                           +{project.technologies.length - 3}
                         </span>
                       )}
                     </div>
- 
+
                     {/* Links */}
                     <div className="flex gap-4 text-sm mt-3">
                       {project.githubUrl && (
@@ -215,6 +233,7 @@ const Projects = () => {
                           <span>GitHub</span>
                         </a>
                       )}
+
                       {project.demoUrl && (
                         <a
                           href={project.demoUrl}
@@ -227,6 +246,7 @@ const Projects = () => {
                           <span>Demo</span>
                         </a>
                       )}
+
                       {project.docUrl && (
                         <a
                           href={project.docUrl}
