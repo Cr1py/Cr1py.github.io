@@ -138,13 +138,13 @@ const Header = ({ className = "" }: HeaderProps) => {
                       transition={{ duration: 0.2 }}
                       onMouseEnter={() => setIsHobbiesOpen(true)}
                       onMouseLeave={() => setIsHobbiesOpen(false)}
-                      className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 py-2 w-48 bg-magenta/5 backdrop-blur-sm rounded-lg border border-blush/20 shadow-xl"
+                      className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 py-2 w-48 bg-[var(--bg)] rounded-lg border border-blush/20 shadow-xl"
                     >
                       {HOBBY_LINKS.map((link) => (
                         <Link
                           key={link.to}
                           to={link.to}
-                          className={`flex items-center gap-3 px-4 py-3 hover:bg-blush-400/10 transition-colors ${
+                          className={`flex items-center gap-3 px-4 py-3 hover:bg-blush/10 transition-colors ${
                             isActive(link.to)
                             ? "text-blush"
                             : "hover:text-blush"
