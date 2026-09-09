@@ -113,7 +113,7 @@ const AboutMeSection = () => {
             {/* Learning */}
             <div className="card rounded-lg p-5">
               <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-lavender">
-                2
+                ~2
               </div>
               <div className="text-left text-xs text-text/70 mt-1">
                 Years of Experience
