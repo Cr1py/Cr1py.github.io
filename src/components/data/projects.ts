@@ -1,3 +1,4 @@
+import pokeBinder from "../../assets/pokeBinder.png";
 import floorPlanImg from "../../assets/floorPlanImg.png";
 import capstoneImg from "../../assets/capstoneImg.png";
 import capstoneDemo from "../../assets/preview.html?url";
@@ -26,7 +27,45 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-    {
+  {
+    id: 'poke-binder',
+    title: 'Virtual Pokemon Art Binder',
+    description:
+      'Inspired by VaultX binders that people use to hold their Pokemon card collections, I wanted to make a similar-looking digital binder to hold my own painted Pokemon cards. I have a lot of card bulk from gambling too much, so I might as well improve my art skills and show it off LOL. This project is mostly for me to explore 3D interactions, animations, and building a persistent digital collection.',
+    shortDescription:
+      'Interactive digital Pokemon card binder with 3D card viewing and persistent cloud storage',
+    longDescription: [
+      'The user starts by opening the binder cover, which transitions into a two-page spread using a hinge-style animation.',
+      'Each binder page displays a 3x3 grid of card sleeves. Users can flip through the binder by clicking the corners of each page, with animated page turns that mimic a physical book.',
+      'Clicking a card sleeve pulls the card partway out. From there, clicking the top half of the card opens a full-screen 3D viewer, while clicking the bottom half slides the card back into its sleeve.',
+      'The 3D card viewer allows users to drag and rotate a card to inspect both sides. The card is rendered using custom Three.js geometry, with the original artwork applied to the front and back faces.',
+      'A floating Pokeball icon provides an admin login flow. Once authenticated, I can upload new card artwork, which is automatically assigned to the next available slot in the binder.',
+      'Cards and binder slots are stored in Supabase, allowing the binder state to persist across sessions and devices. Refreshing the page re-fetches the collection from the database.',
+    ],
+    technologies: [
+      'Next.js',
+      'React', 
+      'TypeScript',
+      'HTML',
+      'CSS',
+      'Tailwind',
+      'Motion.js',
+      'Three.js',
+      'Three Fiber',
+      'Three Drei',
+      'PostgreSQL',
+      'Supabase',
+      'Git'
+    ],
+    imageUrl: pokeBinder,
+    githubUrl: 'https://cr1pys-poke-binder.vercel.app/',
+    demoUrl: 'https://github.com/Cr1py/PokeBinder',
+    category: 'Personal',
+    featured: true,
+    date: '2026-08'
+  },
+
+  {
     id: 'ai-room-layout-preview',
     title: 'AI Room Layout Preview',
     description:
@@ -167,7 +206,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/Cr1py/Pi-Cams',
     docUrl: 'https://docs.google.com/document/d/1E7uFqbcq4rbA7CDt9fvQErw7aQOaYISQcTtDdHzvz8g/edit?tab=t.0',
     category: 'School',
-    featured: true,
+    featured: false,
     date: '2023-09'
   },
 
