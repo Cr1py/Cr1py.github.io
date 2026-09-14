@@ -58,8 +58,8 @@ export const projects: Project[] = [
       'Git'
     ],
     imageUrl: pokeBinder,
-    githubUrl: 'https://cr1pys-poke-binder.vercel.app/',
-    demoUrl: 'https://github.com/Cr1py/PokeBinder',
+    githubUrl: 'https://github.com/Cr1py/PokeBinder',
+    demoUrl: 'https://cr1pys-poke-binder.vercel.app/',
     category: 'Personal',
     featured: true,
     date: '2026-08'
