@@ -1,8 +1,12 @@
+import pokeBinder from "../../assets/pokeBinder.png";
 import floorPlanImg from "../../assets/floorPlanImg.png";
 import capstoneImg from "../../assets/capstoneImg.png";
 import capstoneDemo from "../../assets/preview.html?url";
 import piCamsImg from "../../assets/piCams.png";
 import riipenLogo from "../../assets/Riipen-Logo.png";
+import uxl2024 from "../../assets/uxl2024.png";
+import myCity from "../../assets/myCity.png";
+import sightBridge from "../../assets/sightBridge.png";
 import mcGroundFloor from "../../assets/MC-groundfloor.png";
 import customDiscordImg1 from "../../assets/customDiscordImg1.png";
 
@@ -18,18 +22,56 @@ export interface Project {
   githubUrl?: string;
   docUrl?: string;
   featured: boolean;
-  category?: 'Personal' | 'Freelance' | 'School';
+  category?: 'Personal' | 'Freelance' | 'School' | 'Hackathon';
   date?: string; // Format: "YYYY-MM"
 }
 
 export const projects: Project[] = [
-    {
+  {
+    id: 'poke-binder',
+    title: 'Virtual Pokemon Art Binder',
+    description:
+      'Inspired by VaultX binders that people use to hold their Pokemon card collections, I wanted to make a similar-looking digital binder to hold my own painted Pokemon cards. I have a lot of card bulk from gambling too much, so I might as well improve my art skills and show it off LOL. This project is mostly for me to explore 3D interactions, animations, and building a persistent digital collection.',
+    shortDescription:
+      'Interactive digital Pokemon card binder with 3D card viewing and persistent cloud storage',
+    longDescription: [
+      'The user starts by opening the binder cover, which transitions into a two-page spread using a hinge-style animation.',
+      'Each binder page displays a 3x3 grid of card sleeves. Users can flip through the binder by clicking the corners of each page, with animated page turns that mimic a physical book.',
+      'Clicking a card sleeve pulls the card partway out. From there, clicking the top half of the card opens a full-screen 3D viewer, while clicking the bottom half slides the card back into its sleeve.',
+      'The 3D card viewer allows users to drag and rotate a card to inspect both sides. The card is rendered using custom Three.js geometry, with the original artwork applied to the front and back faces.',
+      'A floating Pokeball icon provides an admin login flow. Once authenticated, I can upload new card artwork, which is automatically assigned to the next available slot in the binder.',
+      'Cards and binder slots are stored in Supabase, allowing the binder state to persist across sessions and devices. Refreshing the page re-fetches the collection from the database.',
+    ],
+    technologies: [
+      'Next.js',
+      'React', 
+      'TypeScript',
+      'HTML',
+      'CSS',
+      'Tailwind',
+      'Motion.js',
+      'Three.js',
+      'Three Fiber',
+      'Three Drei',
+      'PostgreSQL',
+      'Supabase',
+      'Git'
+    ],
+    imageUrl: pokeBinder,
+    githubUrl: 'https://github.com/Cr1py/PokeBinder',
+    demoUrl: 'https://cr1pys-poke-binder.vercel.app/',
+    category: 'Personal',
+    featured: true,
+    date: '2026-08'
+  },
+
+  {
     id: 'ai-room-layout-preview',
     title: 'AI Room Layout Preview',
     description:
       'Inspired by my obsession of the Feng Shui guy and sims 4, this app allows the user to upload a blank floor plan and receive a render of what the place may look like when furnished. This project is mostly just for me to explore puter and integrating ai models in a project.',
     shortDescription:
-      'AI powered floor plan renderer built with React and Puter.js.',
+      'AI powered floor plan renderer built with React and Puter.js',
     longDescription: [
       'The user can drag a floor plan into the upload area or click to select a file. The file is then prepared for processing, and a short progress animation is shown.',
       'Once the upload is finished, the floor plan is saved and displayed as a preview. Any previous results or error messages are cleared, and the “Generate 3D View” button becomes available.',
@@ -86,7 +128,7 @@ export const projects: Project[] = [
     demoUrl: capstoneDemo,
     category: 'School',
     featured: true,
-    date: '2026-04'
+    date: '2025-09'
   },
 
   {
@@ -114,12 +156,37 @@ export const projects: Project[] = [
   },
 
   {
+    id: 'uxl-2024',
+    title: 'Buns',
+    description:
+      'A social media app for pregnant and new mothers to connect and build community.',
+    shortDescription:
+      '(FINALIST) UXL 2024 Designathon Submission',
+    longDescription: [
+      'My groups finalist submission for the Wilfred Laurier UXL 2024 Designathon.',
+      'Colour scheme was made in Coolors.',
+      'Icons and assets designed in Canva and Figma.',
+      'Wireframes and slide deck was made in Figma.',
+    ],
+      technologies: [
+      'Figma',
+      'Coolors',
+      'Canva',
+    ],
+    imageUrl: uxl2024,
+    demoUrl: 'https://www.figma.com/proto/GvsFBz3tPERqmeqXFshqtw/2024-Designathon?node-id=305-1075&p=f&t=8jFXVnq6RuNWJgX0-0&scaling=contain&content-scaling=fixed&page-id=17%3A42',
+    category: 'Hackathon',
+    featured: false,
+    date: '2024-03'
+  },
+
+  {
     id: 'proj-picams',
     title: 'Pi\n Cams',
     description:
       'A group project focused on developing a Raspberry Pi-based surveillance system that uses real-time video processing and facial recognition to monitor activity and provide security alerts.',
     shortDescription:
-      'A Raspberry Pi suveillance application built with ',
+      'A Raspberry Pi suveillance application built with C++, Python and OpenCV.',
     longDescription: [
       'Connected and configured a camera with a Raspberry Pi, using C++ and Python to support video capture, motion detection, and real-time processing.',
       'Developed a React web interface with TypeScript that allowed users to monitor the surveillance system, receive security alerts, and interact with system controls.',
@@ -139,8 +206,62 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/Cr1py/Pi-Cams',
     docUrl: 'https://docs.google.com/document/d/1E7uFqbcq4rbA7CDt9fvQErw7aQOaYISQcTtDdHzvz8g/edit?tab=t.0',
     category: 'School',
-    featured: true,
+    featured: false,
     date: '2023-09'
+  },
+
+  {
+    id: 'sight-bridge',
+    title: 'Sight Bridge AI',
+    description:
+      'Product .',
+    shortDescription:
+      '(FINALIST) Western University World\'s Challenge Challenge 2023 Submission',
+    longDescription: [
+      'My teams pitch for the 2023 World\'s Challenge Challenge hosted by Western Univeristy.',
+      'This is a branch of the Global Challenge stream.',
+    ],
+      technologies: [
+      'AI',
+      'Product Design',
+      'Hardware',
+      'User Research',
+    ],
+    imageUrl: sightBridge,
+    docUrl: 'https://news.westernu.ca/2023/03/western-students-suggest-solutions-to-advance-un-sustainable-development-goals/',
+    demoUrl: 'https://www.canva.com/design/DAFcBDp0LnE/BmEcGzV5GJfHlgNAxnj-aA/edit?ui=eyJEIjp7IlAiOnsiQiI6ZmFsc2V9fX0',
+    category: 'Hackathon',
+    featured: false,
+    date: '2023-03'
+  },
+
+  {
+    id: 'my-city',
+    title: 'My City',
+    description:
+      'Mobile app project that aims to provide the everyday citizen the ability to share their ideas for developing their city.',
+    shortDescription:
+      'Google Impact Challenge 2023 Submission',
+    longDescription: [
+      'My teams submission for the 2023 Google Impact Challenge.',
+      'Users can place tiles representing sidewalks, houses, apartments, stores, roads, trees, parks, and (generic) buildings in a grid to simulate planning their city.',
+      'Users can then share their ideal city with others to hopefully spread awareness of missing or problematic infrastructure in their city.',
+    ],
+      technologies: [
+      'Dart',
+      'Flutter',
+      'Node.js',
+      'Android Studio',
+      'Firebase',
+      'HTML',
+      'CSS',
+    ],
+    imageUrl: myCity,
+    demoUrl: 'https://canva.link/b77yu6hny6kq6zl',
+    githubUrl: 'https://github.com/Cr1py/My-City',
+    category: 'Hackathon',
+    featured: false,
+    date: '2023-01'
   },
 
   {

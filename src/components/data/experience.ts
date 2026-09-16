@@ -8,8 +8,8 @@ export interface Experience {
   title: string;
   company: string;
   location: string;
-  startDate: string;
-  endDate?: string;
+  startDate: string; // Format: "YYYY-MM"
+  endDate?: string; 
   description: string;
   technologies: string[];
   achievements: string[];

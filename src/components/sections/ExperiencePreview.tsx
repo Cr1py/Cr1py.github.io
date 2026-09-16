@@ -30,6 +30,18 @@ const Experience = () => {
     );
   };
 
+  const formatDate = (dateString?: string) => {
+    if (!dateString) return "Date TBD";
+
+    const [year, month] = dateString.split("-");
+    const date = new Date(parseInt(year), parseInt(month) - 1);
+
+    return date.toLocaleDateString("en-US", {
+      month: "long",
+      year: "numeric",
+    });
+  };
+
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="flex items-center justify-between mb-8">
@@ -170,21 +182,9 @@ const Experience = () => {
                           <div className="text-left text-text/70">
                             <p>{experience.location}</p>
                             <p>
-                              {new Date(
-                                experience.startDate
-                              ).toLocaleDateString("en-US", {
-                                month: "long",
-                                year: "numeric",
-                              })}
+                              {formatDate(experience.startDate)}
                               {" - "}
-                              {experience.endDate
-                                ? new Date(
-                                    experience.endDate
-                                  ).toLocaleDateString("en-US", {
-                                    month: "long",
-                                    year: "numeric",
-                                  })
-                                : "Present"}
+                              {formatDate(experience.endDate)}
                             </p>
                           </div>
                         </div>
