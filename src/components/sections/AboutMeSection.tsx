@@ -79,8 +79,7 @@ const AboutMeSection = () => {
             {/* Education */}
             <Link to="/education" className="col-span-2 block">
               <motion.div
-                className="card rounded-lg p-5 tracking-wide cursor-pointer"
-                whileHover={{ y: -4 }}
+                className="card rounded-lg p-5 tracking-wide cursor-pointer hover:border-blush"
                 transition={{ duration: 0.2 }}
               >
                 <div className="flex items-center gap-6">
@@ -101,7 +100,7 @@ const AboutMeSection = () => {
             </Link>
 
             {/* Internship */}
-            <div className="card rounded-lg p-5">
+            <div className="bg-magenta/5 border border-lavender/25 rounded-lg p-5">
               <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-lavender">
                 4
               </div>
@@ -113,7 +112,7 @@ const AboutMeSection = () => {
             {/* Learning */}
             <div className="card rounded-lg p-5">
               <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-lavender">
-                2
+                1.5
               </div>
               <div className="text-left text-xs text-text/70 mt-1">
                 Years of Experience
