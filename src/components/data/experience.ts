@@ -48,7 +48,7 @@ export const experiences: Experience[] = [
     startDate: '2024-05',
     endDate: '2024-12',
     description:
-      'Worked closely with product, design, and engineering teams to understand the architecture and functionality of a React-based mobile and web application and identify opportunities for improvement. Contributed to the development of UI components using HTML and CSS based on Figma designs.',
+      'Worked closely with product, design, and engineering teams to understand the architecture and functionality of a React-based mobile and web application and identify opportunities for improvement.',
     technologies: [
       'TypeScript',
       'HTML',
@@ -64,7 +64,8 @@ export const experiences: Experience[] = [
     achievements: [
       'Implemented Mixpanel event tracking across 13 key pages.',
       'Integrated Mixpanel with Firebase Analytics and created 18 metrics reports.',
-      'Conducted unit, end-to-end, and UAT testing across development, staging, and production environments to reduce user bug reports by 80%.',
+      'Conducted unit, end-to-end, and UAT testing across development, staging, and production environments to reduce user bug reports.',
+      'Created resuable UI components using TypeScript, HTML, and CSS based on Figma designs.'
     ],
     imageUrl: GoodSelfImg,
   },
