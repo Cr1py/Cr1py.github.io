@@ -117,15 +117,9 @@
   .card {
     @apply bg-magenta/5 border border-lavender/25 transition-all duration-200;
   }
-  .card:hover {
-    @apply border-blush;
-  }
-  
+
   .tag-pill {
     @apply font-mono text-[11px] px-3.5 py-1.5 bg-blush/5 rounded border border-blush/25 text-blush/60 tracking-wide transition-all duration-200;
-  }
-  .tag-pill:hover {
-    @apply border-blush text-blush;
   }
   
   .terminal-block {

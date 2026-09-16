@@ -7,7 +7,7 @@ const Experience = () => {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [isFilterOpen, setIsFilterOpen] = useState<boolean>(false);
 
-  // Get unique tags from all experiences
+  // get unique tags from all experiences
   const allTags = useMemo(() => {
     const tags = new Set<string>();
     experiences.forEach((exp) => {
@@ -16,7 +16,7 @@ const Experience = () => {
     return Array.from(tags).sort();
   }, []);
 
-  // Filter experiences based on selected tags
+  // filter experiences based on selected tags
   const filteredExperiences = useMemo(() => {
     if (selectedTags.length === 0) return experiences;
     return experiences.filter((exp) =>
@@ -55,7 +55,7 @@ const Experience = () => {
           <span className="text-dusk">Experience</span>
         </motion.h2>
 
-        {/* Filter Button */}
+        {/* filter Button */}
         <motion.button
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ const Experience = () => {
         </motion.button>
       </div>
 
-      {/* Filter Box */}
+      {/* filter Box */}
       <AnimatePresence>
         {isFilterOpen && (
           <motion.div
@@ -133,47 +133,33 @@ const Experience = () => {
               No experiences match the selected filters.
             </motion.div>
           ) : (
-            <div className="relative"> {/* Experience */}
-              {/* Timeline line */}
+            <div className="relative">
+              {/* timeline line */}
               <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-dusk" />
 
               {filteredExperiences.map((experience, index) => (
                 <motion.div
                   key={experience.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
                   className="relative mb-24 last:mb-0"
                 >
-                  {/* Timeline dot */}
-                  <div className="hidden lg:block absolute left-1/2 top-1/2 w-4 h-4 bg-dusk rounded transform -translate-x-1/2" />
+                  {/* timeline dot */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.4, delay: index * 0.05 + 0.1 }}
+                    className="hidden lg:block absolute left-1/2 top-1/2 w-4 h-4 bg-dusk rounded transform -translate-x-1/2"
+                  />
 
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    {/* Image */}
-                    <div
-                      className={`relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-lg overflow-hidden ${
-                        index % 2 === 0 ? "lg:order-2" : "lg:order-1"
-                      }`}
-                    >
-                      <img
-                        src={experience.imageUrl}
-                        alt={`${experience.company} office`}
-                        className="w-full h-full object-contain"
-                      />
-                    </div>
-
-                    {/* Content */}
-                    <div
-                      className={`${
-                        index % 2 === 0
-                          ? "lg:order-1 lg:pr-12"
-                          : "lg:order-2 lg:pl-12"
-                      } px-0 lg:px-0`}
-                    >
+                    <div className="lg:order-1 lg:pr-12">
                       <div className="card backdrop-blur-sm rounded-lg p-8">
-                        {/* Header */}
                         <div className="mb-6">
-                          <h3 className="text-left text-2xl text-lavender mb-4">
+                          <h3 className="text-left text-2xl text-text mb-4">
                             {experience.title}
                           </h3>
                           <h4 className="text-left text-xl text-text mb-2">
@@ -189,12 +175,10 @@ const Experience = () => {
                           </div>
                         </div>
 
-                        {/* Description */}
                         <p className="text-left mb-6">
                           {experience.description}
                         </p>
 
-                        {/* Key Achievements */}
                         <div className="mb-6">
                           <h4 className="text-left text-lg text-text mb-2 mt-4">
                             Key Achievements
@@ -208,7 +192,6 @@ const Experience = () => {
                           </ul>
                         </div>
 
-                        {/* Technologies */}
                         <div>
                           <h4 className="text-left text-lg text-text mb-3">
                             Technologies & Skills
@@ -229,6 +212,14 @@ const Experience = () => {
                           </div>
                         </div>
                       </div>
+                    </div>
+
+                    <div className="lg:order-2 relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-lg overflow-hidden">
+                      <img
+                        src={experience.imageUrl}
+                        alt={`${experience.company} office`}
+                        className="w-full h-full object-contain"
+                      />
                     </div>
                   </div>
                 </motion.div>

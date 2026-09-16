@@ -73,7 +73,7 @@ const ProjectDetail = () => {
         transition={{ delay: 0.1 }}
         className="mb-8"
       >
-        <h3 className="text-left text-3xl sm:text-4xl text-lavender mb-4">
+        <h3 className="text-left text-3xl sm:text-4xl text-text mb-4">
           {project.title}
         </h3>
 

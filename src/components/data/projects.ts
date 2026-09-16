@@ -49,7 +49,7 @@ export const projects: Project[] = [
       'HTML',
       'CSS',
       'Tailwind',
-      'Motion.js',
+      'Motion.dev',
       'Three.js',
       'Three Fiber',
       'Three Drei',

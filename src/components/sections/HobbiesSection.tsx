@@ -10,7 +10,8 @@ const HobbiesSection = () => {
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-10">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         className="text-left font-syne font-black mb-4"
         >
           <span className="text-text">My </span>
@@ -22,7 +23,8 @@ const HobbiesSection = () => {
           <motion.div
             key={hobby.id}
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ delay: index * 0.1 }}
             className={`group cursor-pointer ${
               activeHobby && activeHobby !== hobby.id ? "opacity-50" : ""
@@ -30,10 +32,8 @@ const HobbiesSection = () => {
             onMouseEnter={() => setActiveHobby(hobby.id)}
             onMouseLeave={() => setActiveHobby(null)}
           >
-            {/* Card */}
             <Link to={`/hobbies/${hobby.id}`}>
               <div className="relative h-75 bg-magenta/5 rounded border border-lavender/25 rounded-lg overflow-hidden">
-                {/* Background Image with Parallax */}
                 <motion.div
                   className="absolute inset-0"
                   animate={{
@@ -44,10 +44,8 @@ const HobbiesSection = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-magenta/10 to-transparent" />
                 </motion.div>
 
-                {/* Content */}
                 <div className="relative h-full flex flex-col p-6">
                   
-                  {/* Icon with Glow Effect */}
                   <motion.div
                     className="relative w-full h-20 flex items-center justify-center text-6xl mb-4"
                     animate={{
@@ -60,7 +58,6 @@ const HobbiesSection = () => {
                     <span className="relative">{hobby.icon}</span>
                   </motion.div>
 
-                  {/* Title with Animation */}
                   <motion.h3
                     className="text-2xl font-bold text-text mb-3"
                     animate={{
@@ -72,7 +69,6 @@ const HobbiesSection = () => {
                     {hobby.name}
                   </motion.h3>
 
-                  {/* Description with Slide Up Animation */}
                   <motion.p
                     className="text-sm sm:text-base text-left text-text/70 whitespace-pre-line line-clamp-6"
                     initial={{ opacity: 0, y: 20 }}
@@ -85,7 +81,6 @@ const HobbiesSection = () => {
                     {hobby.description}
                   </motion.p>
 
-                  {/* Interactive Elements */}
                   <motion.div
                     className="absolute top-0 left-0 right-0 h-1 bg-blush/80 origin-left"
                     initial={{ scaleX: 0 }}
@@ -95,7 +90,6 @@ const HobbiesSection = () => {
                     transition={{ duration: 0.6 }}
                   />
 
-                  {/* Hover Indicator */}
                   <motion.div
                     className="absolute bottom-4 right-4 text-blush"
                     animate={{
