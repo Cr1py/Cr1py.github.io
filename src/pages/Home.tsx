@@ -40,11 +40,14 @@ const Home = () => {
       </section>  
 
       {/* Hobbies Preview */}
+      
+      {/*
       <section id="hobbies">
         <div>
           <HobbiesSection />
         </div>
-      </section>  
+      </section>        
+      */}
 
       {/* Contact*/}
       <section id="contact">
