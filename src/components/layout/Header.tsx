@@ -94,12 +94,14 @@ const Header = ({ className = "" }: HeaderProps) => {
                 Projects
               </a>
             
+            {/*
               <a
                 href="/#hobbies"
                 className="hover:text-blush transition-colors duration-300 text-lg"
               >
                 Hobbies
-              </a>
+              </a>            
+            */}
 
               <a
                 href="/#contact"
@@ -162,13 +164,15 @@ const Header = ({ className = "" }: HeaderProps) => {
                   Projects
                 </a>
 
+                {/*
                 <a
                   href="/#hobbies"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="block px-4 py-3 rounded-lg transition-colors hover:text-blush hover:bg-blush/5"
                 >
                   Hobbies
-                </a>
+                </a>                
+                */}
 
                 <a
                   href="/#contact"
