@@ -106,19 +106,6 @@ const Experience = () => {
                           ))}
                         </ul>
                       </div>
-
-                      <div>
-                        <h4 className="text-left text-lg text-text mb-3">
-                          Technologies & Skills
-                        </h4>
-                        <div className="flex flex-wrap gap-2">
-                          {activeExperience.technologies.map((tech) => (
-                            <span key={tech} className="tag-pill">
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
                     </motion.div>
                   </AnimatePresence>
                 </div>
