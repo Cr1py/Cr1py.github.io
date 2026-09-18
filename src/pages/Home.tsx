@@ -10,36 +10,32 @@ import '../App.css'
 
 const Home = () => {
   return (
-    <div>
-      {/* Intro */}
+    <div className="w-full">
       <section id="intro">
         <div>
           <Intro />
         </div>
       </section> 
 
-      {/* About Me */}
       <section id="aboutme">
         <div>
           <AboutMeSection />
         </div>
       </section>   
 
-      {/* Experience Preview */}
       <section id="experience">
         <div>
           <ExperiencePreview />
         </div>
       </section> 
 
-      {/* Featured Projects */}
       <section id="projects">
         <div>
           <FeaturedProjects />
         </div>
       </section>  
 
-      {/* Hobbies Preview */}
+      {/* removed hobbies for now */}
       
       {/*
       <section id="hobbies">
@@ -49,7 +45,6 @@ const Home = () => {
       </section>        
       */}
 
-      {/* Contact*/}
       <section id="contact">
         <div>
           <ContactSection />
