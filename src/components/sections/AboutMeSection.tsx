@@ -24,7 +24,7 @@ const AboutMeSection = () => {
   ]
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       {/* Skills */}
       <div className="relative mt-16 w-screen left-1/2 -translate-x-1/2 overflow-hidden border-y border-lavender/20 py-4 mb-8">

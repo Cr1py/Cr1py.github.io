@@ -1,34 +1,14 @@
-import { useState, useMemo } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useRef } from "react";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useMotionValueEvent,
+} from "framer-motion";
 import { experiences } from "../data/experience";
-import { FaTimes, FaFilter } from "react-icons/fa";
 
 const Experience = () => {
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
-  const [isFilterOpen, setIsFilterOpen] = useState<boolean>(false);
-
-  // get unique tags from all experiences
-  const allTags = useMemo(() => {
-    const tags = new Set<string>();
-    experiences.forEach((exp) => {
-      exp.technologies.forEach((tech) => tags.add(tech));
-    });
-    return Array.from(tags).sort();
-  }, []);
-
-  // filter experiences based on selected tags
-  const filteredExperiences = useMemo(() => {
-    if (selectedTags.length === 0) return experiences;
-    return experiences.filter((exp) =>
-      selectedTags.every((tag) => exp.technologies.includes(tag))
-    );
-  }, [selectedTags]);
-
-  const toggleTag = (tag: string) => {
-    setSelectedTags((prev) =>
-      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
-    );
-  };
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const formatDate = (dateString?: string) => {
     if (!dateString) return "Date TBD";
@@ -42,9 +22,27 @@ const Experience = () => {
     });
   };
 
+  // scroll-driven pinning
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: scrollContainerRef,
+    offset: ["start start", "end end"],
+  });
+
+  useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    if (experiences.length === 0) return;
+    const idx = Math.min(
+      experiences.length - 1,
+      Math.floor(latest * experiences.length)
+    );
+    setActiveIndex(idx);
+  });
+
+  const activeExperience = experiences[activeIndex];
+
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="flex items-center justify-between mb-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 lg:pt-10">
+      <div className="flex items-center justify-between mb-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -54,179 +52,105 @@ const Experience = () => {
           <span className="text-text">My </span>
           <span className="text-dusk">Experience</span>
         </motion.h2>
-
-        {/* filter Button */}
-        <motion.button
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          onClick={() => setIsFilterOpen(!isFilterOpen)}
-          className={`relative flex items-center gap-2 px-4 py-2 rounded-lg border transition-colors ${
-            isFilterOpen
-              ? "bg-blush/5 text-blush border-blush"
-              : "text-text border-text"
-          }`}
-        >
-          <FaFilter />
-          <span>Filters</span>
-
-          {selectedTags.length > 0 && (
-            <span className="absolute -top-2 -right-2 bg-lavender rounded text-text/70 text-xs font-bold w-6 h-6 flex items-center justify-center">
-              {selectedTags.length}
-            </span>
-          )}
-        </motion.button>
       </div>
 
-      {/* filter Box */}
-      <AnimatePresence>
-        {isFilterOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="mb-12 overflow-hidden"
-          >
-            <div className="card backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-left text-xl text-text mb-2">
-                Filter by Technology
-              </h3>
-              <div className="flex flex-wrap gap-2 mb-2 mt-4">
-                {allTags.map((tag) => (
-                  <button
-                    key={tag}
-                    onClick={() => toggleTag(tag)}
-                    className={`tag-pill ${
-                      selectedTags.includes(tag) ? "border-blush text-blush" : ""
-                    }`}
-                  >
-                    {tag}
-                  </button>
-                ))}
-              </div>
-              {selectedTags.length > 0 && (
-                <div className="text-center mt-4 pt-4 border-t">
-                  <button
-                    onClick={() => setSelectedTags([])}
-                    className="inline-flex items-center gap-2 text-text hover:text-blush transition-colors"
-                  >
-                    <FaTimes />
-                    Clear all filters
-                  </button>
-                </div>
-              )}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <div className="max-w-[1400px] mx-auto">
-        <AnimatePresence mode="wait">
-          {filteredExperiences.length === 0 ? (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="text-center text-text py-12"
-            >
-              No experiences match the selected filters.
-            </motion.div>
-          ) : (
-            <div className="relative">
-              {/* timeline line */}
-              <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-dusk" />
-
-              {filteredExperiences.map((experience, index) => (
+      <div
+        ref={scrollContainerRef}
+        className="relative"
+        style={{ height: `${experiences.length * 100}vh` }}
+      >
+        <div className="sticky top-20 h-[calc(100vh-6rem)] flex items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full max-w-[1400px] mx-auto">
+            {/* text */}
+            <div className="lg:order-1 lg:pr-12 h-[520px]">
+              <AnimatePresence mode="wait">
                 <motion.div
-                  key={experience.id}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.5, delay: index * 0.05 }}
-                  className="relative mb-24 last:mb-0"
+                  key={activeExperience.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.35 }}
+                  className="card backdrop-blur-sm rounded-lg p-8 h-full overflow-y-auto"
                 >
-                  {/* timeline dot */}
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true, amount: 0.2 }}
-                    transition={{ duration: 0.4, delay: index * 0.05 + 0.1 }}
-                    className="hidden lg:block absolute left-1/2 top-1/2 w-4 h-4 bg-dusk rounded transform -translate-x-1/2"
-                  />
-
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div className="lg:order-1 lg:pr-12">
-                      <div className="card backdrop-blur-sm rounded-lg p-8">
-                        <div className="mb-6">
-                          <h3 className="text-left text-2xl text-text mb-4">
-                            {experience.title}
-                          </h3>
-                          <h4 className="text-left text-xl text-text mb-2">
-                            {experience.company}
-                          </h4>
-                          <div className="text-left text-text/70">
-                            <p>{experience.location}</p>
-                            <p>
-                              {formatDate(experience.startDate)}
-                              {" - "}
-                              {formatDate(experience.endDate)}
-                            </p>
-                          </div>
-                        </div>
-
-                        <p className="text-left mb-6">
-                          {experience.description}
-                        </p>
-
-                        <div className="mb-6">
-                          <h4 className="text-left text-lg text-text mb-2 mt-4">
-                            Key Achievements
-                          </h4>
-                          <ul className="text-left list-disc list-inside space-y-2">
-                            {experience.achievements.map((achievement, i) => (
-                              <li key={i} className="pl-2">
-                                {achievement}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-
-                        <div>
-                          <h4 className="text-left text-lg text-text mb-3">
-                            Technologies & Skills
-                          </h4>
-                          <div className="flex flex-wrap gap-2">
-                            {experience.technologies.map((tech) => (
-                              <span
-                                key={tech}
-                                className={`tag-pill ${
-                                  selectedTags.includes(tech)
-                                    ? "border-blush text-blush"
-                                    : ""
-                                }`}
-                              >
-                                {tech}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
+                  <div className="mb-6">
+                    <h3 className="text-left text-2xl text-text mb-4">
+                      {activeExperience.title}
+                    </h3>
+                    <h4 className="text-left text-xl text-text mb-2">
+                      {activeExperience.company}
+                    </h4>
+                    <div className="text-left text-text/70">
+                      <p>{activeExperience.location}</p>
+                      <p>
+                        {formatDate(activeExperience.startDate)}
+                        {" - "}
+                        {formatDate(activeExperience.endDate)}
+                      </p>
                     </div>
+                  </div>
 
-                    <div className="lg:order-2 relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-lg overflow-hidden">
-                      <img
-                        src={experience.imageUrl}
-                        alt={`${experience.company} office`}
-                        className="w-full h-full object-contain"
-                      />
+                  <p className="text-left mb-6">
+                    {activeExperience.description}
+                  </p>
+
+                  <div className="mb-6">
+                    <h4 className="text-left text-lg text-text mb-2 mt-4">
+                      Key Achievements
+                    </h4>
+                    <ul className="text-left list-disc list-inside space-y-2">
+                      {activeExperience.achievements.map((achievement, i) => (
+                        <li key={i} className="pl-2">
+                          {achievement}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-left text-lg text-text mb-3">
+                      Technologies & Skills
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {activeExperience.technologies.map((tech) => (
+                        <span key={tech} className="tag-pill">
+                          {tech}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </motion.div>
-              ))}
+              </AnimatePresence>
             </div>
-          )}
-        </AnimatePresence>
+
+            {/* image*/}
+            <div className="lg:order-2 relative h-[520px] rounded-lg overflow-hidden mr-10 lg:mr-12">
+              <AnimatePresence mode="wait">
+                <motion.img
+                  key={activeExperience.id}
+                  src={activeExperience.imageUrl}
+                  alt={`${activeExperience.company} office`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.35 }}
+                  className="absolute inset-0 w-full h-full object-contain"
+                />
+              </AnimatePresence>
+            </div>
+          </div>
+
+          {/* progress indicator */}
+          <div className="hidden lg:flex flex-col gap-2 absolute right-0 top-1/2 -translate-y-1/2">
+            {experiences.map((exp, i) => (
+              <div
+                key={exp.id}
+                className={`w-2 h-2 rounded-full transition-colors ${
+                  i === activeIndex ? "bg-blush" : "bg-text/20"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

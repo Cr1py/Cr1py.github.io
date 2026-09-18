@@ -7,7 +7,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 const ContactSection = () => {
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 lg:pt-16">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 lg:pt-16">
       {/* About Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-start">
 
