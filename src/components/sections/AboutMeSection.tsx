@@ -1,35 +1,50 @@
-import { motion } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { FaGithub, FaJava, FaPython, FaHtml5, FaReact, FaNodeJs, FaDocker } from "react-icons/fa";
+import { FaCss3Alt } from "react-icons/fa6";
+import { BsJavascript, BsTypescript } from "react-icons/bs";
+import { SiSpringboot, SiMysql, SiSqlite, SiFastapi } from "react-icons/si";
+import { PiFileSqlFill } from "react-icons/pi";
+import { BiLogoPostgresql } from "react-icons/bi";
 
 const AboutMeSection = () => {
 
   const skills = [
-    "Java",
-    "Python",
-    "JavaScript",
-    "TypeScript",
-    "HTML/CSS",
-    "React",
-    "React Native",
-    "Node.js",
-    "Spring Boot",
-    "REST APIs",
-    "SQL",
-    "MongoDB",
-    "MySQL",
-    "SQLite",
-    "Docker",
-    "Git",
-    "CI-CD",
+    <FaJava className="text-lavender/75 w-8 h-8" />,
+    <FaPython className="text-lavender/75 w-8 h-8" />,
+    <BsJavascript className="text-lavender/75 w-8 h-8" />,
+    <BsTypescript className="text-lavender/75 w-8 h-8" />,
+    <FaHtml5 className="text-lavender/75 w-8 h-8" />,
+    <FaCss3Alt className="text-lavender/75 w-8 h-8" />,
+    <FaReact className="text-lavender/75 w-8 h-8" />,
+    <FaNodeJs className="text-lavender/75 w-8 h-8" />,
+    <SiSpringboot className="text-lavender/75 w-8 h-8" />,
+    <SiFastapi className="text-lavender/75 w-8 h-8" />,
+    <PiFileSqlFill className="text-lavender/75 w-8 h-8" />,
+    <BiLogoPostgresql className="text-lavender/75 w-8 h-8" />,
+    <SiMysql className="text-lavender/75 w-8 h-8" />,
+    <SiSqlite className="text-lavender/75 w-8 h-8" />,
+    <FaDocker className="text-lavender/75 w-8 h-8" />,
+    <FaGithub className="text-lavender/75 w-8 h-8" />,
   ]
+
+  const [skillWidth, setSkillWidth] = useState(0);
+  const skillRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (skillRef.current) {
+      setSkillWidth(skillRef.current.offsetWidth);
+    }
+  }, []);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      {/* Skills */}
+      {/* skills */}
       <div className="relative mt-16 w-screen left-1/2 -translate-x-1/2 overflow-hidden border-y border-lavender/20 py-4 mb-8">
         <motion.div
-          className="flex w-max gap-3"
+          className="flex w-max gap-7"
           animate={{ x: ["0%", "-50%"] }}
           transition={{
             duration: 25,
@@ -37,10 +52,10 @@ const AboutMeSection = () => {
             ease: "linear",
           }}
         >
-          {[...skills, ...skills].map((skill, index) => (
+          {[...skills, ...skills, ...skills].map((skill, index) => (
             <span
               key={`${skill}-${index}`}
-              className="tag-pill whitespace-nowrap"
+              className="whitespace-nowrap"
             >
               {skill}
             </span>
@@ -61,10 +76,10 @@ const AboutMeSection = () => {
         </h2>
       </motion.div>
 
-      {/* About Layout */}
+      {/* about Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-center">
 
-        {/* Left Section */}
+        {/* left Section */}
         <motion.div
           className="w-full"
           initial={{ opacity: 0, x: -40 }}
@@ -73,10 +88,10 @@ const AboutMeSection = () => {
           transition={{ delay: 0.2 }}
         >
 
-          {/* Stats */}
+          {/* stats */}
           <div className="grid grid-cols-2 gap-3 mt-6">
 
-            {/* Education */}
+            {/* education */}
             <Link to="/education" className="col-span-2 block">
               <motion.div
                 className="card rounded-lg p-5 tracking-wide cursor-pointer hover:border-blush"
@@ -99,7 +114,7 @@ const AboutMeSection = () => {
               </motion.div>
             </Link>
 
-            {/* Internship */}
+            {/* internship */}
             <div className="bg-magenta/5 border border-lavender/25 rounded-lg p-5">
               <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-lavender">
                 4
@@ -109,7 +124,7 @@ const AboutMeSection = () => {
               </div>
             </div>
 
-            {/* Learning */}
+            {/* learning */}
             <div className="card rounded-lg p-5">
               <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-lavender">
                 1.5
@@ -122,7 +137,7 @@ const AboutMeSection = () => {
           </div>
         </motion.div>
 
-        {/* Right Section*/}
+        {/* right Section*/}
         <motion.div
           className="text-sm sm:text-base text-left whitespace-pre-line"
           initial={{ opacity: 0, x: 40 }}
