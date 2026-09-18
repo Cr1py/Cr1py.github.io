@@ -56,7 +56,7 @@ const AboutMeSection = () => {
         transition={{ delay: 0.2 }}
       >
         <h2 className="text-left font-syne">
-          <span className="text-text">A little </span>
+          <span className="text-text">A lil' </span>
           <span className="text-dusk">About Me...</span>
         </h2>
       </motion.div>
