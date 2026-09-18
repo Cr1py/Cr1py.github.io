@@ -11,47 +11,42 @@ import '../App.css'
 const Home = () => {
   return (
     <div>
-      {/* Intro */}
       <section id="intro">
         <div>
           <Intro />
         </div>
       </section> 
 
-      {/* About Me */}
       <section id="aboutme">
-        <div>
+        <div className="max-w-[1200px] mx-auto">
           <AboutMeSection />
         </div>
       </section>   
 
-      {/* Experience Preview */}
       <section id="experience">
-        <div>
+        <div className="max-w-[1200px] mx-auto">
           <ExperiencePreview />
         </div>
       </section> 
 
-      {/* Featured Projects */}
       <section id="projects">
-        <div>
+        <div className="max-w-[1200px] mx-auto">
           <FeaturedProjects />
         </div>
       </section>  
 
-      {/* Hobbies Preview */}
+      {/* removed hobbies for now */}
       
       {/*
       <section id="hobbies">
-        <div>
+        <div className="max-w-[1200px] mx-auto">
           <HobbiesSection />
         </div>
       </section>        
       */}
 
-      {/* Contact*/}
       <section id="contact">
-        <div>
+        <div className="max-w-[1200px] mx-auto">
           <ContactSection />
         </div>
       </section>

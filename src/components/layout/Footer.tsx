@@ -11,12 +11,10 @@ const Footer = ({ className }: { className?: string }) => {
     >
       <div className="max-w-7xl mx-auto h-20 px-4 sm:px-6 lg:px-8 flex flex-row items-center justify-between gap-4">
  
-        {/* Copyright */}
         <div>
             © {currentYear} {personalInfo.name} - Thanks for stopping by!
         </div>
  
-        {/* Social Links */}
         <div className="flex items-center justify-end gap-4 text-ele-text-light">
           {personalInfo.socials.github && (
             <a
