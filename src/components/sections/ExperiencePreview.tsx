@@ -110,8 +110,8 @@ const Experience = () => {
                   </AnimatePresence>
                 </div>
 
-                {/* image*/}
-                <div className="lg:order-2 relative h-[520px] rounded-lg overflow-hidden mr-10 lg:mr-12">
+                {/* image that only appears on larger screens bc mobile looks wonky*/}
+                <div className="hidden md:block lg:order-2 elative h-[520px] rounded-lg overflow-hidden mr-10 lg:mr-12">
                   <AnimatePresence mode="wait">
                     <motion.img
                       key={activeExperience.id}
