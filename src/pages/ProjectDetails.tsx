@@ -16,7 +16,7 @@ const ProjectDetail = () => {
 
   if (!project) {
     return (
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+      <div className="max-w-[1200px] container mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
         <h4 className="text-2xl text-text mb-4">Project Not Found</h4>
         <Link
           to="/projects"
@@ -37,7 +37,7 @@ const ProjectDetail = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="max-w-[1200px] container mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Back Button */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
