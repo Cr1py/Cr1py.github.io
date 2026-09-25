@@ -1,3 +1,4 @@
+import galleriaGif from "../../assets/galleriaGif.gif";
 import pokeBinder from "../../assets/pokeBinder.png";
 import floorPlanImg from "../../assets/floorPlanImg.png";
 import capstoneImg from "../../assets/capstoneImg.png";
@@ -10,6 +11,7 @@ import sightBridge from "../../assets/sightBridge.png";
 import mcGroundFloor from "../../assets/MC-groundfloor.png";
 import customDiscordImg1 from "../../assets/customDiscordImg1.png";
 
+
 export interface Project {
   id: string;
   title: string;
@@ -21,12 +23,51 @@ export interface Project {
   demoUrl?: string;
   githubUrl?: string;
   docUrl?: string;
+  vidUrl?: string;
   featured: boolean;
   category?: 'Personal' | 'Freelance' | 'School' | 'Hackathon';
   date?: string; // Format: "YYYY-MM"
 }
 
 export const projects: Project[] = [
+    {
+    id: 'galleria',
+    title: 'Galleria: Virtual Art Gallery',
+    description:
+      'I was inspired by the feeling of getting lost in an art museum, so I decided to create a website where artists can submit their art into this gallery for visitors to get lost in.',
+    shortDescription:
+      'Current Project: virtual art gallery for artist to post their art.',
+    longDescription: [
+      'Currently users can:',
+      'Load in by following the preview link (I\'m using Render as my backend hosting and it may have a 30-40 second boot up time becuase I\'m using the free version, so sorry if it takes a bit to load in)',
+      'Use your scroll wheel to get real close to the stock image painting.',
+      'Use your left mouse button to look around the painting and notice how the perspective changes.',
+      'Go to the next randomly generated painting from the exhibit, or go back to a previous painting.',
+      'Add or edit your art (currently only available to test account holders).',
+    ],
+    technologies: [
+      'React',
+      'TypeScript',
+      'HTML',
+      'CSS',
+      'Vite',
+      'Python',
+      'FastAPI',
+      'SQL',
+      'PostgreSQL',
+      'Cloudflare',
+      'Render',
+      'Neon',
+      'Git'
+    ],
+    imageUrl: galleriaGif,
+    githubUrl: 'https://github.com/Cr1py/Galleria',
+    demoUrl: 'https://galleria.cr1py.workers.dev/',
+    category: 'Personal',
+    featured: true,
+    date: '2026-09'
+  },
+
   {
     id: 'poke-binder',
     title: 'Virtual Pokemon Art Binder',
@@ -94,7 +135,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/Cr1py/AI-Room-Layout-Preview',
     demoUrl: 'https://cr1py.github.io/AI-Room-Layout-Preview/',
     category: 'Personal',
-    featured: true,
+    featured: false,
     date: '2026-08'
   },
 
@@ -229,7 +270,7 @@ export const projects: Project[] = [
     ],
     imageUrl: sightBridge,
     docUrl: 'https://news.westernu.ca/2023/03/western-students-suggest-solutions-to-advance-un-sustainable-development-goals/',
-    demoUrl: 'https://www.canva.com/design/DAFcBDp0LnE/BmEcGzV5GJfHlgNAxnj-aA/edit?ui=eyJEIjp7IlAiOnsiQiI6ZmFsc2V9fX0',
+    vidUrl: 'https://www.canva.com/design/DAFcBDp0LnE/BmEcGzV5GJfHlgNAxnj-aA/edit?ui=eyJEIjp7IlAiOnsiQiI6ZmFsc2V9fX0',
     category: 'Hackathon',
     featured: false,
     date: '2023-03'
@@ -257,7 +298,7 @@ export const projects: Project[] = [
       'CSS',
     ],
     imageUrl: myCity,
-    demoUrl: 'https://canva.link/b77yu6hny6kq6zl',
+    vidUrl: 'https://canva.link/b77yu6hny6kq6zl',
     githubUrl: 'https://github.com/Cr1py/My-City',
     category: 'Hackathon',
     featured: false,

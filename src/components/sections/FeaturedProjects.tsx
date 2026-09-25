@@ -66,7 +66,7 @@ const FeaturedProjects = () => {
                       {project.technologies.slice(0, 3).map((tech) => (
                         <motion.span
                           key={tech}
-                          className="font-mono text-[10px] sm:text-[11px] px-2.5 py-1 bg-blush/5 rounded border border-blush/25 text-blush/60 transition-all duration-200 tracking-wide hover:border-blush hover:text-blush whitespace-nowrap shrink-0"
+                          className="font-mono text-[10px] sm:text-[11px] px-2.5 py-1 bg-blush/5 rounded border border-blush/25 text-blush/60 whitespace-nowrap shrink-0"
                         >
                           {tech}
                         </motion.span>
@@ -74,7 +74,7 @@ const FeaturedProjects = () => {
 
                       {project.technologies.length > 3 && (
                         <motion.span
-                          className="font-mono text-[10px] sm:text-[11px] px-2.5 py-1 bg-blush/5 rounded border border-blush/25 text-blush/60 transition-all duration-200 tracking-wide hover:border-blush hover:text-blush whitespace-nowrap shrink-0"
+                          className="font-mono text-[10px] sm:text-[11px] px-2.5 py-1 bg-blush/5 rounded border border-blush/25 text-blush/60 whitespace-nowrap shrink-0"
                         >
                           +{project.technologies.length - 3}
                         </motion.span>

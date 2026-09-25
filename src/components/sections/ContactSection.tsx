@@ -8,10 +8,10 @@ const ContactSection = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 lg:pt-16">
-      {/* About Layout */}
+      {/* about layout */}
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-start">
 
-        {/* Left Section - Contact Input */}
+        {/* left Section - contact input */}
         <motion.div
           className="w-full"
           initial={{ opacity: 0, x: -40 }}
@@ -24,9 +24,9 @@ const ContactSection = () => {
             <span className="text-dusk">Talk.</span>
           </h2>
 
-          {/* Input */}
+          {/* input */}
           <div className="gap-3 mt-8">
-            <p className="text-sm sm:text-base text-left whitespace-pre-line mb-4">I'm always happy to hear from interesting people: whether it's a project idea, a collaboration, or just a hello.</p>
+            <p className="text-sm sm:text-base text-left whitespace-pre-line mb-4">If you're interested in working together for a project or to chat, feel free to shoot me an email!</p>
             
             <a className="block font-mono text-left text-[15px] text-lavender no-underline border border-lavender/25 bg-lavender/5 py-4 px-6 rounded-lg mb-8 transition-all duration-200 tracking-[0.02em] hover:bg-blush/10 hover:border-blush hover:text-blush mt-4"
             href="mailto:{personalInfo.email}"
@@ -34,7 +34,7 @@ const ContactSection = () => {
             {personalInfo.email} →
             </a>
             
-            {/* Social Links */}
+            {/* social links */}
             <div className="flex items-center justify-start gap-4">
               {personalInfo.socials.github && (
                 <a
@@ -60,7 +60,7 @@ const ContactSection = () => {
           </div>
         </motion.div>
 
-        {/* Right Section - Code Block with Info */}
+        {/* right section - code */}
         <motion.div
           className="text-sm sm:text-base text-left text-ele-text-light/70 whitespace-pre-line"
           initial={{ opacity: 0, x: 40 }}
@@ -68,7 +68,7 @@ const ContactSection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
         >
-          {/* Terminal Design */}
+          {/* terminal design */}
           <div className="bg-magenta/5 border border-lavender/25 rounded-2xl p-10 [font-family:'Space_Mono',monospace] text-xs leading-loose">
            <div className="text-gold">// Christine Bautista... get in touch</div>
             &nbsp;
@@ -83,9 +83,6 @@ const ContactSection = () => {
             </div>
             <div>
               &nbsp;&nbsp;responseTime: <span className="text-blush">"usually within 24h"</span>,
-            </div>
-            <div>
-              &nbsp;&nbsp;relocation: <span className="text-dusk">true</span>,
             </div>
             <div>
               &nbsp;&nbsp;drinkOfChoice: <span className="text-blush">"tea 🍵"</span>,
