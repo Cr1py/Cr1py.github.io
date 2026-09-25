@@ -259,6 +259,19 @@ const Projects = () => {
                           <span>Documentation</span>
                         </a>
                       )}
+
+                      {project.vidUrl && (
+                        <a
+                          href={project.vidUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 link-hover"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <FaExternalLinkAlt className="w-3 h-3" />
+                          <span>Video Demo</span>
+                        </a>
+                      )}
                     </div>
                   </div>
                 </Link>
