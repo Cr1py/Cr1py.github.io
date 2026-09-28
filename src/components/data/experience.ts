@@ -25,7 +25,7 @@ export const experiences: Experience[] = [
     startDate: '2025-05',
     endDate: '2025-08',
     description:
-      'Collaborated with departments such as Suppy Chain Management, HR, and Operations to identifiy pain points with their daily workflows. Developed Python automation tools, and SQL queries and schemas to streamline workflows, automate repetitive tasks, and improve the efficiency of internal processes.',
+      'Collaborated with departments such as Supply Chain Management, HR, and Operations to identifiy pain points with their daily workflows. Developed Python automation tools, and SQL queries and schemas to streamline workflows, automate repetitive tasks, and improve the efficiency of internal processes.',
     technologies: [
       'Python',
       'SQL',

@@ -69,7 +69,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="container max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="max-w-[1200px] container mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="flex items-center justify-between mb-8">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -257,6 +257,19 @@ const Projects = () => {
                         >
                           <FaExternalLinkAlt className="w-3 h-3" />
                           <span>Documentation</span>
+                        </a>
+                      )}
+
+                      {project.vidUrl && (
+                        <a
+                          href={project.vidUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 link-hover"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <FaExternalLinkAlt className="w-3 h-3" />
+                          <span>Video Demo</span>
                         </a>
                       )}
                     </div>
