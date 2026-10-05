@@ -23,7 +23,7 @@ const Experience = () => {
     });
   };
 
-  // Scroll-driven pinning
+  // scroll-driven pinning
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -53,7 +53,7 @@ const Experience = () => {
       >
         <div className="sticky top-20">
           <div className="experience-content">
-            {/* Header */}
+            {/* header */}
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -66,7 +66,7 @@ const Experience = () => {
 
             <div className="experience-display">
               <div className="experience-grid">
-                {/* Experience Text */}
+                {/* experience text */}
                 <div className="experience-details">
                   <AnimatePresence mode="wait">
                     <motion.div
@@ -123,7 +123,7 @@ const Experience = () => {
                   </AnimatePresence>
                 </div>
 
-                {/* Experience Image */}
+                {/* experience image */}
                 <div className="experience-image-wrapper">
                   <AnimatePresence mode="wait">
                     <motion.img
@@ -140,7 +140,7 @@ const Experience = () => {
                 </div>
               </div>
 
-              {/* Progress Indicator */}
+              {/* progress indicator */}
               <div className="experience-progress">
                 {experiences.map((exp, i) => (
                   <div
