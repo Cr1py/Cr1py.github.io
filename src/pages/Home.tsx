@@ -4,6 +4,7 @@ import ExperiencePreview from "../components/sections/ExperiencePreview"
 import FeaturedProjects from "../components/sections/FeaturedProjects"
 import HobbiesSection from "../components/sections/HobbiesSection"
 import ContactSection from "../components/sections/ContactSection"
+import Footer from "../components/sections/Footer"
 
 import '../App.css'
 
@@ -11,29 +12,18 @@ import '../App.css'
 const Home = () => {
   return (
     <div>
-      <section id="intro">
-        <div>
-          <Intro />
-        </div>
-      </section> 
 
-      <section id="aboutme">
+      <section id="footer">
         <div className="max-w-[1200px] mx-auto">
-          <AboutMeSection />
+          <Footer />
         </div>
-      </section>   
+      </section>
 
-      <section id="experience">
+      <section id="contact">
         <div className="max-w-[1200px] mx-auto">
-          <ExperiencePreview />
+          <ContactSection />
         </div>
-      </section> 
-
-      <section id="projects">
-        <div className="max-w-[1200px] mx-auto">
-          <FeaturedProjects />
-        </div>
-      </section>  
+      </section>
 
       {/* removed hobbies for now */}
       
@@ -45,11 +35,30 @@ const Home = () => {
       </section>        
       */}
 
-      <section id="contact">
+      <section id="projects">
         <div className="max-w-[1200px] mx-auto">
-          <ContactSection />
+          <FeaturedProjects />
         </div>
-      </section>
+      </section>  
+
+      <section id="experience">
+        <div className="max-w-[1200px] mx-auto">
+          <ExperiencePreview />
+        </div>
+      </section> 
+
+      <section id="aboutme">
+        <div className="max-w-[1200px] mx-auto">
+          <AboutMeSection />
+        </div>
+      </section>   
+
+      <section id="intro">
+        <div>
+          <Intro />
+        </div>
+      </section> 
+
     </div>
   );
 };
