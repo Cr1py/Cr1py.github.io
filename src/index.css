@@ -122,3 +122,4 @@
 @import "./components/styling/experienceprev.css" layer(components);
 @import "./components/styling/featprojects.css" layer(components);
 @import "./components/styling/hobbies.css" layer(components);
+@import "./components/styling/contact.css" layer(components);

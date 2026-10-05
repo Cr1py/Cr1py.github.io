@@ -1,0 +1,120 @@
+.experience-section {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 lg:pt-10;
+}
+
+/* scroll container */
+
+.experience-scroll-container {
+  @apply relative;
+}
+
+.experience-content {
+  @apply max-w-[1400px] mx-auto;
+}
+
+
+/* heading */
+
+.experience-heading {
+  @apply text-left mb-8;
+}
+
+.experience-heading-text {
+  @apply text-text;
+}
+
+.experience-heading-accent {
+  @apply text-dusk;
+}
+
+
+/* experience display */
+
+.experience-display {
+  @apply relative;
+}
+
+.experience-grid {
+  @apply grid grid-cols-1 lg:grid-cols-2
+    gap-12 items-center w-full;
+}
+
+
+/* experience details */
+
+.experience-details {
+  @apply lg:order-1 lg:pr-12 h-[520px];
+}
+
+.experience-card {
+  @apply backdrop-blur-sm rounded-lg p-8 h-full overflow-y-auto;
+}
+
+
+/* experience header */
+
+.experience-title {
+  @apply text-left text-2xl text-text mb-4;
+}
+
+.experience-company {
+  @apply text-left text-xl text-text mb-2;
+}
+
+.experience-meta {
+  @apply text-left text-text/70;
+}
+
+
+/* experience description */
+
+.experience-description {
+  @apply text-left mb-6;
+}
+
+
+/* achievements */
+
+.experience-achievements-heading {
+  @apply text-left text-lg text-text mb-2 mt-4;
+}
+
+.experience-achievements-list {
+  @apply text-left list-disc list-inside space-y-2;
+}
+
+.experience-achievement {
+  @apply pl-2;
+}
+
+
+/* experience Image */
+
+.experience-image-wrapper {
+  @apply lg:order-2 relative h-[520px]
+    rounded-lg overflow-hidden
+    mr-10 lg:mr-12
+    hidden md:block;
+}
+
+.experience-image {
+  @apply absolute inset-0 w-full h-full object-contain;
+}
+
+
+/* progress Indicator */
+
+.experience-progress {
+  @apply hidden lg:flex flex-col gap-2
+    absolute right-0 top-1/2
+    -translate-y-1/2;
+}
+
+.experience-progress-dot {
+  @apply w-2 h-2 rounded-full
+    bg-text/20 transition-colors;
+}
+
+.experience-progress-dot.active {
+  @apply bg-blush;
+}

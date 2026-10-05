@@ -1,0 +1,107 @@
+.contact-section {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 lg:pt-16;
+}
+
+
+/* layout */
+
+.contact-layout {
+  @apply grid grid-cols-1 lg:grid-cols-[1fr_1.2fr]
+    gap-12 lg:gap-20 items-start;
+}
+
+
+/* contact info */
+
+.contact-info {
+  @apply w-full;
+}
+
+.contact-heading {
+  @apply text-left font-syne font-black mb-4;
+}
+
+.contact-heading-text {
+  @apply text-text;
+}
+
+.contact-heading-accent {
+  @apply text-dusk;
+}
+
+.contact-content {
+  @apply mt-8;
+}
+
+.contact-description {
+  @apply text-sm sm:text-base text-left whitespace-pre-line mb-4;
+}
+
+
+/* email */
+
+.contact-email {
+  @apply block font-mono text-left text-[15px]
+    text-lavender no-underline
+    border border-lavender/25
+    bg-lavender/5
+    py-4 px-6
+    rounded-lg
+    mb-8
+    mt-4
+    tracking-[0.02em]
+    transition-all duration-200
+    hover:bg-blush/10
+    hover:border-blush
+    hover:text-blush;
+}
+
+
+/* social Links */
+
+.contact-socials {
+  @apply flex items-center justify-start gap-4;
+}
+
+.contact-social-link {
+  @apply text-lavender transition-colors
+    hover:text-blush;
+}
+
+.contact-social-link svg {
+  @apply w-8 h-8;
+}
+
+
+/* terminal */
+
+.contact-terminal-wrapper {
+  @apply text-sm sm:text-base text-left
+    text-text/70 whitespace-pre-line;
+}
+
+.contact-terminal {
+  @apply bg-magenta/5
+    border border-lavender/25
+    rounded-2xl
+    p-10
+    font-mono
+    text-xs
+    leading-loose;
+}
+
+.contact-terminal-comment {
+  @apply text-gold;
+}
+
+.contact-terminal-keyword {
+  @apply text-magenta;
+}
+
+.contact-terminal-text {
+  @apply text-text;
+}
+
+.contact-terminal-string {
+  @apply text-blush;
+}
