@@ -117,6 +117,7 @@
 
 @import "./components/styling/components.css" layer(components);
 
+@import "./components/styling/intro.css" layer(components);
 @import "./components/styling/aboutme.css" layer(components);
 @import "./components/styling/education.css" layer(components);
 @import "./components/styling/experienceprev.css" layer(components);

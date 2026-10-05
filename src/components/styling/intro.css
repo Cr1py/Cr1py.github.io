@@ -1,0 +1,33 @@
+.hero {
+  @apply relative min-h-screen overflow-hidden;
+}
+
+/* Background SVG */
+.hero-bg-image {
+  @apply absolute inset-0 w-full h-full object-cover;
+  z-index: 0;
+}
+
+/* Dark/color overlay */
+.hero-overlay {
+  @apply absolute inset-0;
+  z-index: 1;
+}
+
+/* Decorative SVGs */
+.hero-decorations {
+  @apply absolute inset-0 pointer-events-none;
+  z-index: 2;
+}
+
+/* Individual stars */
+.hero-star {
+  @apply absolute;
+}
+
+/* Actual content */
+.hero-header,
+.hero-main {
+  @apply relative;
+  z-index: 3;
+}

@@ -1,7 +1,7 @@
-import GDImg from "../../assets/GD.jpg";
-import GoodSelfImg from "../../assets/goodself.jpg";
-import FimiMallIMG from "../../assets/fimi.png";
-import SimulenceIMG from "../../assets/simu.png";
+import GDImg from "../../assets/experience/GD.jpg";
+import GoodSelfImg from "../../assets/experience/goodself.jpg";
+import FimiMallIMG from "../../assets/experience/fimi.png";
+import SimulenceIMG from "../../assets/experience/simu.png";
 
 export interface Experience {
   id: string;

@@ -1,115 +1,110 @@
-import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaDownload} from "react-icons/fa";
+import { useState } from "react";
 import { personalInfo } from "../data/personal-info";
-import resume from "/src/assets/Christine_Bautista_Resume.pdf";
+import startButton from "../../assets/web/start-button.svg";
+import dreamCityAtSunset from "../../assets/web/city-bg.svg";
+import pixelInsignia from "../../assets/web/pixel-insignia.svg";
+import starlight from "../../assets/web/star.svg";
+
+const decorativeStars = [
+  { src: starlight, alt: "", className: "hero-star top-[20%] left-[18%] w-5 h-5" },
+  { src: starlight, alt: "", className: "hero-star top-[27%] right-[6%] w-6 h-6" },
+  { src: starlight, alt: "", className: "hero-star top-[53%] left-[5%] w-4 h-4" },
+  { src: starlight, alt: "", className: "hero-star top-[58%] right-[12%] w-4 h-4" },
+];
 
 const Intro = () => {
-  return (
-    <div className="flex flex-col lg:flex-row items-center justify-between w-full min-h-[calc(100svh-5rem)] max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 gap-8 lg:gap-4">
-      {/* Left Section - Text */}
-      <motion.div
-        className="flex-1 text-center lg:text-left w-full"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.2 }}
-      >
-        <motion.div
-          className="text-xl sm:text-2xl font-mono mb-2 text-text"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-        >
-          Hey there,
-        </motion.div>
-        <motion.h1
-          className="text-dusk font-syne font-black tracking-tight mb-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-        >
-          I'm Christine
-        </motion.h1>
-        <motion.div
-          className="text-base sm:text-lg text-text/70 italic mb-6"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-        >
-          {personalInfo.currentPosition.title} @{" "}
-          {personalInfo.currentPosition.company}
-        </motion.div>
-        <motion.div
-          className="flex flex-wrap gap-3"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-        >
-          <a
-            href={resume}
-            className="inline-flex items-center gap-2 px-6 py-3 text-lavender no-underline border border-lavender/25 bg-lavender/5 rounded-lg transition-all tracking-[0.02em] duration-300 hover:bg-blush/10 hover:border-blush hover:text-blush"
-          >
-            <FaDownload className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
-            Download CV
-          </a>
-          {personalInfo.socials.linkedin && (
-          <a
-            href={personalInfo.socials.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link-accent"
-            aria-label="LinkedIn"
-          >
-            <FaLinkedin className="items-center w-12 h-12 fill-none hover:fill-blush/20 stroke-[4]" />
-          </a>
-        )}
-        {personalInfo.socials.github && (
-          <a
-            href={personalInfo.socials.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link-accent"
-            aria-label="GitHub"
-          >
-            <FaGithub className="items-center w-12 h-12 fill-none hover:fill-blush/20 stroke-[4]" />
-          </a>
-        )}
-        </motion.div>
-      </motion.div>
+  const [hasStarted, setHasStarted] = useState(false);
 
-      {/* Right Section - Social Links */}
-      <motion.div
-        className="text-sm sm:text-base text-left text-ele-text-light/70 whitespace-pre-line"
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.7 }}
-      >
-          {/* Terminal Design */}
-          <div className="terminal-block rounded-2xl p-8">
-           <div className="text-gold">// Welcome to my website!</div>
-            &nbsp;
-            <div>
-              <span className="text-magenta"> const </span> christine = <span className="text-text">{'{'}</span>
-            </div>
-            <div>
-              &nbsp;&nbsp;email: <span className="text-blush">"{personalInfo.email}"</span>,
-            </div>
-            <div>
-              &nbsp;&nbsp;role: <span className="text-blush">"software developer"</span>,
-            </div>
-            <div>
-              &nbsp;&nbsp;currentLocation: <span className="text-blush">"Canada"</span>,
-            </div>
-            <div>
-              &nbsp;&nbsp;relocation: <span className="text-dusk">true</span>,
-            </div>
-            <div>
-              <span className="text-text">{'}'}</span>
-            </div>
+  return (
+    <div className="hero">
+      {/* Background */}
+      <img
+        className="hero-bg-image"
+        alt="City skyline at sunset"
+        src={dreamCityAtSunset}
+      />
+
+      <div className="hero-overlay" aria-hidden="true" />
+
+      {/* Decorative elements */}
+      <div className="hero-decorations" aria-hidden="true">
+        {decorativeStars.map((star, i) => (
+          <img
+            key={i}
+            className={star.className}
+            alt={star.alt}
+            src={star.src}
+          />
+        ))}
+      </div>
+
+      {/* Header */}
+      <header className="hero-header">
+        <div className="hero-logo">
+          <img
+            className="w-6 h-6"
+            alt=""
+            src={pixelInsignia}
+          />
+          <span className="hero-logo-text">
+            CB / PORTFOLIO
+          </span>
+        </div>
+
+        <div className="hero-badge">
+          <div className="hero-badge-dot" aria-hidden="true" />
+          <span className="hero-badge-text">
+            PLAYER 01
+          </span>
+        </div>
+      </header>
+
+      {/* Main */}
+      <main className="hero-main">
+        <div
+          className="hero-divider"
+          aria-label="Welcome to my world"
+        >
+          <div className="hero-divider-line" aria-hidden="true" />
+          <span className="hero-divider-text">
+            WELCOME TO MY WORLD
+          </span>
+          <div className="hero-divider-line" aria-hidden="true" />
+        </div>
+
+        <h1 className="hero-name">
+          {personalInfo.name}
+        </h1>
+
+        <p className="hero-tagline">
+          {personalInfo.currentPosition?.title ?? "Software Developer"}
+        </p>
+
+        <div className="hero-start-wrapper">
+          <button
+            type="button"
+            className="hero-start-button"
+            aria-label="Start to explore portfolio"
+            aria-pressed={hasStarted}
+            onClick={() => setHasStarted(true)}
+          >
+            <span className="hero-start-button-label">
+              START
+            </span>
+          </button>
+
+          <div className="hero-start-caption">
+            PRESS START TO EXPLORE
           </div>
-      </motion.div>
+
+          {hasStarted && (
+            <span className="sr-only" aria-live="polite">
+              Portfolio exploration started.
+            </span>
+          )}
+        </div>
+      </main>
     </div>
   );
 };
-
-
 export default Intro;

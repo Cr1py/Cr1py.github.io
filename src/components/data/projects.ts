@@ -1,15 +1,15 @@
-import galleriaGif from "../../assets/galleriaGif.gif";
-import pokeBinder from "../../assets/pokeBinder.png";
-import floorPlanImg from "../../assets/floorPlanImg.png";
-import capstoneImg from "../../assets/capstoneImg.png";
-import capstoneDemo from "../../assets/preview.html?url";
-import piCamsImg from "../../assets/piCams.png";
-import riipenLogo from "../../assets/Riipen-Logo.png";
-import uxl2024 from "../../assets/uxl2024.png";
-import myCity from "../../assets/myCity.png";
-import sightBridge from "../../assets/sightBridge.png";
-import mcGroundFloor from "../../assets/MC-groundfloor.png";
-import customDiscordImg1 from "../../assets/customDiscordImg1.png";
+import galleriaGif from "../../assets/projects/galleriaGif.gif";
+import pokeBinder from "../../assets/projects/pokeBinder.png";
+import floorPlanImg from "../../assets/projects/floorPlanImg.png";
+import capstoneImg from "../../assets/projects/capstoneImg.png";
+import capstoneDemo from "../../assets/projects/preview.html?url";
+import piCamsImg from "../../assets/projects/piCams.png";
+import riipenLogo from "../../assets/projects/Riipen-Logo.png";
+import uxl2024 from "../../assets/projects/uxl2024.png";
+import myCity from "../../assets/projects/myCity.png";
+import sightBridge from "../../assets/projects/sightBridge.png";
+import mcGroundFloor from "../../assets/projects/MC-groundfloor.png";
+import customDiscordImg1 from "../../assets/projects/customDiscordImg1.png";
 
 
 export interface Project {
