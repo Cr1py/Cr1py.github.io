@@ -15,7 +15,7 @@
 }
 
 .project-card {
-  @apply bg-magenta/5 border border-lavender/25 transition-all duration-200 rounded-lg overflow-hidden group;
+  @apply bg-magenta/5 border border-lavender/25 transition-all duration-200 rounded-lg overflow-hidden;
 }
 
 .project-image-wrapper {
