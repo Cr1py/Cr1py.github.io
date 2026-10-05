@@ -2,32 +2,153 @@
   @apply relative min-h-screen overflow-hidden;
 }
 
-/* Background SVG */
+
+/* background */
+
 .hero-bg-image {
-  @apply absolute inset-0 w-full h-full object-cover;
-  z-index: 0;
+  @apply absolute inset-0 z-0 h-full w-full object-cover;
 }
 
-/* Dark/color overlay */
 .hero-overlay {
-  @apply absolute inset-0;
-  z-index: 1;
+  @apply absolute inset-0 z-[1] bg-black/20;
 }
 
-/* Decorative SVGs */
+
+/* stars */
+
 .hero-decorations {
-  @apply absolute inset-0 pointer-events-none;
-  z-index: 2;
+  @apply pointer-events-none absolute inset-0 z-[2];
 }
 
-/* Individual stars */
 .hero-star {
   @apply absolute;
 }
 
-/* Actual content */
-.hero-header,
+
+/* header */
+
+.hero-header {
+  @apply relative z-[3] flex items-center justify-between px-6 py-6 sm:px-8 lg:px-12;
+}
+
+
+/* logo */
+
+.hero-logo {
+  @apply flex items-center gap-2;
+}
+
+.hero-logo-text {
+  @apply font-mono text-sm font-bold tracking-wide text-[var(--text)];
+}
+
+
+/* player badge */
+
+.hero-badge {
+  @apply flex items-center gap-2;
+}
+
+.hero-badge-dot {
+  @apply h-2 w-2 rounded-full bg-[var(--color-gold)];
+}
+
+.hero-badge-text {
+  @apply font-mono text-xs font-bold tracking-widest text-[var(--text)];
+}
+
+
+/* main */
+
 .hero-main {
-  @apply relative;
-  z-index: 3;
+  @apply relative z-[3] flex min-h-[calc(100vh-88px)] flex-col items-center justify-center px-6 text-center;
+}
+
+
+/* welcome */
+
+.hero-divider {
+  @apply flex w-full max-w-2xl items-center gap-4;
+}
+
+.hero-divider-line {
+  @apply h-px flex-1 bg-[var(--color-lavender)]/50;
+}
+
+.hero-divider-text {
+  @apply font-mono text-xs font-bold tracking-[0.2em] text-[var(--color-lavender)] sm:text-sm;
+}
+
+
+/* name */
+
+.hero-name {
+  @apply mt-6 font-syne text-5xl font-black tracking-[-0.04em] text-[var(--color-text)] sm:text-6xl lg:text-7xl;
+}
+
+
+/* tagline */
+
+.hero-tagline {
+  @apply mt-2 font-mono text-sm uppercase tracking-widest text-[var(--color-lavender)] sm:text-base;
+}
+
+
+/* start button */
+
+.hero-start-wrapper {
+  @apply mt-10 flex flex-col items-center;
+}
+
+.hero-start-button {
+  @apply inline-block p-0 transition-transform duration-150 hover:scale-105 active:scale-95;
+}
+
+.hero-start-button-image {
+  @apply block h-auto w-[180px];
+}
+
+.hero-start-caption {
+  @apply mt-3 font-mono text-xs font-bold tracking-widest text-[var(--color-text)]/70;
+}
+
+
+/* responsive */
+
+@media (max-width: 640px) {
+  .hero-header {
+    @apply px-4 py-5;
+  }
+
+  .hero-main {
+    @apply px-4;
+  }
+
+  .hero-logo-text {
+    @apply text-xs;
+  }
+
+  .hero-badge-text {
+    @apply text-[10px];
+  }
+
+  .hero-divider {
+    @apply gap-2;
+  }
+
+  .hero-divider-text {
+    @apply text-[10px];
+  }
+
+  .hero-name {
+    @apply text-4xl;
+  }
+
+  .hero-tagline {
+    @apply text-xs;
+  }
+
+  .hero-start-button-image {
+    @apply w-[150px];
+  }
 }

@@ -1,33 +1,55 @@
-import { useState } from "react";
 import { personalInfo } from "../data/personal-info";
+
 import startButton from "../../assets/web/start-button.svg";
 import dreamCityAtSunset from "../../assets/web/city-bg.svg";
 import pixelInsignia from "../../assets/web/pixel-insignia.svg";
 import starlight from "../../assets/web/star.svg";
 
 const decorativeStars = [
-  { src: starlight, alt: "", className: "hero-star top-[20%] left-[18%] w-5 h-5" },
-  { src: starlight, alt: "", className: "hero-star top-[27%] right-[6%] w-6 h-6" },
-  { src: starlight, alt: "", className: "hero-star top-[53%] left-[5%] w-4 h-4" },
-  { src: starlight, alt: "", className: "hero-star top-[58%] right-[12%] w-4 h-4" },
+  {
+    src: starlight,
+    alt: "",
+    className: "absolute top-[20%] left-[18%] w-5 h-5",
+  },
+  {
+    src: starlight,
+    alt: "",
+    className: "absolute top-[27%] right-[6%] w-6 h-6",
+  },
+  {
+    src: starlight,
+    alt: "",
+    className: "absolute top-[53%] left-[5%] w-4 h-4",
+  },
+  {
+    src: starlight,
+    alt: "",
+    className: "absolute top-[58%] right-[12%] w-4 h-4",
+  },
 ];
 
 const Intro = () => {
-  const [hasStarted, setHasStarted] = useState(false);
-
   return (
-    <div className="hero">
-      {/* Background */}
+    <div className="relative min-h-screen overflow-hidden">
+
+      {/* background */}
       <img
-        className="hero-bg-image"
+        className="absolute inset-0 z-0 w-full h-full object-cover"
         alt="City skyline at sunset"
         src={dreamCityAtSunset}
       />
 
-      <div className="hero-overlay" aria-hidden="true" />
+      {/* overlay */}
+      <div
+        className="absolute inset-0 z-[1] bg-black/20"
+        aria-hidden="true"
+      />
 
-      {/* Decorative elements */}
-      <div className="hero-decorations" aria-hidden="true">
+      {/* Stars */}
+      <div
+        className="absolute inset-0 z-[2] pointer-events-none"
+        aria-hidden="true"
+      >
         {decorativeStars.map((star, i) => (
           <img
             key={i}
@@ -38,73 +60,90 @@ const Intro = () => {
         ))}
       </div>
 
-      {/* Header */}
-      <header className="hero-header">
-        <div className="hero-logo">
+      {/* header */}
+      <header className="relative z-[3] flex items-center justify-between px-6 py-6 sm:px-8 lg:px-12">
+
+        {/* logo */}
+        <div className="flex items-center gap-2">
           <img
             className="w-6 h-6"
             alt=""
             src={pixelInsignia}
           />
-          <span className="hero-logo-text">
+
+          <span className="font-mono text-sm font-bold tracking-wide text-[var(--text)]">
             CB / PORTFOLIO
           </span>
         </div>
 
-        <div className="hero-badge">
-          <div className="hero-badge-dot" aria-hidden="true" />
-          <span className="hero-badge-text">
+        {/* player badge */}
+        <div className="flex items-center gap-2">
+          <div
+            className="w-2 h-2 rounded-full bg-[var(--color-gold)]"
+            aria-hidden="true"
+          />
+
+          <span className="font-mono text-xs font-bold tracking-widest text-[var(--text)]">
             PLAYER 01
           </span>
         </div>
       </header>
 
-      {/* Main */}
-      <main className="hero-main">
+      {/* main */}
+      <main className="relative z-[3] flex min-h-[calc(100vh-88px)] flex-col items-center justify-center px-6 text-center">
+
+        {/* welcome */}
         <div
-          className="hero-divider"
+          className="flex w-full max-w-2xl items-center gap-4"
           aria-label="Welcome to my world"
         >
-          <div className="hero-divider-line" aria-hidden="true" />
-          <span className="hero-divider-text">
+          <div
+            className="h-px flex-1 bg-[var(--color-lavender)]/50"
+            aria-hidden="true"
+          />
+
+          <span className="font-mono text-xs font-bold tracking-[0.2em] text-[var(--color-lavender)] sm:text-sm">
             WELCOME TO MY WORLD
           </span>
-          <div className="hero-divider-line" aria-hidden="true" />
+
+          <div
+            className="h-px flex-1 bg-[var(--color-lavender)]/50"
+            aria-hidden="true"
+          />
         </div>
 
-        <h1 className="hero-name">
+        {/* name */}
+        <h1 className="mt-6 font-syne text-5xl font-black tracking-[-0.04em] text-[var(--color-text)] sm:text-6xl lg:text-7xl">
           {personalInfo.name}
         </h1>
 
-        <p className="hero-tagline">
+        {/* tagline */}
+        <p className="mt-2 font-mono text-sm uppercase tracking-widest text-[var(--color-lavender)] sm:text-base">
           {personalInfo.currentPosition?.title ?? "Software Developer"}
         </p>
 
-        <div className="hero-start-wrapper">
-          <button
-            type="button"
-            className="hero-start-button"
+        {/* start */}
+        <div className="mt-10 flex flex-col items-center">
+          <a
+            href="/#aboutme"
+            className="inline-block p-0 transition-transform duration-150 hover:scale-105 active:scale-95"
             aria-label="Start to explore portfolio"
-            aria-pressed={hasStarted}
-            onClick={() => setHasStarted(true)}
           >
-            <span className="hero-start-button-label">
-              START
-            </span>
-          </button>
+            <img
+              src={startButton}
+              alt=""
+              className="block w-[180px] h-auto"
+            />
+          </a>
 
-          <div className="hero-start-caption">
+          <div className="mt-3 font-mono text-xs font-bold tracking-widest text-[var(--color-text)]/70">
             PRESS START TO EXPLORE
           </div>
-
-          {hasStarted && (
-            <span className="sr-only" aria-live="polite">
-              Portfolio exploration started.
-            </span>
-          )}
         </div>
+
       </main>
     </div>
   );
 };
+
 export default Intro;
