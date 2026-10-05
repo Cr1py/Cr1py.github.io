@@ -1,7 +1,17 @@
 import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { FaGithub, FaJava, FaPython, FaHtml5, FaReact, FaNodeJs, FaDocker } from "react-icons/fa";
+
+import {
+  FaGithub,
+  FaJava,
+  FaPython,
+  FaHtml5,
+  FaReact,
+  FaNodeJs,
+  FaDocker,
+} from "react-icons/fa";
+
 import { FaCss3Alt } from "react-icons/fa6";
 import { BsJavascript, BsTypescript } from "react-icons/bs";
 import { SiSpringboot, SiMysql, SiSqlite, SiFastapi } from "react-icons/si";
@@ -9,25 +19,24 @@ import { PiFileSqlFill } from "react-icons/pi";
 import { BiLogoPostgresql } from "react-icons/bi";
 
 const AboutMeSection = () => {
-
   const skills = [
-    <FaJava className="text-lavender/75 w-8 h-8" />,
-    <FaPython className="text-lavender/75 w-8 h-8" />,
-    <BsJavascript className="text-lavender/75 w-8 h-8" />,
-    <BsTypescript className="text-lavender/75 w-8 h-8" />,
-    <FaHtml5 className="text-lavender/75 w-8 h-8" />,
-    <FaCss3Alt className="text-lavender/75 w-8 h-8" />,
-    <FaReact className="text-lavender/75 w-8 h-8" />,
-    <FaNodeJs className="text-lavender/75 w-8 h-8" />,
-    <SiSpringboot className="text-lavender/75 w-8 h-8" />,
-    <SiFastapi className="text-lavender/75 w-8 h-8" />,
-    <PiFileSqlFill className="text-lavender/75 w-8 h-8" />,
-    <BiLogoPostgresql className="text-lavender/75 w-8 h-8" />,
-    <SiMysql className="text-lavender/75 w-8 h-8" />,
-    <SiSqlite className="text-lavender/75 w-8 h-8" />,
-    <FaDocker className="text-lavender/75 w-8 h-8" />,
-    <FaGithub className="text-lavender/75 w-8 h-8" />,
-  ]
+    <FaJava />,
+    <FaPython />,
+    <BsJavascript />,
+    <BsTypescript />,
+    <FaHtml5 />,
+    <FaCss3Alt />,
+    <FaReact />,
+    <FaNodeJs />,
+    <SiSpringboot />,
+    <SiFastapi />,
+    <PiFileSqlFill />,
+    <BiLogoPostgresql />,
+    <SiMysql />,
+    <SiSqlite />,
+    <FaDocker />,
+    <FaGithub />,
+  ];
 
   const [skillWidth, setSkillWidth] = useState(0);
   const skillRef = useRef<HTMLDivElement>(null);
@@ -39,12 +48,12 @@ const AboutMeSection = () => {
   }, []);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
+    <div className="about-me">
       {/* skills */}
-      <div className="relative mt-16 w-screen left-1/2 -translate-x-1/2 overflow-hidden border-y border-lavender/20 py-4 mb-8">
+      <div className="about-me-skills">
         <motion.div
-          className="flex w-max gap-7"
+          ref={skillRef}
+          className="about-me-skills-track"
           animate={{ x: ["0%", "-50%"] }}
           transition={{
             duration: 25,
@@ -54,8 +63,8 @@ const AboutMeSection = () => {
         >
           {[...skills, ...skills, ...skills].map((skill, index) => (
             <span
-              key={`${skill}-${index}`}
-              className="whitespace-nowrap"
+              key={`${index}`}
+              className="about-me-skill"
             >
               {skill}
             </span>
@@ -63,50 +72,49 @@ const AboutMeSection = () => {
         </motion.div>
       </div>
 
+      {/* heading */}
       <motion.div
-        className="w-full"
+        className="about-me-heading"
         initial={{ opacity: 0, x: -40 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.2 }}
       >
-        <h2 className="text-left font-syne">
-          <span className="text-text">A lil' </span>
-          <span className="text-dusk">About Me...</span>
+        <h2>
+          <span className="about-me-heading-text">A lil' </span>
+          <span className="about-me-heading-accent">About Me...</span>
         </h2>
       </motion.div>
 
       {/* about Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-center">
-
+      <div className="about-me-layout">
         {/* left Section */}
         <motion.div
-          className="w-full"
+          className="about-me-stats"
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-
           {/* stats */}
-          <div className="grid grid-cols-2 gap-3 mt-6">
-
+          <div className="about-me-stat-grid">
             {/* education */}
-            <Link to="/education" className="col-span-2 block">
+            <Link to="/education" className="about-me-education">
               <motion.div
-                className="card rounded-lg p-5 tracking-wide cursor-pointer hover:border-blush"
+                className="about-me-card card hover:border-blush"
                 transition={{ duration: 0.2 }}
               >
-                <div className="flex items-center gap-6">
-                  <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-lavender">
+                <div className="about-me-education-content">
+                  <div className="about-me-stat-value">
                     BSc
                   </div>
 
-                  <div className="text-left">
-                    <div className="text-sm sm:text-base text-text">
+                  <div className="about-me-education-text">
+                    <div className="about-me-education-title">
                       Computer Science
                     </div>
-                    <div className="text-xs text-text/70 mt-1">
+
+                    <div className="about-me-education-details">
                       2026 - University of Western Ontario
                     </div>
                   </div>
@@ -114,59 +122,56 @@ const AboutMeSection = () => {
               </motion.div>
             </Link>
 
-            {/* internship */}
-            <div className="bg-magenta/5 border border-lavender/25 rounded-lg p-5">
-              <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-lavender">
+            {/* experiences */}
+            <div className="about-me-card">
+              <div className="about-me-stat-value">
                 4
               </div>
-              <div className="text-left text-xs text-text/70 mt-1">
+
+              <div className="about-me-stat-label">
                 Internship Experiences
               </div>
             </div>
 
-            {/* learning */}
-            <div className="card rounded-lg p-5">
-              <div className="font-mono text-left text-2xl sm:text-3xl font-bold text-lavender">
+            <div className="about-me-card card">
+              <div className="about-me-stat-value">
                 1.5
               </div>
-              <div className="text-left text-xs text-text/70 mt-1">
+
+              <div className="about-me-stat-label">
                 Years of Experience
               </div>
             </div>
-
           </div>
         </motion.div>
 
-        {/* right Section*/}
+        {/* right Section */}
         <motion.div
-          className="text-sm sm:text-base text-left whitespace-pre-line"
+          className="about-me-description"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
         >
           I am{" "}
-          <span className="font-bold text-text">
+          <span className="about-me-description-highlight">
             software developer
           </span>{" "}
           who loves working with people to solve problems.
-
           {"\n\n"}
-
           Whether I'm building software, analyzing data, or working with a team,{" "}
-          <span className="font-bold text-text">
+          <span className="about-me-description-highlight">
             I enjoy taking on new challenges and finding new solutions.
           </span>
-
           {"\n\n"}
-
           I hope you'll be able to learn more about my personality, my work,
           and what I can bring to the table as you browse my website. Thanks
           for stopping by!
         </motion.div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AboutMeSection
+export default AboutMeSection;
+

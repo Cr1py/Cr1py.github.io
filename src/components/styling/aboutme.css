@@ -1,0 +1,114 @@
+.about-me {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* skills */
+
+.about-me-skills {
+  @apply relative mt-16 w-screen left-1/2 -translate-x-1/2 overflow-hidden
+    border-y border-lavender/20 py-4 mb-8;
+}
+
+.about-me-skills-track {
+  @apply flex w-max gap-7;
+}
+
+.about-me-skill {
+  @apply whitespace-nowrap text-lavender/75 w-8 h-8;
+}
+
+.about-me-skill svg {
+  @apply w-8 h-8;
+}
+
+
+/* heading */
+
+.about-me-heading {
+  @apply w-full;
+}
+
+.about-me-heading h2 {
+  @apply text-left font-syne;
+}
+
+.about-me-heading-text {
+  @apply text-text;
+}
+
+.about-me-heading-accent {
+  @apply text-dusk;
+}
+
+
+/* main Layout */
+
+.about-me-layout {
+  @apply grid grid-cols-1 lg:grid-cols-[1fr_1.2fr]
+    gap-12 lg:gap-20 items-center;
+}
+
+
+/* stats */
+
+.about-me-stats {
+  @apply w-full;
+}
+
+.about-me-stat-grid {
+  @apply grid grid-cols-2 gap-3 mt-6;
+}
+
+.about-me-education {
+  @apply col-span-2 block;
+}
+
+.about-me-card {
+  @apply bg-magenta/5 border border-lavender/25 rounded-lg p-5;
+}
+
+.about-me-education-content {
+  @apply flex items-center gap-6;
+}
+
+.about-me-stat-value {
+  @apply font-mono text-left text-2xl sm:text-3xl
+    font-bold text-lavender;
+}
+
+.about-me-education-text {
+  @apply text-left;
+}
+
+.about-me-education-title {
+  @apply text-sm sm:text-base text-text;
+}
+
+.about-me-education-details {
+  @apply text-xs text-text/70 mt-1;
+}
+
+.about-me-stat-label {
+  @apply text-left text-xs text-text/70 mt-1;
+}
+
+
+/* description */
+
+.about-me-description {
+  @apply text-sm sm:text-base text-left whitespace-pre-line;
+}
+
+.about-me-description-highlight {
+  @apply font-bold text-text;
+}
+
+
+/* responsive */
+
+@media (max-width: 1024px) {
+  .about-me-skills {
+    @apply mt-12;
+  }
+}
+

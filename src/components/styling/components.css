@@ -1,0 +1,25 @@
+@layer components {
+  .card {
+    @apply bg-magenta/5 border border-lavender/25 transition-all duration-200;
+  }
+
+  .tag-pill {
+    @apply font-mono text-[11px] px-3.5 py-1.5 bg-blush/5 rounded border border-blush/25 text-blush/60 tracking-wide transition-all duration-200;
+  }
+  
+  .terminal-block {
+    @apply bg-magenta/5 border border-lavender/25 [font-family:'Space_Mono',monospace] text-xs leading-loose;
+  }
+  
+  .link-accent {
+    @apply text-lavender hover:text-blush transition-colors;
+  }
+
+  .link-hover {
+    @apply text-text hover:text-blush transition-colors;
+  }
+ 
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-lavender/5 border border-lavender/25 rounded-lg text-lavender transition-colors hover:text-blush hover:border-blush;
+  }
+}

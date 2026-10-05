@@ -1,0 +1,47 @@
+.featured-projects {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 lg:pt-10;
+}
+
+.featured-projects-heading {
+  @apply flex items-center text-left font-syne font-black mb-4 gap-2;
+}
+
+.featured-projects-view-all {
+  @apply flex items-center justify-center w-12 h-12 rounded-full text-lavender hover:text-blush hover:scale-110 transition-all;
+}
+
+.featured-projects-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-6;
+}
+
+.project-card {
+  @apply bg-magenta/5 border border-lavender/25 transition-all duration-200 rounded-lg overflow-hidden;
+}
+
+.project-image-wrapper {
+  @apply aspect-video overflow-hidden;
+}
+
+.project-image {
+  @apply w-full h-full object-cover transition-transform duration-300 group-hover:scale-105;
+}
+
+.project-info {
+  @apply p-6;
+}
+
+.project-title {
+  @apply text-left text-xl font-bold text-text mb-2;
+}
+
+.project-description {
+  @apply text-left text-text/70 mb-4 line-clamp-3;
+}
+
+.project-tech-list {
+  @apply flex flex-nowrap gap-2 mt-5 overflow-hidden;
+}
+
+.project-tech-additional {
+  @apply font-mono text-[10px] sm:text-[11px] px-2.5 py-1 bg-blush/5 rounded border border-blush/25 text-blush/60 whitespace-nowrap shrink-0;
+}
