@@ -48,7 +48,7 @@ const Home = () => {
       </section> 
 
       <section id="aboutme">
-        <div className="max-w-[1200px] mx-auto">
+        <div>
           <AboutMeSection />
         </div>
       </section>   

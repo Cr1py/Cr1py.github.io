@@ -20,8 +20,20 @@
   @apply pointer-events-none absolute inset-0 z-[2];
 }
 
-.hero-star {
-  @apply absolute;
+.hero-star-1 {
+  @apply absolute top-[27%] right-[6%] w-6 h-6";
+}
+
+.hero-star-2 {
+  @apply absolute top-[20%] left-[18%] w-5 h-5;
+}
+
+.hero-star-3 {
+  @apply absolute top-[53%] left-[5%] w-4 h-4;
+}
+
+.hero-star-4 {
+  @apply absolute top-[58%] right-[12%] w-4 h-4;
 }
 
 

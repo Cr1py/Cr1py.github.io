@@ -10,13 +10,13 @@ import ProjectDetail from "./pages/ProjectDetails";
 //import Baking from "./pages/Baking";
 //import TCGs from "./pages/TCGs";
 
-import ScrollToTop from "./components/interaction/ScrollToTop";
+import ScrollManager from "./components/interaction/ScrollManager";
 
 const App = () => {
   return (
     <Router>
 
-      <ScrollToTop />
+      <ScrollManager />
 
       <Routes>
         <Route path="/" element={<Layout><Home /></Layout>} />
